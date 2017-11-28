@@ -118,6 +118,8 @@
     <Compile Include="MovieSearchViewController.cs" />
     <Compile Include="MovieSettings.cs" />
     <Compile Include="MovieSearchViewsController.cs" />
+    <Compile Include="NameListDataSource.cs" />
+    <Compile Include="nameController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

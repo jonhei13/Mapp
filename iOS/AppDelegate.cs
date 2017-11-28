@@ -24,8 +24,9 @@ namespace MovieSearch.iOS
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
             this.Window = new UIWindow(UIScreen.MainScreen.Bounds);
-            var controller = new MovieSearchViewsController();
-            this.Window.RootViewController = controller;
+            MovieSettings _db = new MovieSettings();
+            var controller = new MovieSearchViewsController(_db);
+            this.Window.RootViewController = new UINavigationController(controller);
             this.Window.MakeKeyAndVisible();
             return true;
         }

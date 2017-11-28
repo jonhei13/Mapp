@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/MovieSearchViewsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/MovieSettings.cs">
     <Files>
       <File FileName="MovieSearch/search.cs" Line="11" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="27" Column="60" />
+      <File FileName="iOS/AppDelegate.cs" Line="27" Column="13" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
       <File FileName="iOS/MovieDbSettings.cs" Line="1" Column="1" />
       <File FileName="iOS/MovieSearchViewController.cs" Line="68" Column="1" />
       <File FileName="iOS/packages.config" Line="5" Column="12" />
-      <File FileName="iOS/MovieSettings.cs" Line="8" Column="10" />
+      <File FileName="iOS/MovieSettings.cs" Line="9" Column="6" />
       <File FileName="iOS/Info.plist" />
       <File FileName="iOS/Entitlements.plist" />
-      <File FileName="iOS/MovieSearchViewsController.cs" Line="1" Column="1" />
+      <File FileName="iOS/MovieSearchViewsController.cs" Line="82" Column="6" />
+      <File FileName="iOS/NameListDataSource.cs" Line="92" Column="6" />
+      <File FileName="iOS/nameController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -19,7 +21,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8E17C931-1885-405F-B1C7-63D0900E442E">
+  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.75DA6F4D-F828-4BED-85BC-128C48D608B2">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.MovieSearch.iOS>
 </Properties>
