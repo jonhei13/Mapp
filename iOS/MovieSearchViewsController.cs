@@ -22,9 +22,7 @@ namespace MovieSearch.iOS
         public MovieSearchViewsController(MovieSettings db)
         {
             _db = db;
-
         }
-
 
         public override void DidReceiveMemoryWarning()
         {
@@ -38,28 +36,23 @@ namespace MovieSearch.iOS
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             base.ViewDidLoad();
 
+
+
             this.View.BackgroundColor = UIColor.White;
 
             UILabel promptLabel = PromptLabel();
 
-            //  this.View.AddSubview(promptLabel);
-
             UITextField nameField = NameField();
 
-            //this.View.AddSubview(nameField);
-
-           
-            //  this.View.AddSubview(SearchTitleButton);
-
-            var navigationButton = NavigationButton(nameField);
             UILabel movieTitleLabel = MovieTitleLabel();
+            var navigationButton = NavigationButton(nameField, movieTitleLabel);
+           
             var SearchTitleButton = SearchButton(nameField, movieTitleLabel);
-           // this.View.AddSubview(movieTitleLabel);
 
             this.View.AddSubviews(new UIView[] { promptLabel, nameField, SearchTitleButton,movieTitleLabel, navigationButton });
         }
 
-        private UIButton NavigationButton(UITextField nameField)
+        private UIButton NavigationButton(UITextField nameField, UILabel MovieTitleLabel)
         {
             var navigateButton = UIButton.FromType(UIButtonType.RoundedRect);
             navigateButton.Frame = new CGRect((System.nfloat)startX, (System.nfloat)(startY + 4 * height), this.View.Bounds.Width - 2 * startX, height);
@@ -69,7 +62,10 @@ namespace MovieSearch.iOS
             {
                 nameField.ResignFirstResponder();
                 _nameList = await _db.getMovies(nameField.Text);
+                MovieTitleLabel.Text = "";
                 this.NavigationController.PushViewController(new nameController(_nameList), true);
+                this.NavigationItem.BackBarButtonItem = new UIBarButtonItem("Movie Search",
+                                                                        UIBarButtonItemStyle.Plain, null);
             };
             return navigateButton;
         }
@@ -77,7 +73,7 @@ namespace MovieSearch.iOS
         private UIButton SearchButton(UITextField nameField, UILabel movieTitleLabel)
         {
             var SearchTitleButton = UIButton.FromType(UIButtonType.RoundedRect);
-            SearchTitleButton.Frame = new CGRect(startX, 180 - startY, this.View.Bounds.Width / 2, height);
+            SearchTitleButton.Frame = new CGRect(startX, startY + 3 * height, this.View.Bounds.Width - 2 * startX, height);
             SearchTitleButton.SetTitle("GetMovie", UIControlState.Normal);
 
             SearchTitleButton.TouchUpInside += async (sender, args) =>
@@ -93,7 +89,7 @@ namespace MovieSearch.iOS
         {
             return new UILabel()
             {
-                Frame = new CGRect(startX, 230 - startY, this.View.Bounds.Width, height),
+                Frame = new CGRect(startX, startY + 2 * height, this.View.Bounds.Width - 2 + startX, height),
 
             };
         }
@@ -102,7 +98,7 @@ namespace MovieSearch.iOS
         {
             return new UITextField()
             {
-                Frame = new CGRect(startX, 130 - startY, this.View.Bounds.Width, height),
+                Frame = new CGRect(startX, startY + height, this.View.Bounds.Width - 2 * startX, height),
                 BorderStyle = UITextBorderStyle.RoundedRect
             };
         }
@@ -111,7 +107,7 @@ namespace MovieSearch.iOS
         {
             return new UILabel()
             {
-                Frame = new CGRect(startX, startY, this.View.Bounds.Width, height),
+                Frame = new CGRect(startX, startY, this.View.Bounds.Width - 2 * startX, height),
                 Text = "Enter Words In Movie Title: "
             };
         }

@@ -24,6 +24,10 @@ namespace MovieSearch.iOS
 
         public async Task<string> getMovie(string name)
         {
+            if(string.IsNullOrEmpty(name))
+            {
+                return "Please Enter A Title";
+            }
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             ApiSearchResponse<MovieInfo> response = await movieApi.SearchByTitleAsync(name);
 
@@ -39,13 +43,17 @@ namespace MovieSearch.iOS
         }
         public async Task<List<string>> getMovies(string name)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                return new List<string>();
+            }
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             ApiSearchResponse<MovieInfo> response = await movieApi.SearchByTitleAsync(name);
 
             var result = (from x in response.Results select x.Title).ToList();
             if (result == null)
             {
-                return null;
+                return new List<string>();
             }
             else
             {

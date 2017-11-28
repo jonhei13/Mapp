@@ -16,7 +16,9 @@ namespace MovieSearch.iOS
         {
             base.ViewDidLoad();
 
-            this.Title = "Name List";
+            this.Title = "Movie List";
+
+
 
             this.TableView.Source = new NameListDataSource(_nameList);
         }

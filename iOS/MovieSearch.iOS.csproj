@@ -114,8 +114,6 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieDbSettings.cs" />
-    <Compile Include="MovieSearchViewController.cs" />
     <Compile Include="MovieSettings.cs" />
     <Compile Include="MovieSearchViewsController.cs" />
     <Compile Include="NameListDataSource.cs" />
