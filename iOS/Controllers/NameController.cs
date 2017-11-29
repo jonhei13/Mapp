@@ -6,12 +6,10 @@ namespace MovieSearch.iOS.Controllers
     public class nameController : UITableViewController
     {
         private List<MovieDetails> _nameList;
-        //private Action<int> _onSelected;
 
-        public nameController(List<MovieDetails> namelist /*Action<int> onSelectedPerson*/)
+        public nameController(List<MovieDetails> namelist)
         {
             this._nameList = namelist;
-            //this._onSelected = onSelectedPerson; 
         }
 
         public override void ViewDidLoad()
@@ -22,11 +20,11 @@ namespace MovieSearch.iOS.Controllers
 
 
 
-            this.TableView.Source = new NameListDataSource(_nameList);
+            this.TableView.Source = new NameListDataSource(_nameList, _onSelected);
         }
-        public void _onSelect(int row)
+        public void _onSelected(MovieDetails mov)
         {
-            this.NavigationController.PushViewController(new MovieDetailsController(_nameList[row]), true);
+            this.NavigationController.PushViewController(new MovieDetailsController(mov), true);
             
            // var okAlertController = UIAlertController.Create("Selected", this._nameList[row], UIAlertControllerStyle.Alert);
            // okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));

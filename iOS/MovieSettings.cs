@@ -74,7 +74,6 @@ namespace MovieSearch.iOS
                     ReleaseDate = info.ReleaseDate,
                     Description = info.Overview,
                     ImagePath = localPath
-
                 };
                 MovieDetails.actors = await getCredits(MovieDetails.Id);
                 if (MovieDetails != null)
@@ -91,7 +90,6 @@ namespace MovieSearch.iOS
 
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             ApiQueryResponse<MovieCredit> response = await movieApi.GetCreditsAsync(movieId);
-
 
             var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
 

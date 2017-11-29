@@ -46,5 +46,7 @@ namespace MovieSearch.iOS
             get;
             set;
         }
+
+        //public int Runtime { get; set; }
     }
 }
