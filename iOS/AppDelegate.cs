@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using MovieDownload;
+using MovieSearch.iOS.ApiService;
 using MovieSearch.iOS.Controllers;
 using UIKit;
 
@@ -28,8 +29,9 @@ namespace MovieSearch.iOS
             var client = new StorageClient();
             ImageDownloader down = new ImageDownloader(client);
             this.Window = new UIWindow(UIScreen.MainScreen.Bounds);
-            MovieSettings _db = new MovieSettings(down);
-            var controller = new MovieSearchViewsController(_db);
+            MovieSettings ApiConnection = new MovieSettings();
+            MovieService ApiService = new MovieService(down);
+            var controller = new MovieSearchViewsController(ApiConnection, ApiService);
             this.Window.RootViewController = new UINavigationController(controller);
 
             this.Window.MakeKeyAndVisible();

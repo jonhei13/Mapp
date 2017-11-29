@@ -1,9 +1,18 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controllers/MovieDetailsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controllers/MovieSearchViewsController.cs">
     <Files>
-      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="65" Column="37" />
-      <File FileName="iOS/Controllers/MovieSearchViewsController.cs" Line="110" Column="25" />
-      <File FileName="iOS/Views/Cell.cs" Line="52" Column="29" />
+      <File FileName="iOS/MovieSettings.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="32" Column="47" />
+      <File FileName="iOS/MovieDetails.cs" Line="1" Column="1" />
+      <File FileName="iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="iOS/Controllers/MovieSearchViewsController.cs" Line="64" Column="61" />
+      <File FileName="iOS/Views/Cell.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/NameController.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="1" Column="1" />
+      <File FileName="iOS/NameListDataSource.cs" Line="47" Column="10" />
+      <File FileName="MovieDownload/ImageDownloader.cs" Line="49" Column="37" />
+      <File FileName="MovieDownload/StorageClient.cs" Line="1" Column="1" />
+      <File FileName="iOS/ApiService/MovieService.cs" Line="18" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -12,5 +21,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1C926FD6-F969-4CC9-84DE-741CA21565F3" />
+  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.903BCA13-BB77-460B-9DC4-439357542A23" />
 </Properties>

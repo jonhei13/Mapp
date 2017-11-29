@@ -1,9 +1,9 @@
 # Version: 11.3.0.47 (xcode9.1: 51128b8c)
 # [first argument, ignore] # --cache
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mtouch/mtouch.exe \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/mtouch-cache \
+	/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/mtouch-cache \
 	--sim \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/bin/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/MovieSearch.iOS.app \
+	/Users/elfaeir/Desktop/Mapp/iOS/bin/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/MovieSearch.iOS.app \
 	--executable \
 	MovieSearch.iOS \
 	--debug \
@@ -18,16 +18,16 @@
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/mtouch-symbols.list \
+	/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/mtouch-symbols.list \
 	--dsym=no \
 	-r \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/packages/TheMovieDbWrapper.0.8.2/lib/netstandard1.1/DM.MovieApi.dll \
+	/Users/elfaeir/Desktop/Mapp/packages/TheMovieDbWrapper.0.8.2/lib/netstandard1.1/DM.MovieApi.dll \
 	-r \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/bin/Debug/MovieSearch.dll \
+	/Users/elfaeir/Desktop/Mapp/MovieSearch/bin/Debug/MovieSearch.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/packages/Newtonsoft.Json.9.0.1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/elfaeir/Desktop/Mapp/packages/Newtonsoft.Json.9.0.1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -313,11 +313,11 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/packages/TheMovieDbWrapper.0.8.2/lib/netstandard1.1/DM.MovieApi.dll \
+	/Users/elfaeir/Desktop/Mapp/packages/TheMovieDbWrapper.0.8.2/lib/netstandard1.1/DM.MovieApi.dll \
 	-r \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/bin/Debug/MovieSearch.dll \
+	/Users/elfaeir/Desktop/Mapp/MovieSearch/bin/Debug/MovieSearch.dll \
 	-r \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/packages/Newtonsoft.Json.9.0.1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/elfaeir/Desktop/Mapp/packages/Newtonsoft.Json.9.0.1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	--target-framework \
 	'Xamarin.iOS,v1.0' \
-	/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/bin/iPhoneSimulator/Debug/MovieSearch.iOS.exe \
+	/Users/elfaeir/Desktop/Mapp/iOS/bin/iPhoneSimulator/Debug/MovieSearch.iOS.exe \

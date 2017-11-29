@@ -5,6 +5,7 @@ using DM.MovieApi;
 using Foundation;
 using DM.MovieApi.MovieDb.Movies;
 using System.Collections.Generic;
+using MovieSearch.iOS.ApiService;
 
 namespace MovieSearch.iOS.Controllers
 {
@@ -14,12 +15,14 @@ namespace MovieSearch.iOS.Controllers
         private const double startY = 80;
         private const double height = 50;
 
-        private MovieSettings _db;
+        private MovieSettings _apiConnection;
+        private MovieService _apiService;
 
         private List<MovieDetails> _nameList;
-        public MovieSearchViewsController(MovieSettings db)
+        public MovieSearchViewsController(MovieSettings ApiConnection, MovieService ApiService)
         {
-            _db = db;
+            _apiConnection = ApiConnection;
+            _apiService = ApiService;
         }
 
         public override void DidReceiveMemoryWarning()
@@ -41,26 +44,31 @@ namespace MovieSearch.iOS.Controllers
             UITextField nameField = NameField();
 
             UILabel movieTitleLabel = MovieTitleLabel();
-            var navigationButton = NavigationButton(nameField, movieTitleLabel);
-           
-            var SearchTitleButton = SearchButton(nameField, movieTitleLabel);
 
-            this.View.AddSubviews(new UIView[] { promptLabel, nameField, SearchTitleButton,movieTitleLabel, navigationButton });
+            var navigationButton = NavigationButton(nameField, movieTitleLabel);
+
+            this.View.AddSubviews(new UIView[] { promptLabel, nameField,movieTitleLabel, navigationButton });
         }
 
         private UIButton NavigationButton(UITextField nameField, UILabel MovieTitleLabel)
         {
+
+            UIButton.Appearance.SetTitleColor(UIColor.Black, UIControlState.Normal);
             var loading = CreateLoading();
             this.View.AddSubview(loading);
-            var navigateButton = UIButton.FromType(UIButtonType.RoundedRect);
+
+            var navigateButton = UIButton.FromType(UIButtonType.Plain);
+            navigateButton.Layer.BorderWidth = 2.0f;
+            navigateButton.Layer.BorderColor = UIColor.LightGray.CGColor;
+            navigateButton.ShowsTouchWhenHighlighted = true;
             navigateButton.Frame = new CGRect((System.nfloat)startX, (System.nfloat)(startY + 4 * height), this.View.Bounds.Width - 2 * startX, height);
-            navigateButton.SetTitle("See name list", UIControlState.Normal);
+            navigateButton.SetTitle("Get Movies", UIControlState.Normal);
 
             navigateButton.TouchUpInside += async (sender, args) =>
             {
                 loading.StartAnimating();
                 nameField.ResignFirstResponder();
-                _nameList = await _db.getMovies(nameField.Text);
+                _nameList = await _apiService.getMovies(nameField.Text);
                 MovieTitleLabel.Text = "";
                 loading.StopAnimating();
                 this.NavigationController.PushViewController(new nameController(_nameList), true);
@@ -70,20 +78,6 @@ namespace MovieSearch.iOS.Controllers
             return navigateButton;
         }
 
-        private UIButton SearchButton(UITextField nameField, UILabel movieTitleLabel)
-        {
-            var SearchTitleButton = UIButton.FromType(UIButtonType.RoundedRect);
-            SearchTitleButton.Frame = new CGRect(startX, startY + 3 * height, this.View.Bounds.Width - 2 * startX, height);
-            SearchTitleButton.SetTitle("GetMovie", UIControlState.Normal);
-
-            SearchTitleButton.TouchUpInside += async (sender, args) =>
-            {
-                nameField.ResignFirstResponder();
-                var result = await _db.getMovie(nameField.Text);
-                movieTitleLabel.Text = result;
-            };
-            return SearchTitleButton;
-        }
 
         private UILabel MovieTitleLabel()
         {
@@ -120,6 +114,7 @@ namespace MovieSearch.iOS.Controllers
             i.Color = UIColor.Gray;
             return i;
         }
+
     }
 }
 

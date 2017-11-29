@@ -39,9 +39,6 @@
 /Users/elfaeir/Desktop/Mapp/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
 /Users/elfaeir/Desktop/Mapp/iOS/bin/iPhoneSimulator/Debug/DM.MovieApi.pdb
 /Users/elfaeir/Desktop/Mapp/iOS/bin/iPhoneSimulator/Debug/DM.MovieApi.xml
-/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-11.1/actool/_PartialAppManifest.items
-/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-11.1/actool/_BundleResourceWithLogicalName.items
-/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-11.1/optimized/
 /Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/MovieSearch.iOS.csprojResolveAssemblyReference.cache
 /Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/MovieSearch.iOS.csproj.CoreCompileInputs.cache
 /Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/MovieSearch.iOS.exe
@@ -62,3 +59,6 @@
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/MovieSearch.iOS.csproj.CoreCompileInputs.cache
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/MovieSearch.iOS.exe
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/MovieSearch.iOS.pdb
+/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/actool/_PartialAppManifest.items
+/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/actool/_BundleResourceWithLogicalName.items
+/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/optimized/

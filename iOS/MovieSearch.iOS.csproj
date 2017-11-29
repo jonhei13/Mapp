@@ -104,6 +104,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
+    <Folder Include="ApiService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -125,6 +126,7 @@
     <Compile Include="MovieDetails.cs" />
     <Compile Include="Actors.cs" />
     <Compile Include="Controllers\MovieDetailsController.cs" />
+    <Compile Include="ApiService\MovieService.cs" />
   </ItemGroup>
   <Import Project="..\MovieDownload\MovieDownload.projitems" Label="Shared" Condition="Exists('..\MovieDownload\MovieDownload.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
