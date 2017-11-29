@@ -4,11 +4,9 @@ using UIKit;
 using DM.MovieApi;
 using Foundation;
 using DM.MovieApi.MovieDb.Movies;
-using DM.MovieApi.ApiResponse;
-using System.Linq;
 using System.Collections.Generic;
 
-namespace MovieSearch.iOS
+namespace MovieSearch.iOS.Controllers
 {
     public class MovieSearchViewsController : UIViewController
     {
@@ -18,7 +16,7 @@ namespace MovieSearch.iOS
 
         private MovieSettings _db;
 
-        private List<string> _nameList;
+        private List<MovieDetails> _nameList;
         public MovieSearchViewsController(MovieSettings db)
         {
             _db = db;
@@ -35,8 +33,6 @@ namespace MovieSearch.iOS
         {
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             base.ViewDidLoad();
-
-
 
             this.View.BackgroundColor = UIColor.White;
 

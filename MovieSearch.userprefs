@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/MovieSettings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Actors.cs">
     <Files>
       <File FileName="MovieSearch/search.cs" Line="11" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="27" Column="13" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="29" Column="42" />
+      <File FileName="iOS/Main.cs" Line="21" Column="1" />
       <File FileName="iOS/MovieDbSettings.cs" Line="1" Column="1" />
-      <File FileName="iOS/MovieSearchViewController.cs" Line="68" Column="1" />
+      <File FileName="iOS/MovieSearchViewController.cs" Line="1" Column="1" />
       <File FileName="iOS/packages.config" Line="5" Column="12" />
-      <File FileName="iOS/MovieSettings.cs" Line="9" Column="6" />
+      <File FileName="iOS/MovieSettings.cs" Line="59" Column="26" />
       <File FileName="iOS/Info.plist" />
       <File FileName="iOS/Entitlements.plist" />
-      <File FileName="iOS/MovieSearchViewsController.cs" Line="82" Column="6" />
-      <File FileName="iOS/NameListDataSource.cs" Line="92" Column="6" />
-      <File FileName="iOS/nameController.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/MovieSearchViewsController.cs" Line="19" Column="34" />
+      <File FileName="iOS/NameListDataSource.cs" Line="15" Column="52" />
+      <File FileName="iOS/Controllers/NameController.cs" Line="17" Column="43" />
+      <File FileName="iOS/Views/Cell.cs" Line="47" Column="75" />
+      <File FileName="iOS/MovieDetails.cs" Line="28" Column="9" />
+      <File FileName="iOS/Actors.cs" Line="9" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -2,29 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 using Foundation;
+using MovieSearch.iOS.Views;
 using UIKit;
 
 namespace MovieSearch.iOS
 {
     public class NameListDataSource : UITableViewSource
     {
-        private readonly List<string> _nameList;
+        private readonly List<MovieDetails> _nameList;
 
         public readonly NSString NameListCellId = new NSString("NameListCell");
 
-        public NameListDataSource(List<string> nameList)
+        public NameListDataSource(List<MovieDetails> nameList)
         {
             this._nameList = nameList;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            var cell = tableView.DequeueReusableCell((NSString)this.NameListCellId);
+            var cell = (Cell)tableView.DequeueReusableCell((NSString)this.NameListCellId);
             if (cell == null)
             {
-                cell = new UITableViewCell(UITableViewCellStyle.Default, this.NameListCellId);
+                cell = new Cell(this.NameListCellId);
             }
-            cell.TextLabel.Text = this._nameList[indexPath.Row];
+            var movie = this._nameList[indexPath.Row];
+            cell.UpdateCell(movie);
+           
             return cell;
         }
 
@@ -32,5 +35,14 @@ namespace MovieSearch.iOS
         {
             return this._nameList.Count;
         }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            tableView.DeselectRow(indexPath, true);
+
+            //this._onSelect(indexPath.Row);
+        }
+
+
     }
 }

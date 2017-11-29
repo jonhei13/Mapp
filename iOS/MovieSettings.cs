@@ -41,24 +41,44 @@ namespace MovieSearch.iOS
                 return result;
             }
         }
-        public async Task<List<string>> getMovies(string name)
+        public async Task<List<MovieDetails>> getMovies(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
-                return new List<string>();
+                return new List<MovieDetails>();
             }
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             ApiSearchResponse<MovieInfo> response = await movieApi.SearchByTitleAsync(name);
 
-            var result = (from x in response.Results select x.Title).ToList();
-            if (result == null)
+            var result = (from x in response.Results select x).ToList();
+            var Movies = new List<MovieDetails>();
+
+            foreach (MovieInfo info in result)
             {
-                return new List<string>();
+                var MovieDetails = new MovieDetails(){
+                    Title = info.Title,
+                    Id = info.Id,
+                    Genre = (from x in info.Genres select x.Name).ToList(),
+                    ReleaseDate = info.ReleaseDate,
+                    Description = info.Overview
+                };
+                MovieDetails.actors = await getCredits(MovieDetails.Id);
+                Movies.Add(MovieDetails);
+
             }
-            else
-            {
-                return result;
-            }
+            return Movies;
+        }
+        public async Task<List<string>> getCredits(int movieId)
+        {
+
+            var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
+            ApiQueryResponse<MovieCredit> response = await movieApi.GetCreditsAsync(movieId);
+
+
+            var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
+
+            return actors;
+
         }
 
      
