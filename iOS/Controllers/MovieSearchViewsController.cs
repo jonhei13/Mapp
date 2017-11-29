@@ -50,15 +50,19 @@ namespace MovieSearch.iOS.Controllers
 
         private UIButton NavigationButton(UITextField nameField, UILabel MovieTitleLabel)
         {
+            var loading = CreateLoading();
+            this.View.AddSubview(loading);
             var navigateButton = UIButton.FromType(UIButtonType.RoundedRect);
             navigateButton.Frame = new CGRect((System.nfloat)startX, (System.nfloat)(startY + 4 * height), this.View.Bounds.Width - 2 * startX, height);
             navigateButton.SetTitle("See name list", UIControlState.Normal);
 
             navigateButton.TouchUpInside += async (sender, args) =>
             {
+                loading.StartAnimating();
                 nameField.ResignFirstResponder();
                 _nameList = await _db.getMovies(nameField.Text);
                 MovieTitleLabel.Text = "";
+                loading.StopAnimating();
                 this.NavigationController.PushViewController(new nameController(_nameList), true);
                 this.NavigationItem.BackBarButtonItem = new UIBarButtonItem("Movie Search",
                                                                         UIBarButtonItemStyle.Plain, null);
@@ -106,6 +110,15 @@ namespace MovieSearch.iOS.Controllers
                 Frame = new CGRect(startX, startY, this.View.Bounds.Width - 2 * startX, height),
                 Text = "Enter Words In Movie Title: "
             };
+        }
+
+        UIActivityIndicatorView CreateLoading()
+        {
+            var i = new UIActivityIndicatorView();
+            i.ActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge;
+            i.Frame = new System.Drawing.RectangleF((float)startX, (float)(startY + 5 * height), (float)(this.View.Bounds.Width - 2 * startX), (float)height);
+            i.Color = UIColor.Gray;
+            return i;
         }
     }
 }

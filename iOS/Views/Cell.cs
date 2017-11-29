@@ -24,8 +24,8 @@ namespace MovieSearch.iOS.Views
             this._headingLabel = new UILabel()
             {
 
-                Frame = new CGRect(5, 5, this.ContentView.Bounds.Width - 60, 25)
-                //Font = UIFont.FromName()
+                Frame = new CGRect(3, 5, this.ContentView.Bounds.Width - 60, 25),
+                Font = UIFont.FromName("Helvetica-Bold", 14f)
                 //TextColor = UIColor.FromRGB(127,0,51þ)
                 //BackgroundColor = UIColor.Clear
 
@@ -33,12 +33,11 @@ namespace MovieSearch.iOS.Views
 
             this._subHeadingLabel = new UILabel()
             {
-
-                Frame = new CGRect(100, 25, 100, 25),
-                //Font = UIFont.FromName()
+                Frame = new CGRect(5, 25, 200, 25),
+                Font = UIFont.FromName("Helvetica", 10f)
                 //TextColor = UIColor.FromRGB(127,0,51þ)
                 //BackgroundColor = UIColor.Clear
-                TextAlignment = UITextAlignment.Center
+                //TextAlignment = UITextAlignment.Center
 
             };
 
@@ -50,7 +49,7 @@ namespace MovieSearch.iOS.Views
         public void UpdateCell(MovieDetails Movie)
         {
             //this._imageView.Image = UIImage.FromFile(imageName);
-            this._headingLabel.Text = Movie.Title + "( " + Movie.ReleaseDate.Year.ToString() + " )";
+            this._headingLabel.Text = Movie.Title + " (" + Movie.ReleaseDate.Year.ToString() + ")";
             if (Movie.actors.Count < 1)
             {
                 this._subHeadingLabel.Text = "No Actors Listed";
@@ -62,11 +61,11 @@ namespace MovieSearch.iOS.Views
             }
             else if (Movie.actors.Count < 3)
             {
-                this._subHeadingLabel.Text = Movie.actors[0] + Movie.actors[1];   
+                this._subHeadingLabel.Text = Movie.actors[0] + ", " + Movie.actors[1];   
             }
             else 
             {
-                this._subHeadingLabel.Text = Movie.actors[0] + Movie.actors[1] + Movie.actors[2];    
+                this._subHeadingLabel.Text = Movie.actors[0] + ", " + Movie.actors[1] + ", " + Movie.actors[2];    
             }
           
         }

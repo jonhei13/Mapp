@@ -40,7 +40,7 @@ namespace MovieSearch.iOS
         {
             tableView.DeselectRow(indexPath, true);
 
-            //this._onSelect(indexPath.Row);
+            this._onSelect(indexPath.Row);
         }
 
 

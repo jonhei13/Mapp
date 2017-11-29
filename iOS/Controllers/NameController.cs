@@ -6,7 +6,7 @@ namespace MovieSearch.iOS.Controllers
     public class nameController : UITableViewController
     {
         private List<MovieDetails> _nameList;
-        private Action<int> _onSelected;
+        //private Action<int> _onSelected;
 
         public nameController(List<MovieDetails> namelist /*Action<int> onSelectedPerson*/)
         {
@@ -26,6 +26,8 @@ namespace MovieSearch.iOS.Controllers
         }
         public void _onSelect(int row)
         {
+            this.NavigationController.PushViewController(new MovieDetailsController(_nameList[row]), true);
+            
            // var okAlertController = UIAlertController.Create("Selected", this._nameList[row], UIAlertControllerStyle.Alert);
            // okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
            // this.PresentViewController(okAlertController, true, null);

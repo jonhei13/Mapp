@@ -123,6 +123,7 @@
     <Compile Include="Views\Cell.cs" />
     <Compile Include="MovieDetails.cs" />
     <Compile Include="Actors.cs" />
+    <Compile Include="Controllers\MovieDetailsController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
