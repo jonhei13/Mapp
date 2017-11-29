@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/MovieSettings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
     <Files>
       <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="23" Column="43" />
       <File FileName="iOS/Controllers/MovieSearchViewsController.cs" Line="13" Column="1" />
       <File FileName="iOS/MovieSettings.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="2" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
