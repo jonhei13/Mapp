@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using MovieDownload;
 using MovieSearch.iOS.Controllers;
 using UIKit;
 
@@ -24,10 +25,13 @@ namespace MovieSearch.iOS
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            var client = new StorageClient();
+            ImageDownloader down = new ImageDownloader(client);
             this.Window = new UIWindow(UIScreen.MainScreen.Bounds);
-            MovieSettings _db = new MovieSettings();
+            MovieSettings _db = new MovieSettings(down);
             var controller = new MovieSearchViewsController(_db);
             this.Window.RootViewController = new UINavigationController(controller);
+
             this.Window.MakeKeyAndVisible();
             return true;
         }

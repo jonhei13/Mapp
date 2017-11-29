@@ -87,6 +87,7 @@
     <Reference Include="DM.MovieApi">
       <HintPath>..\packages\TheMovieDbWrapper.0.8.2\lib\netstandard1.1\DM.MovieApi.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieSearch\MovieSearch.csproj">
@@ -124,5 +125,6 @@
     <Compile Include="MovieDetails.cs" />
     <Compile Include="Actors.cs" />
   </ItemGroup>
+  <Import Project="..\..\2017-T-488-MAPP\Projects\MovieDownload\MovieDownload.projitems" Label="Shared" Condition="Exists('..\..\2017-T-488-MAPP\Projects\MovieDownload\MovieDownload.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -49,7 +49,7 @@ namespace MovieSearch.iOS.Views
         }
         public void UpdateCell(MovieDetails Movie)
         {
-            //this._imageView.Image = UIImage.FromFile(imageName);
+            this._imageView.Image = UIImage.FromFile(Movie.ImagePath);
             this._headingLabel.Text = Movie.Title + "( " + Movie.ReleaseDate.Year.ToString() + " )";
             if (Movie.actors.Count < 1)
             {

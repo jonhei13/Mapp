@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using DM.MovieApi;
 using DM.MovieApi.ApiResponse;
 using DM.MovieApi.MovieDb.Movies;
+using MovieDownload;
 
 namespace MovieSearch.iOS
 {
@@ -14,11 +16,13 @@ namespace MovieSearch.iOS
 
 
         public string ApiUrl => "http://api.themoviedb.org/3/";
+
+        private ImageDownloader _ImageDownloader;
         
-        public MovieSettings()
+        public MovieSettings(ImageDownloader downloader)
         {
             MovieDbFactory.RegisterSettings(ApiKey,ApiUrl);
-          
+            _ImageDownloader = downloader;
         }
 
 
@@ -52,18 +56,32 @@ namespace MovieSearch.iOS
 
             var result = (from x in response.Results select x).ToList();
             var Movies = new List<MovieDetails>();
-
+            var cancelToke = new CancellationTokenSource();
+            CancellationToken token = cancelToke.Token;
             foreach (MovieInfo info in result)
             {
+                var localPath = "";
+                if (!string.IsNullOrEmpty(info.PosterPath))
+                {
+                    localPath = _ImageDownloader.LocalPathForFilename(info.PosterPath);
+                    await _ImageDownloader.DownloadImage(info.PosterPath, localPath, token);
+                }
+
                 var MovieDetails = new MovieDetails(){
                     Title = info.Title,
                     Id = info.Id,
                     Genre = (from x in info.Genres select x.Name).ToList(),
                     ReleaseDate = info.ReleaseDate,
-                    Description = info.Overview
+                    Description = info.Overview,
+                    ImagePath = localPath
+
                 };
                 MovieDetails.actors = await getCredits(MovieDetails.Id);
-                Movies.Add(MovieDetails);
+                if (MovieDetails != null)
+                {
+                    Movies.Add(MovieDetails); 
+                }
+
 
             }
             return Movies;
