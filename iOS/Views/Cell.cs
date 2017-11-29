@@ -48,8 +48,13 @@ namespace MovieSearch.iOS.Views
         }
         public void UpdateCell(MovieDetails Movie)
         {
+<<<<<<< HEAD
             //this._imageView.Image = UIImage.FromFile(imageName);
             this._headingLabel.Text = Movie.Title + " (" + Movie.ReleaseDate.Year.ToString() + ")";
+=======
+            this._imageView.Image = UIImage.FromFile(Movie.ImagePath);
+            this._headingLabel.Text = Movie.Title + "( " + Movie.ReleaseDate.Year.ToString() + " )";
+>>>>>>> 740861202d0eb64aa85cbf400331281cc7f52b48
             if (Movie.actors.Count < 1)
             {
                 this._subHeadingLabel.Text = "No Actors Listed";
