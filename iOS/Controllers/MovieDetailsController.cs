@@ -35,7 +35,7 @@ namespace MovieSearch.iOS.Controllers
         {
             return new UILabel()
             {
-                Frame = new CGRect(startX, startY, this.View.Bounds.Width - 2 * startX, height),
+                Frame = new CGRect(startX, 250, this.View.Bounds.Width - 2 * startX, height),
                 Text = this.Movie.Title + " (" + this.Movie.ReleaseDate.Year + ")",
                 Font = UIFont.FromName("Helvetica-Bold", 16f)
             };
@@ -50,7 +50,7 @@ namespace MovieSearch.iOS.Controllers
             }
             return new UILabel()
             {
-                Frame = new CGRect(startX, 100, this.View.Bounds.Width - 2 * startX, height),
+                Frame = new CGRect(startX, 265, this.View.Bounds.Width - 2 * startX, height),
                 Text = genres,
                 Font = UIFont.FromName("Helvetica", 13f),
                 TextColor = UIColor.Gray
@@ -62,7 +62,7 @@ namespace MovieSearch.iOS.Controllers
         {
             return new UITextView()
             {
-                Frame = new CGRect(65, 150, this.View.Bounds.Width - 75, height*4),
+                Frame = new CGRect(startX, 295, this.View.Bounds.Width - 75, height*4),
                 Text = this.Movie.Description,
                 Font = UIFont.FromName("Helvetica", 11f)
             };
@@ -71,7 +71,7 @@ namespace MovieSearch.iOS.Controllers
         private UIImageView posterImg() {
             return new UIImageView()
             {
-                Frame = new CGRect(5, 150, 60, 60),
+                Frame = new CGRect(2, 65, this.View.Bounds.Width, height*4),
                 Image = UIImage.FromFile(Movie.ImagePath)
             };
         }

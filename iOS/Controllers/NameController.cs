@@ -25,10 +25,7 @@ namespace MovieSearch.iOS.Controllers
         public void _onSelected(MovieDetails mov)
         {
             this.NavigationController.PushViewController(new MovieDetailsController(mov), true);
-            
-           // var okAlertController = UIAlertController.Create("Selected", this._nameList[row], UIAlertControllerStyle.Alert);
-           // okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-           // this.PresentViewController(okAlertController, true, null);
+
 
         }
     }
