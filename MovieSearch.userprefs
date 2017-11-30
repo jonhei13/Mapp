@@ -1,19 +1,22 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/ApiService/MovieService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controllers/TableController.cs">
     <Files>
-      <File FileName="iOS/Controllers/MovieController.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/MovieController.cs" Line="66" Column="45" />
       <File FileName="iOS/Controllers/MovieTabController.cs" Line="5" Column="57" />
       <File FileName="iOS/AppDelegate.cs" Line="42" Column="65" />
       <File FileName="iOS/Controllers/RatedMoviesController.cs" Line="1" Column="1" />
-      <File FileName="iOS/Controllers/RatedController.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/RatedController.cs" Line="39" Column="50" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
       <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="29" Column="13" />
-      <File FileName="iOS/ApiService/MovieService.cs" Line="134" Column="1" />
       <File FileName="iOS/ViewController.cs" Line="18" Column="13" />
       <File FileName="iOS/Controllers/TopRatedViewController.cs" Line="20" Column="12" />
-      <File FileName="iOS/MovieSettings.cs" Line="1" Column="1" />
-      <File FileName="MovieDownload/ImageDownloader.cs" Line="38" Column="1" />
-      <File FileName="iOS/Views/Cell.cs" Line="1" Column="1" />
+      <File FileName="MovieDownload/ImageDownloader.cs" Line="5" Column="2" />
+      <File FileName="iOS/TableView/MovieDetailCell.cs" Line="13" Column="31" />
+      <File FileName="iOS/TableView/MovieDetailsRows.cs" Line="11" Column="34" />
+      <File FileName="MovieDownload/StorageClient.cs" Line="1" Column="1" />
+      <File FileName="MovieDownload/IImageStorage.cs" Line="1" Column="1" />
+      <File FileName="iOS/Entities/MovieDetails.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/TableController.cs" Line="24" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

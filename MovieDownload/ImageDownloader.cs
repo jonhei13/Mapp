@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MovieDownload
 {
@@ -33,8 +32,6 @@ namespace MovieDownload
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string localPath = Path.Combine(documentsPath, remoteFilePath.TrimStart('/'));
             return localPath;
-                
-        
         }
 
         public async Task DownloadImage(string remoteFilePath, string localFilePath, CancellationToken token)
@@ -55,6 +52,7 @@ namespace MovieDownload
                 }
                 catch (Exception ex)
                 {
+                   
                     Console.WriteLine(ex.ToString());
                 }
             }
