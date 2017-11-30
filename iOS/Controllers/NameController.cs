@@ -10,6 +10,7 @@ namespace MovieSearch.iOS.Controllers
         public nameController(List<MovieDetails> namelist)
         {
             this._nameList = namelist;
+          
         }
 
         public override void ViewDidLoad()

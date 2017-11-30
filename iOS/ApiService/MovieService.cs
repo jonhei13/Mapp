@@ -80,16 +80,59 @@ namespace MovieSearch.iOS.ApiService
             }
             return Movies;
         }
-        public async Task<List<string>> getCredits(int movieId)
+        public async Task<List<string>> getCredits(int? movieId)
         {
 
+            if (movieId.HasValue)
+            {
+                var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
+                ApiQueryResponse<MovieCredit> response = await movieApi.GetCreditsAsync(movieId.Value);
+
+                var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
+
+                return actors;
+            }
+            return null;
+     
+
+        }
+        public async Task<List<MovieDetails>> getTopRated()
+        {
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            ApiQueryResponse<MovieCredit> response = await movieApi.GetCreditsAsync(movieId);
+            ApiSearchResponse<MovieInfo> response = await movieApi.GetTopRatedAsync();
 
-            var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
+            var result = (from x in response.Results select x);
+            var Movies = new List<MovieDetails>();
+            var cancelToke = new CancellationTokenSource();
+            CancellationToken token = cancelToke.Token;
+            foreach (MovieInfo info in result)
+            {
+                var localPath = "";
+                if (!string.IsNullOrEmpty(info.PosterPath))
+                {
+                    localPath = _ImageDownloader.LocalPathForFilename(info.PosterPath);
+                    await _ImageDownloader.DownloadImage(info.PosterPath, localPath, token);
+                }
 
-            return actors;
+                var MovieDetails = new MovieDetails()
+                {
+                    Title = info.Title,
+                    Id = info.Id,
+                    Genre = (from x in info.Genres select x.Name).ToList(),
+                    ReleaseDate = info.ReleaseDate,
+                    Description = info.Overview,
+                    ImagePath = localPath
+                };
+                MovieDetails.actors = await getCredits(MovieDetails.Id);
+                if (MovieDetails != null)
+                {
+                    Movies.Add(MovieDetails);
+                }
 
+
+            }
+            return Movies;
+            
         }
     }
 }

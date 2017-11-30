@@ -6,8 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/actool/bundle/LaunchImage-700-568h@2x.png</string>
-			<string>/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/actool/partial-info.plist</string>
+			<string>/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/actool/bundle/LaunchImage-700-568h@2x.png</string>
+			<string>/Users/elfaeir/Desktop/Mapp/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.1/actool/partial-info.plist</string>
 		</array>
 	</dict>
 </dict>

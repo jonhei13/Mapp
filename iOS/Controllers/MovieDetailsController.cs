@@ -27,6 +27,7 @@ namespace MovieSearch.iOS.Controllers
             var description = MovieDescription();
             var img = posterImg();
 
+
             this.View.AddSubviews(new UIView[ ] { title, description, genres, img });
 
         }

@@ -120,13 +120,16 @@
     </Compile>
     <Compile Include="MovieSettings.cs" />
     <Compile Include="NameListDataSource.cs" />
-    <Compile Include="Controllers\MovieSearchViewsController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Controllers\NameController.cs" />
     <Compile Include="Views\Cell.cs" />
     <Compile Include="MovieDetails.cs" />
     <Compile Include="Actors.cs" />
     <Compile Include="Controllers\MovieDetailsController.cs" />
     <Compile Include="ApiService\MovieService.cs" />
+    <Compile Include="Controllers\MovieTabController.cs" />
+    <Compile Include="Controllers\RatedController.cs" />
+    <Compile Include="Controllers\TopRatedViewController.cs" />
   </ItemGroup>
   <Import Project="..\MovieDownload\MovieDownload.projitems" Label="Shared" Condition="Exists('..\MovieDownload\MovieDownload.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

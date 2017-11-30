@@ -31,8 +31,15 @@ namespace MovieSearch.iOS
             this.Window = new UIWindow(UIScreen.MainScreen.Bounds);
             MovieSettings ApiConnection = new MovieSettings();
             MovieService ApiService = new MovieService(down);
-            var controller = new MovieSearchViewsController(ApiConnection, ApiService);
-            this.Window.RootViewController = new UINavigationController(controller);
+            var MovieSearchController = new MovieController(ApiConnection, ApiService);
+            var MovieSearchNavigationControler = new UINavigationController(MovieSearchController);
+            var MovieRatedController = new RatedController(ApiConnection, ApiService);
+            var MovieRatedNavigationController = new UINavigationController(MovieRatedController);
+            var movieTabController = new MovieTabController()
+            {
+                ViewControllers = new UIViewController[] { MovieSearchNavigationControler, MovieRatedNavigationController  }
+            };
+            this.Window.RootViewController = movieTabController;
 
             this.Window.MakeKeyAndVisible();
             return true;
