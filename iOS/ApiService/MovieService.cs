@@ -13,42 +13,36 @@ namespace MovieSearch.iOS.ApiService
     public class MovieService
     {
         private ImageDownloader _ImageDownloader;
-
+        private IApiMovieRequest _movieApi;
+        private List<MovieDetails> _movies;
         public MovieService(ImageDownloader downloader)
         {
             _ImageDownloader = downloader;
+            _movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
+            _movies = new List<MovieDetails>();
         }
 
-
-        public async Task<string> getMovie(string name)
-        {
-            if (string.IsNullOrEmpty(name))
-            {
-                return "Please Enter A Title";
-            }
-            var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            ApiSearchResponse<MovieInfo> response = await movieApi.SearchByTitleAsync(name);
-
-            var result = (from x in response.Results select x.Title).FirstOrDefault();
-            if (result == null)
-            {
-                return "Could Not Find Movie";
-            }
-            else
-            {
-                return result;
-            }
-        }
-        public async Task<List<MovieDetails>> getMovies(string name)
+        public async Task<List<MovieDetails>> getMoviesByTitle(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
                 return new List<MovieDetails>();
             }
-            var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            ApiSearchResponse<MovieInfo> response = await movieApi.SearchByTitleAsync(name);
+            ApiSearchResponse<MovieInfo> response = await _movieApi.SearchByTitleAsync(name);
+            _movies = await getMovies(response.Results);
+            return _movies;   
+        }
 
-            var result = (from x in response.Results select x).ToList();
+        public async Task<List<MovieDetails>> getTopRatedMovies()
+        {
+            ApiSearchResponse<MovieInfo> response = await _movieApi.GetTopRatedAsync();
+            _movies = await getMovies(response.Results);
+            return _movies;
+        }
+
+        private async Task<List<MovieDetails>> getMovies(IReadOnlyList<MovieInfo> response)
+        {
+            var result = (from x in response select x).ToList();
             var Movies = new List<MovieDetails>();
             var cancelToke = new CancellationTokenSource();
             CancellationToken token = cancelToke.Token;
@@ -70,69 +64,22 @@ namespace MovieSearch.iOS.ApiService
                     Description = info.Overview,
                     ImagePath = localPath
                 };
+
                 MovieDetails.actors = await getCredits(MovieDetails.Id);
                 if (MovieDetails != null)
                 {
-                    Movies.Add(MovieDetails);
+                    _movies.Add(MovieDetails);
                 }
-
-
             }
-            return Movies;
+            return _movies;
         }
-        public async Task<List<string>> getCredits(int? movieId)
+        private async Task<List<string>> getCredits(int? movieId)
         {
-
-            if (movieId.HasValue)
-            {
-                var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-                ApiQueryResponse<MovieCredit> response = await movieApi.GetCreditsAsync(movieId.Value);
-
-                var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
-
-                return actors;
-            }
-            return null;
-     
-
+            ApiQueryResponse<MovieCredit> response = await _movieApi.GetCreditsAsync(movieId.Value);
+            var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
+            return actors;
         }
-        public async Task<List<MovieDetails>> getTopRated()
-        {
-            var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            ApiSearchResponse<MovieInfo> response = await movieApi.GetTopRatedAsync();
 
-            var result = (from x in response.Results select x);
-            var Movies = new List<MovieDetails>();
-            var cancelToke = new CancellationTokenSource();
-            CancellationToken token = cancelToke.Token;
-            foreach (MovieInfo info in result)
-            {
-                var localPath = "";
-                if (!string.IsNullOrEmpty(info.PosterPath))
-                {
-                    localPath = _ImageDownloader.LocalPathForFilename(info.PosterPath);
-                    await _ImageDownloader.DownloadImage(info.PosterPath, localPath, token);
-                }
-
-                var MovieDetails = new MovieDetails()
-                {
-                    Title = info.Title,
-                    Id = info.Id,
-                    Genre = (from x in info.Genres select x.Name).ToList(),
-                    ReleaseDate = info.ReleaseDate,
-                    Description = info.Overview,
-                    ImagePath = localPath
-                };
-                MovieDetails.actors = await getCredits(MovieDetails.Id);
-                if (MovieDetails != null)
-                {
-                    Movies.Add(MovieDetails);
-                }
-
-
-            }
-            return Movies;
-            
-        }
+      
     }
 }

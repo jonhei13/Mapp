@@ -76,7 +76,7 @@ namespace MovieSearch.iOS.Controllers
         }
         public async Task<List<MovieDetails>> getTopRatedMovies()
         {
-            var TopRatedMovies = await _apiService.getTopRated();
+            var TopRatedMovies = await _apiService.getTopRatedMovies();
             return TopRatedMovies;
         }
         public void _onSelected(MovieDetails mov)
