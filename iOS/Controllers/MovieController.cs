@@ -74,7 +74,7 @@ namespace MovieSearch.iOS.Controllers
                 _nameList = await _apiService.getMovies(nameField.Text);
                 MovieTitleLabel.Text = "";
                 loading.StopAnimating();
-                this.NavigationController.PushViewController(new nameController(_nameList), true);
+                this.NavigationController.PushViewController(new TableController(_nameList), true);
                 this.NavigationItem.BackBarButtonItem = new UIBarButtonItem("Movie Search",
                                                                         UIBarButtonItemStyle.Plain, null);
             };

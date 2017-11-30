@@ -1,31 +1,14 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Views/Cell.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/ApiService/MovieService.cs">
     <Files>
-      <File FileName="iOS/Controllers/MovieController.cs" Line="83" Column="9" />
-      <File FileName="iOS/Controllers/MovieTabController.cs" Line="12" Column="13" />
-      <File FileName="iOS/Controllers/NameController.cs" Line="23" Column="13" />
-      <File FileName="iOS/AppDelegate.cs" Line="40" Column="64" />
-      <File FileName="iOS/Controllers/RatedMoviesController.cs" Line="1" Column="1" />
-      <File FileName="iOS/Controllers/RatedController.cs" Line="39" Column="60" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="29" Column="13" />
-      <File FileName="iOS/ApiService/MovieService.cs" Line="82" Column="1" />
-      <File FileName="iOS/NameListDataSource.cs" Line="19" Column="10" />
-      <File FileName="iOS/ViewController.cs" Line="18" Column="13" />
-      <File FileName="iOS/Controllers/TopRatedViewController.cs" Line="20" Column="12" />
-      <File FileName="iOS/MovieSettings.cs" Line="1" Column="1" />
-      <File FileName="MovieDownload/ImageDownloader.cs" Line="38" Column="1" />
-      <File FileName="iOS/Views/Cell.cs" Line="1" Column="1" />
+      <File FileName="iOS/ApiService/MovieService.cs" Line="51" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/elfaeir/Desktop/Mapp/iOS/Controllers/RatedController.cs" relfile="iOS/Controllers/RatedController.cs" line="72" column="1" />
-      <Breakpoint file="/Users/elfaeir/Desktop/Mapp/iOS/ApiService/MovieService.cs" relfile="iOS/ApiService/MovieService.cs" line="134" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.903BCA13-BB77-460B-9DC4-439357542A23" />
+  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1C926FD6-F969-4CC9-84DE-741CA21565F3" />
 </Properties>

@@ -36,7 +36,7 @@ namespace MovieSearch.iOS.Controllers
            
             base.ViewDidLoad();
             this.Title = "Top Rated";
-            this.TableView.Source = new NameListDataSource(new List<MovieDetails>(), _onSelected);
+            this.TableView.Source = new MovieListDataSource(new List<MovieDetails>(), _onSelected);
             PopulateTopRated();
         }
 
@@ -46,7 +46,7 @@ namespace MovieSearch.iOS.Controllers
             if (this.DidAppear){
                 base.ViewDidAppear(true);
                 this.Title = "Top Rated";
-                this.TableView.Source = new NameListDataSource(new List<MovieDetails>(), _onSelected);
+                this.TableView.Source = new MovieListDataSource(new List<MovieDetails>(), _onSelected);
                 PopulateTopRated();  
             }
             this.DidAppear = true;
@@ -69,7 +69,7 @@ namespace MovieSearch.iOS.Controllers
             _topRated = await getTopRatedMovies();
             loading.StopAnimating();
 
-            this.TableView.Source = new NameListDataSource(_topRated, _onSelected);
+            this.TableView.Source = new MovieListDataSource(_topRated, _onSelected);
             this.TableView.ReloadData();
 
 

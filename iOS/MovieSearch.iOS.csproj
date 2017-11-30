@@ -119,9 +119,9 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieSettings.cs" />
-    <Compile Include="NameListDataSource.cs" />
+    <Compile Include="MovieListDataSource.cs" />
     <Compile Include="Controllers\MovieController.cs" />
-    <Compile Include="Controllers\NameController.cs" />
+    <Compile Include="Controllers\TableController.cs" />
     <Compile Include="Views\Cell.cs" />
     <Compile Include="MovieDetails.cs" />
     <Compile Include="Actors.cs" />
