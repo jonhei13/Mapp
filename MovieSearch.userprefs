@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controllers/MovieDetailsController.cs">
     <Files>
-      <File FileName="iOS/Controllers/MovieController.cs" Line="42" Column="98" />
-      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="23" Column="55" />
-      <File FileName="iOS/Controllers/TopRatedViewController.cs" Line="1" Column="1" />
+      <File FileName="iOS/Controllers/MovieController.cs" Line="75" Column="52" />
+      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="45" Column="19" />
+      <File FileName="iOS/Controllers/RatedController.cs" Line="72" Column="1" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

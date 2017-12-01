@@ -25,20 +25,15 @@ namespace MovieSearch.iOS.Views
             {
 
                 Frame = new CGRect(3, 5, this.ContentView.Bounds.Width - 60, 25),
-                Font = UIFont.FromName("Helvetica-Bold", 14f)
-                //TextColor = UIColor.FromRGB(127,0,51þ)
-                //BackgroundColor = UIColor.Clear
-
+                Font = UIFont.FromName("Helvetica-Bold", 14f),
+                TextColor = UIColor.LightGray               
             };
 
             this._subHeadingLabel = new UILabel()
             {
                 Frame = new CGRect(5, 25, 200, 25),
-                Font = UIFont.FromName("Helvetica", 10f)
-                //TextColor = UIColor.FromRGB(127,0,51þ)
-                //BackgroundColor = UIColor.Clear
-                //TextAlignment = UITextAlignment.Center
-
+                Font = UIFont.FromName("Helvetica", 10f),
+                TextColor = UIColor.Gray
             };
 
             this.ContentView.AddSubviews(new UIView[] { this._imageView, this._headingLabel, this._subHeadingLabel });
