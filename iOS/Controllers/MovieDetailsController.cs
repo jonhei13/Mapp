@@ -23,8 +23,11 @@ namespace MovieSearch.iOS.Controllers
             this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
 
             var title = MovieTitleLabel();
+            title.LineBreakMode = UILineBreakMode.WordWrap;
+            title.Lines = 0;  
             var genres = GenresLabel();
             var description = MovieDescription();
+            description.BackgroundColor = UIColor.Black.ColorWithAlpha(0.1f);
             var img = posterImg();
 
 
@@ -36,9 +39,10 @@ namespace MovieSearch.iOS.Controllers
         {
             return new UILabel()
             {
-                Frame = new CGRect(startX, 250, this.View.Bounds.Width - 2 * startX, height),
+                Frame = new CGRect(startX, 270, this.View.Bounds.Width - 2 * startX, height),
                 Text = this.Movie.Title + " (" + this.Movie.ReleaseDate.Year + ")",
-                Font = UIFont.FromName("Helvetica-Bold", 16f)
+                Font = UIFont.FromName("Helvetica-Bold", 16f),
+                TextColor = UIColor.DarkGray
             };
         }
 
@@ -51,10 +55,10 @@ namespace MovieSearch.iOS.Controllers
             }
             return new UILabel()
             {
-                Frame = new CGRect(startX, 265, this.View.Bounds.Width - 2 * startX, height),
+                Frame = new CGRect(startX, 300, this.View.Bounds.Width - 2 * startX, height),
                 Text = genres,
                 Font = UIFont.FromName("Helvetica", 13f),
-                TextColor = UIColor.Gray
+                TextColor = UIColor.Gray,
             };
         }
 
@@ -63,9 +67,10 @@ namespace MovieSearch.iOS.Controllers
         {
             return new UITextView()
             {
-                Frame = new CGRect(startX, 295, this.View.Bounds.Width - 75, height*4),
+                Frame = new CGRect(startX, 345, this.View.Bounds.Width - 50, height*2.5),
                 Text = this.Movie.Description,
-                Font = UIFont.FromName("Helvetica", 11f)
+                Font = UIFont.FromName("Helvetica", 11f),
+                TextColor = UIColor.LightGray
             };
         }
 
