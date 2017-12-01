@@ -1,13 +1,9 @@
 ﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/TableView/MovieDetailsRows.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controllers/MovieDetailsController.cs">
     <Files>
-      <File FileName="iOS/Controllers/MovieController.cs" Line="75" Column="95" />
-      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="1" Column="1" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="iOS/Controllers/MovieController.cs" Line="42" Column="98" />
+      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="23" Column="55" />
       <File FileName="iOS/Controllers/TopRatedViewController.cs" Line="1" Column="1" />
-      <File FileName="iOS/Controllers/RatedController.cs" Line="55" Column="35" />
-      <File FileName="iOS/Controllers/TableController.cs" Line="20" Column="39" />
-      <File FileName="iOS/TableView/MovieDetailsRows.cs" Line="11" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

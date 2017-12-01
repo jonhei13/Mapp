@@ -20,6 +20,9 @@ namespace MovieSearch.iOS.Controllers
             this.Title = "Movie List";
 
             this.TableView.Source = new MovieDetailsRows(_movieList, _onSelected);
+            this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
+            this.TableView.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
+
         }
         public void _onSelected(MovieDetails mov)
         {
