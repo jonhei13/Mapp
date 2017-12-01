@@ -20,7 +20,7 @@ namespace MovieSearch.iOS.Controllers
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            this.View.BackgroundColor = UIColor.White;
+            this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
 
             var title = MovieTitleLabel();
             var genres = GenresLabel();
