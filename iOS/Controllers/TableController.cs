@@ -19,8 +19,6 @@ namespace MovieSearch.iOS.Controllers
 
             this.Title = "Movie List";
 
-
-
             this.TableView.Source = new MovieDetailsRows(_movieList, _onSelected);
         }
         public void _onSelected(MovieDetails mov)

@@ -36,6 +36,7 @@ namespace MovieSearch.iOS
             var MovieSearchNavigationControler = new UINavigationController(MovieSearchController);
             var MovieRatedController = new RatedController(ApiConnection, ApiService);
             var MovieRatedNavigationController = new UINavigationController(MovieRatedController);
+
             var movieTabController = new MovieTabController()
             {
                 ViewControllers = new UIViewController[] { MovieSearchNavigationControler, MovieRatedNavigationController  }

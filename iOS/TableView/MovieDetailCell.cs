@@ -13,7 +13,7 @@ namespace MovieSearch.iOS.Views
         public MovieDetailCell(NSString cellId) : base(UITableViewCellStyle.Default, cellId)
         {
             this.SelectionStyle = UITableViewCellSelectionStyle.Gray;
-
+            this.BackgroundColor = UIColor.Clear;
             this._imageView = new UIImageView()
             {
 

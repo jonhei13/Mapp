@@ -36,8 +36,10 @@ namespace MovieSearch.iOS.Controllers
            
             base.ViewDidLoad();
             this.Title = "Top Rated";
+            this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
             this.TableView.Source = new MovieDetailsRows(new List<MovieDetails>(), _onSelected);
             PopulateTopRated();
+
         }
 
         public override void ViewDidAppear(bool animated)
@@ -48,6 +50,7 @@ namespace MovieSearch.iOS.Controllers
                 this.Title = "Top Rated";
                 this.TableView.Source = new MovieDetailsRows(new List<MovieDetails>(), _onSelected);
                 PopulateTopRated();  
+                this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
             }
             this.DidAppear = true;
        

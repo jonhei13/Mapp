@@ -3,7 +3,12 @@
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/com.companyname.MovieSearch.apk
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/com.companyname.MovieSearch-Signed.apk
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/MovieSearch.dll
+/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/DM.MovieApi.dll
+/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/Newtonsoft.Json.dll
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/MovieSearch.pdb
+/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/DM.MovieApi.pdb
+/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/DM.MovieApi.xml
+/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/bin/Debug/Newtonsoft.Json.xml
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/obj/Debug/MovieSearch.Droid.csprojResolveAssemblyReference.cache
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/obj/Debug/MovieSearch.Droid.csproj.CoreCompileInputs.cache
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/Droid/obj/Debug/MovieSearch.Droid.dll

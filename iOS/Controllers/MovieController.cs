@@ -39,11 +39,14 @@ namespace MovieSearch.iOS.Controllers
             var movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             base.ViewDidLoad();
 
-            this.View.BackgroundColor = UIColor.White;
+            this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background"));
 
             UILabel promptLabel = PromptLabel();
 
             UITextField nameField = NameField();
+            nameField.Layer.BorderWidth = 2.0f;
+            nameField.Layer.BorderColor = UIColor.Black.ColorWithAlpha(0.5f).CGColor;
+            nameField.Layer.CornerRadius = 5;
 
             UILabel movieTitleLabel = MovieTitleLabel();
 
@@ -61,11 +64,15 @@ namespace MovieSearch.iOS.Controllers
 
             var navigateButton = UIButton.FromType(UIButtonType.Plain);
             navigateButton.Layer.BorderWidth = 2.0f;
-            var highlightedAttributedTitle = new NSAttributedString("Get Movies", foregroundColor: UIColor.Green, strikethroughStyle: NSUnderlineStyle.Thick);
+            var highlightedAttributedTitle = new NSAttributedString("Get Movies", foregroundColor: UIColor.LightGray);
             navigateButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlighted);
             navigateButton.TintColor = UIColor.Red;
             navigateButton.Frame = new CGRect((System.nfloat)startX, (System.nfloat)(startY + 4 * height), this.View.Bounds.Width - 2 * startX, height);
             navigateButton.SetTitle("Get Movies", UIControlState.Normal);
+            navigateButton.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
+            navigateButton.TitleLabel.Font = UIFont.FromName("Helvetica", 18f);
+            navigateButton.TitleLabel.TextColor = UIColor.LightGray;
+            navigateButton.Layer.BackgroundColor = UIColor.Black.ColorWithAlpha(0.7f).CGColor;
 
             navigateButton.TouchUpInside += async (sender, args) =>
             {
@@ -96,7 +103,12 @@ namespace MovieSearch.iOS.Controllers
             return new UITextField()
             {
                 Frame = new CGRect(startX, startY + height, this.View.Bounds.Width - 2 * startX, height),
-                BorderStyle = UITextBorderStyle.RoundedRect
+                BorderStyle = UITextBorderStyle.RoundedRect,
+                BackgroundColor = UIColor.Black.ColorWithAlpha(0.2f),
+                AttributedPlaceholder = new NSAttributedString("Search Movies", font: UIFont.FromName("Helvetica", 18f), foregroundColor: UIColor.LightGray),
+                TextColor = UIColor.LightGray,
+                TextAlignment = UITextAlignment.Center,
+                Font = UIFont.FromName("Helvetica", 18f)
             };
         }
 
@@ -105,7 +117,9 @@ namespace MovieSearch.iOS.Controllers
             return new UILabel()
             {
                 Frame = new CGRect(startX, startY, this.View.Bounds.Width - 2 * startX, height),
-                Text = "Enter Words In Movie Title: "
+                Text = "Enter words in a movie title: ",
+                Font = UIFont.FromName("Helvetica-Bold", 20f),
+                TextColor = UIColor.LightGray
             };
         }
 
