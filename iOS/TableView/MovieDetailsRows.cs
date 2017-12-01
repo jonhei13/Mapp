@@ -11,7 +11,7 @@ namespace MovieSearch.iOS
     public class MovieDetailsRows : UITableViewSource
     {
         private readonly List<MovieDetails> _movieList;
-
+        private const double _rowHeight = 90;
         public readonly NSString MovieListCellId = new NSString("MovieListCell");
         private readonly Action<MovieDetails> _onSelectedMovie;
 
@@ -29,6 +29,7 @@ namespace MovieSearch.iOS
                 movieCell = new MovieDetailCell(this.MovieListCellId);
             }
             var movie = this._movieList[indexPath.Row];
+            tableView.RowHeight = (System.nfloat)_rowHeight;
             movieCell.UpdateCell(movie);
            
             return movieCell;
@@ -41,6 +42,7 @@ namespace MovieSearch.iOS
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
+            
             tableView.DeselectRow(indexPath, true);
             this._onSelectedMovie(_movieList[indexPath.Row]);
 

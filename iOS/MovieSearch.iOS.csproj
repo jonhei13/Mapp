@@ -124,7 +124,6 @@
     <Compile Include="Controllers\MovieDetailsController.cs" />
     <Compile Include="Controllers\MovieTabController.cs" />
     <Compile Include="Controllers\RatedController.cs" />
-    <Compile Include="Controllers\TopRatedViewController.cs" />
     <Compile Include="TableView\MovieDetailsRows.cs" />
     <Compile Include="ApiService\MovieService.cs" />
     <Compile Include="ApiService\DownloadImage.cs" />

@@ -60,7 +60,7 @@ namespace MovieSearch.iOS.Controllers
         {
             var i = new UIActivityIndicatorView();
             i.ActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge;
-            i.Frame = new System.Drawing.RectangleF((float)startX, (float)(startY + 5 * height), (float)(this.View.Bounds.Width - 2 * startX), (float)height);
+            i.Frame = new System.Drawing.RectangleF((float)startX, (float)(startY + 100), (float)(this.View.Bounds.Width - 2 * startX), (float)height);
             i.Color = UIColor.Gray;
             return i;
         }

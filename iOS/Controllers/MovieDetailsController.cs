@@ -24,14 +24,14 @@ namespace MovieSearch.iOS.Controllers
 
             var title = MovieTitleLabel();
             title.LineBreakMode = UILineBreakMode.WordWrap;
-            title.Lines = 0;  
+            title.Lines = 0;
             var genres = GenresLabel();
             var description = MovieDescription();
             description.BackgroundColor = UIColor.Black.ColorWithAlpha(0.1f);
             var img = posterImg();
 
 
-            this.View.AddSubviews(new UIView[ ] { title, description, genres, img });
+            this.View.AddSubviews(new UIView[] { title, description, genres, img });
 
         }
 
@@ -48,7 +48,7 @@ namespace MovieSearch.iOS.Controllers
 
         private UILabel GenresLabel()
         {
-            string genres ="";
+            string genres = "";
             foreach (var x in this.Movie.Genre)
             {
                 genres += (x + ", ");
@@ -67,17 +67,18 @@ namespace MovieSearch.iOS.Controllers
         {
             return new UITextView()
             {
-                Frame = new CGRect(startX, 345, this.View.Bounds.Width - 50, height*2.5),
+                Frame = new CGRect(startX, 345, this.View.Bounds.Width - 50, height * 2.5),
                 Text = this.Movie.Description,
                 Font = UIFont.FromName("Helvetica", 11f),
                 TextColor = UIColor.LightGray
             };
         }
 
-        private UIImageView posterImg() {
+        private UIImageView posterImg()
+        {
             return new UIImageView()
             {
-                Frame = new CGRect(2, 65, this.View.Bounds.Width, height*4),
+                Frame = new CGRect(2, 65, this.View.Bounds.Width, height * 4),
                 Image = UIImage.FromFile(Movie.ImagePath)
             };
         }

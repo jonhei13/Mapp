@@ -74,14 +74,20 @@ namespace MovieSearch.iOS.ApiService
             }
             return _movies;
         }
-        private async Task<List<string>> getCredits(int? movieId)
+        private async Task<List<string>> getCredits(int movieId)
         {
-            ApiQueryResponse<MovieCredit> response = await _movieApi.GetCreditsAsync(movieId.Value);
-            if(response == null){
+            ApiQueryResponse<MovieCredit> response = await _movieApi.GetCreditsAsync(movieId);
+            try
+            {
+                var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
+                return actors;
+
+            }catch(NullReferenceException e)
+            {
+                Console.WriteLine(e);
                 return null;
             }
-            var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
-            return actors;
+       
         }
 
       

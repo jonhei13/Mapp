@@ -24,14 +24,12 @@ namespace MovieSearch.iOS.Controllers
             _apiConnection = ApiConnection;
             _apiService = ApiService;
             this.TabBarItem = new UITabBarItem(UITabBarSystemItem.Search, 0);
-           
+
         }
 
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
-
-            // Release any cached data, images, etc that aren't in use.
         }
 
         public override void ViewDidLoad()
@@ -44,15 +42,20 @@ namespace MovieSearch.iOS.Controllers
             UILabel promptLabel = PromptLabel();
 
             UITextField nameField = NameField();
-            nameField.Layer.BorderWidth = 2.0f;
-            nameField.Layer.BorderColor = UIColor.Black.ColorWithAlpha(0.5f).CGColor;
-            nameField.Layer.CornerRadius = 5;
+            TextFieldCustom(nameField);
 
             UILabel movieTitleLabel = MovieTitleLabel();
 
             var navigationButton = NavigationButton(nameField, movieTitleLabel);
 
-            this.View.AddSubviews(new UIView[] { promptLabel, nameField,movieTitleLabel, navigationButton });
+            this.View.AddSubviews(new UIView[] { promptLabel, nameField, movieTitleLabel, navigationButton });
+        }
+
+        private static void TextFieldCustom(UITextField nameField)
+        {
+            nameField.Layer.BorderWidth = 2.0f;
+            nameField.Layer.BorderColor = UIColor.Black.ColorWithAlpha(0.5f).CGColor;
+            nameField.Layer.CornerRadius = 5;
         }
 
         private UIButton NavigationButton(UITextField nameField, UILabel MovieTitleLabel)
@@ -63,6 +66,29 @@ namespace MovieSearch.iOS.Controllers
             this.View.AddSubview(loading);
 
             var navigateButton = UIButton.FromType(UIButtonType.Plain);
+            CustomTransParentButton(navigateButton);
+
+            navigateButton.TouchUpInside += async (sender, args) =>
+            {
+                await NavButtonClick(nameField, MovieTitleLabel, loading);
+            };
+            return navigateButton;
+        }
+
+        private async System.Threading.Tasks.Task NavButtonClick(UITextField nameField, UILabel MovieTitleLabel, UIActivityIndicatorView loading)
+        {
+            loading.StartAnimating();
+            nameField.ResignFirstResponder();
+            _nameList = await _apiService.getMoviesByTitle(nameField.Text);
+            MovieTitleLabel.Text = "";
+            loading.StopAnimating();
+            this.NavigationController.PushViewController(new TableController(_nameList), true);
+            this.NavigationItem.BackBarButtonItem = new UIBarButtonItem("Movie Search",
+                                                                    UIBarButtonItemStyle.Plain, null);
+        }
+
+        private void CustomTransParentButton(UIButton navigateButton)
+        {
             navigateButton.Layer.BorderWidth = 2.0f;
             var highlightedAttributedTitle = new NSAttributedString("Get Movies", foregroundColor: UIColor.LightGray);
             navigateButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlighted);
@@ -73,21 +99,7 @@ namespace MovieSearch.iOS.Controllers
             navigateButton.TitleLabel.Font = UIFont.FromName("Helvetica", 18f);
             navigateButton.TitleLabel.TextColor = UIColor.LightGray;
             navigateButton.Layer.BackgroundColor = UIColor.Black.ColorWithAlpha(0.7f).CGColor;
-
-            navigateButton.TouchUpInside += async (sender, args) =>
-            {
-                loading.StartAnimating();
-                nameField.ResignFirstResponder();
-                _nameList = await _apiService.getMoviesByTitle(nameField.Text);
-                MovieTitleLabel.Text = "";
-                loading.StopAnimating();
-                this.NavigationController.PushViewController(new TableController(_nameList), true);
-                this.NavigationItem.BackBarButtonItem = new UIBarButtonItem("Movie Search",
-                                                                        UIBarButtonItemStyle.Plain, null);
-            };
-            return navigateButton;
         }
-
 
         private UILabel MovieTitleLabel()
         {
@@ -127,11 +139,10 @@ namespace MovieSearch.iOS.Controllers
         {
             var i = new UIActivityIndicatorView();
             i.ActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge;
-            i.Frame = new System.Drawing.RectangleF((float)startX, (float)(startY + 5 * height), (float)(this.View.Bounds.Width - 2 * startX), (float)height);
+            i.Frame = new System.Drawing.RectangleF((float)startX, (float)(startY + 100), (float)(this.View.Bounds.Width - 2 * startX), (float)height);
             i.Color = UIColor.Gray;
             return i;
         }
 
     }
 }
-

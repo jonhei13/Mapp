@@ -36,8 +36,7 @@ namespace MovieSearch.iOS
             var MovieSearchNavigationControler = new UINavigationController(MovieSearchController);
             var MovieRatedController = new RatedController(ApiConnection, ApiService);
             var MovieRatedNavigationController = new UINavigationController(MovieRatedController);
-            MovieSearchNavigationControler.NavigationBar.TintColor = UIColor.White;
-          
+
        
             var movieTabController = new MovieTabController()
             {
