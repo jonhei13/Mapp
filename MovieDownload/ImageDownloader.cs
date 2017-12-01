@@ -37,7 +37,7 @@ namespace MovieDownload
         public async Task DownloadImage(string remoteFilePath, string localFilePath, CancellationToken token)
         {
             
-            if (token.IsCancellationRequested)
+            if (!token.IsCancellationRequested)
             {
                 var fileStream = new FileStream(
                      localFilePath,
