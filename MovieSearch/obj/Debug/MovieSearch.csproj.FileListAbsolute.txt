@@ -40,3 +40,4 @@
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.dll
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.pdb
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.csprojResolveAssemblyReference.cache
+/Users/elfaeir/Desktop/Mapp/MovieSearch/obj/Debug/MovieSearch.csprojResolveAssemblyReference.cache

@@ -77,6 +77,9 @@ namespace MovieSearch.iOS.ApiService
         private async Task<List<string>> getCredits(int? movieId)
         {
             ApiQueryResponse<MovieCredit> response = await _movieApi.GetCreditsAsync(movieId.Value);
+            if(response == null){
+                return null;
+            }
             var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
             return actors;
         }

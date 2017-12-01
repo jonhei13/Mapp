@@ -1,4 +1,4 @@
-/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/iOS/bin/iPhoneSimulator/Debug/MovieSearch.iOS.exe
+/Users/elfaeir/Desktop/Mapp/iOS/bin/iPhoneSimulator/Debug/MovieSearch.iOS.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/mscorlib.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.Net.Http.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/../../64bits/Xamarin.iOS.dll
@@ -6,12 +6,12 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Mono.Security.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.Xml.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.Core.dll
-/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/bin/Debug/MovieSearch.dll
+/Users/elfaeir/Desktop/Mapp/MovieSearch/bin/Debug/MovieSearch.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.ComponentModel.Composition.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Collections.dll
-/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/packages/TheMovieDbWrapper.0.8.2/lib/netstandard1.1/DM.MovieApi.dll
+/Users/elfaeir/Desktop/Mapp/packages/TheMovieDbWrapper.0.8.2/lib/netstandard1.1/DM.MovieApi.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Runtime.InteropServices.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Collections.Concurrent.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Reflection.dll
@@ -19,7 +19,7 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.Runtime.Serialization.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.ServiceModel.Internals.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll
-/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/packages/Newtonsoft.Json.9.0.1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll
+/Users/elfaeir/Desktop/Mapp/packages/Newtonsoft.Json.9.0.1/lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.IO.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/Facades/System.Xml.XDocument.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.3.0.47/lib/mono/Xamarin.iOS/System.Xml.Linq.dll

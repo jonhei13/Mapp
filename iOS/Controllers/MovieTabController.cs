@@ -8,12 +8,11 @@ namespace MovieSearch.iOS.Controllers
         public override void ViewDidLoad(){
             base.ViewDidLoad();
 
-            //this.TabBar.BackgroundColor = UIColor.Black;
+            //tchis.TabBar.BackgroundColor = UIColor.Black;
             //this.TabBar.BackgroundImage = UIImage.FromFile("Background");
 
-
-            this.TabBar.TintColor = UIColor.Black;
-
+  //          this.TabBar.BackgroundColor = UIColor.Clear ;
+            this.TabBar.BarTintColor = UIColor.Black;
             this.SelectedIndex = 0;
         }
 
