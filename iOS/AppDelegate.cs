@@ -30,7 +30,8 @@ namespace MovieSearch.iOS
             ImageDownloader down = new ImageDownloader(client);
             this.Window = new UIWindow(UIScreen.MainScreen.Bounds);
             MovieSettings ApiConnection = new MovieSettings();
-            MovieService ApiService = new MovieService(down);
+            DownloadImage download = new DownloadImage(down);
+            MovieService ApiService = new MovieService(download);
             var MovieSearchController = new MovieController(ApiConnection, ApiService);
             var MovieSearchNavigationControler = new UINavigationController(MovieSearchController);
             var MovieRatedController = new RatedController(ApiConnection, ApiService);

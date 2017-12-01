@@ -105,7 +105,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="TableView\" />
     <Folder Include="ApiService\" />
-    <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -123,13 +122,12 @@
     <Compile Include="Controllers\TableController.cs" />
     <Compile Include="TableView\MovieDetailCell.cs" />
     <Compile Include="Controllers\MovieDetailsController.cs" />
-    <Compile Include="ApiService\MovieService.cs" />
     <Compile Include="Controllers\MovieTabController.cs" />
     <Compile Include="Controllers\RatedController.cs" />
     <Compile Include="Controllers\TopRatedViewController.cs" />
-    <Compile Include="Entities\MovieDetails.cs" />
-    <Compile Include="ApiService\MovieSettings.cs" />
     <Compile Include="TableView\MovieDetailsRows.cs" />
+    <Compile Include="ApiService\MovieService.cs" />
+    <Compile Include="ApiService\DownloadImage.cs" />
   </ItemGroup>
   <Import Project="..\MovieDownload\MovieDownload.projitems" Label="Shared" Condition="Exists('..\MovieDownload\MovieDownload.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

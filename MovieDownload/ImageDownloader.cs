@@ -36,7 +36,8 @@ namespace MovieDownload
 
         public async Task DownloadImage(string remoteFilePath, string localFilePath, CancellationToken token)
         {
-            if (!DoesPathExist(remoteFilePath))
+            
+            if (token.IsCancellationRequested)
             {
                 var fileStream = new FileStream(
                      localFilePath,
@@ -47,8 +48,9 @@ namespace MovieDownload
                      true);
                 try
                 {
-                    await this._imageStorage.DownloadAsync(remoteFilePath, fileStream, token);
                     _paths.Add(remoteFilePath, localFilePath);
+                    await this._imageStorage.DownloadAsync(remoteFilePath, fileStream, token);
+                 
                 }
                 catch (Exception ex)
                 {
@@ -56,6 +58,7 @@ namespace MovieDownload
                     Console.WriteLine(ex.ToString());
                 }
             }
+
 
         }
 
