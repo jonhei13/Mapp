@@ -11,7 +11,7 @@ using MovieSearch.iOS;
 
 namespace MovieSearch.Droid
 {
-    [Activity(Label = "MovieSearch", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "MovieSearch", Theme = "@style/MyTheme")]
     public class MainActivity : Activity
     {
 
