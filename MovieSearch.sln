@@ -13,6 +13,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MovieDownload\MovieDownload.projitems*{8e0a00b1-d0e6-48f6-aa04-26171f002437}*SharedItemsImports = 13
+		MovieDownload\MovieDownload.projitems*{8f647c08-0c02-458d-810a-e1e25cba198d}*SharedItemsImports = 4
 		MovieDownload\MovieDownload.projitems*{ed5b451f-7533-4631-bd3c-eed1ad22fa6a}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

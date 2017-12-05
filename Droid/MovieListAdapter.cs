@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MovieSearch.iOS;
+using Com.Bumptech.Glide;
 
 namespace MovieSearch.Droid
 {
@@ -41,12 +42,10 @@ namespace MovieSearch.Droid
 
             var movie = this._movieList[position];
             view.FindViewById<TextView>(Resource.Id.name).Text = movie.Title;
-            view.FindViewById<TextView>(Resource.Id.year).Text = movie.ReleaseDate.ToString();
-            /*
-            var resourceId =
-                this._context.Resources.GetIdentifier(person.ImageName, "drawable", this._context.PackageName);
-            view.FindViewById<ImageView>(Resource.Id.picture).SetBackgroundResource(resourceId);
-            */
+            view.FindViewById<TextView>(Resource.Id.year).Text = movie.ReleaseDate.Year.ToString();
+            var imageView = view.FindViewById<ImageView>(Resource.Id.picture);
+            Glide.With(this._context).Load("http://image.tmdb.org/t/p/original/"  + movie.ImagePath).Into(imageView);
+
             return view;
 
             //fill in your items

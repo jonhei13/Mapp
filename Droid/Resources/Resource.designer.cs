@@ -1963,9 +1963,6 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0032
 			public const int forever = 2131361842;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int getMovieButton = 2131361894;
-			
 			// aapt resource value: 0x7f0a0004
 			public const int home = 2131361796;
 			
@@ -1996,8 +1993,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a000a
 			public const int line3 = 2131361802;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int listItem = 2131361897;
+			// aapt resource value: 0x7f0a0068
+			public const int listItem = 2131361896;
 			
 			// aapt resource value: 0x7f0a000e
 			public const int listMode = 2131361806;
@@ -2017,11 +2014,11 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0018
 			public const int multiply = 2131361816;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int name = 2131361898;
+			// aapt resource value: 0x7f0a0069
+			public const int name = 2131361897;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int nameListButton = 2131361896;
+			// aapt resource value: 0x7f0a0067
+			public const int nameListButton = 2131361895;
 			
 			// aapt resource value: 0x7f0a002c
 			public const int never = 2131361836;
@@ -2043,6 +2040,9 @@ namespace MovieSearch.Droid
 			
 			// aapt resource value: 0x7f0a003f
 			public const int parentPanel = 2131361855;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int picture = 2131361899;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int progress_circular = 2131361797;
@@ -2071,11 +2071,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0042
 			public const int scrollView = 2131361858;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int searchMovieText = 2131361893;
-			
-			// aapt resource value: 0x7f0a0067
-			public const int searchResult = 2131361895;
+			// aapt resource value: 0x7f0a0066
+			public const int searchMovieText = 2131361894;
 			
 			// aapt resource value: 0x7f0a005a
 			public const int search_badge = 2131361882;
@@ -2161,6 +2158,9 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0043
 			public const int textSpacerNoTitle = 2131361859;
 			
+			// aapt resource value: 0x7f0a0065
+			public const int textView1 = 2131361893;
+			
 			// aapt resource value: 0x7f0a0077
 			public const int time = 2131361911;
 			
@@ -2194,8 +2194,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a001f
 			public const int wrap_content = 2131361823;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int year = 2131361899;
+			// aapt resource value: 0x7f0a006a
+			public const int year = 2131361898;
 			
 			static Id()
 			{

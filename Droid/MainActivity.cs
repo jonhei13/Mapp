@@ -7,10 +7,12 @@ using DM.MovieApi.MovieDb.Movies;
 using DM.MovieApi;
 using DM.MovieApi.ApiResponse;
 using System.Linq;
-using MovieSearch.iOS;
 using System.Collections.Generic;
 using Android.Content;
 using Newtonsoft.Json;
+using MovieDownload;
+using MovieSearch.iOS;
+using Com.Bumptech.Glide;
 
 namespace MovieSearch.Droid
 {
@@ -24,6 +26,9 @@ namespace MovieSearch.Droid
         {
          
             MovieSettings ApiConnection = new MovieSettings();
+            var client = new StorageClient();
+            ImageDownloader _imageDownloader = new ImageDownloader(client);
+            DownloadImage _downloader = new DownloadImage(_imageDownloader);
             IApiMovieRequest _movieApi;
            _movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             _movieList = new List<MovieDetails>();
@@ -63,8 +68,7 @@ namespace MovieSearch.Droid
                         Id = mov.Id,
                         Genre = (from x in mov.Genres select x.Name).ToList(),
                         ReleaseDate = mov.ReleaseDate,
-                        ImagePath = "",
-                        Actors = null
+                        ImagePath = mov.PosterPath
                     };
                     _movieList.Add(movieDetails);
                 }
