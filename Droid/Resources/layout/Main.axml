@@ -23,4 +23,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/searchResult"
         android:hint="Search a Title" />
+    <Button
+        android:text="See Movie List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameListButton"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp" />
 </LinearLayout>

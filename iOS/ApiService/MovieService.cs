@@ -22,7 +22,7 @@ namespace MovieSearch.iOS.ApiService
             _movies = new List<MovieDetails>();
         }
 
-        public async Task<List<MovieDetails>> getMoviesByTitle(string name)
+        public async Task<List<MovieDetails>> GetMoviesByTitle(string name)
         {
             _movies.Clear();
             if (string.IsNullOrEmpty(name))
@@ -30,19 +30,19 @@ namespace MovieSearch.iOS.ApiService
                 return new List<MovieDetails>();
             }
             ApiSearchResponse<MovieInfo> response = await _movieApi.SearchByTitleAsync(name);
-            _movies = await getMovies(response.Results);
+            _movies = await GetMovies(response.Results);
             return _movies;   
         }
 
-        public async Task<List<MovieDetails>> getTopRatedMovies()
+        public async Task<List<MovieDetails>> GetTopRatedMovies()
         {
             _movies.Clear();
             ApiSearchResponse<MovieInfo> response = await _movieApi.GetTopRatedAsync();
-            _movies = await getMovies(response.Results);
+            _movies = await GetMovies(response.Results);
             return _movies;
         }
 
-        private async Task<List<MovieDetails>> getMovies(IReadOnlyList<MovieInfo> response)
+        private async Task<List<MovieDetails>> GetMovies(IReadOnlyList<MovieInfo> response)
         {
             var result = (from x in response select x).ToList();
             var Movies = new List<MovieDetails>();
@@ -66,7 +66,7 @@ namespace MovieSearch.iOS.ApiService
                     ImagePath = localPath
                 };
 
-                MovieDetails.actors = await getCredits(MovieDetails.Id);
+                MovieDetails.Actors = await getCredits(MovieDetails.Id);
                 if (MovieDetails != null)
                 {
                     _movies.Add(MovieDetails);

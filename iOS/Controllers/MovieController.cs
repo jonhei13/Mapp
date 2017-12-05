@@ -79,7 +79,7 @@ namespace MovieSearch.iOS.Controllers
         {
             loading.StartAnimating();
             nameField.ResignFirstResponder();
-            _nameList = await _apiService.getMoviesByTitle(nameField.Text);
+            _nameList = await _apiService.GetMoviesByTitle(nameField.Text);
             MovieTitleLabel.Text = "";
             loading.StopAnimating();
             this.NavigationController.PushViewController(new TableController(_nameList), true);

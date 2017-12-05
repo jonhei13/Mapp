@@ -48,6 +48,8 @@
 /Users/elfaeir/Desktop/Mapp/Droid/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/elfaeir/Desktop/Mapp/Droid/obj/Debug/R.cs.flag
 /Users/elfaeir/Desktop/Mapp/Droid/obj/Debug/uploadflags.txt
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\MovieSearch.Droid.csprojResolveAssemblyReference.cache
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\MovieSearch.Droid.csproj.CoreCompileInputs.cache
 C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\MovieSearch.Droid.dll.config
 C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\MovieSearch.Droid.dll
 C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\MovieSearch.Droid.pdb
@@ -74,11 +76,10 @@ C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\DM.MovieApi.pdb
 C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\DM.MovieApi.xml
 C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\DM.MovieApi.dll.mdb
 C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\Newtonsoft.Json.xml
-C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\MovieSearch.Droid.csprojResolveAssemblyReference.cache
-C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\MovieSearch.Droid.csproj.CoreCompileInputs.cache
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\MovieSearch.Droid.dll
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\MovieSearch.Droid.pdb
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\android\bin\com.companyname.MovieSearch.apk
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\layout\movielistitem.xml
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\layout\main.xml
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\values\strings.xml
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\drawable-hdpi\icon.png
@@ -88,5 +89,11 @@ C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\drawable-xxhdpi\icon.png
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\drawable-xxxhdpi\icon.png
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\values\styles.xml
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\drawable-mdpi\splash.png
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\res\values\colors.xml
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\R.cs.flag
 C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\uploadflags.txt
+C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\MovieSearch.dll.mdb
+C:\Users\jonsi\Desktop\Mapp\Droid\bin\Debug\MovieSearch.Droid.dll.mdb
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\android\assets\DM.MovieApi.dll.mdb
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\android\assets\MovieSearch.dll.mdb
+C:\Users\jonsi\Desktop\Mapp\Droid\obj\Debug\android\assets\MovieSearch.Droid.dll.mdb

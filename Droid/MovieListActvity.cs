@@ -10,18 +10,40 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MovieSearch.iOS;
+using Newtonsoft.Json;
 
 namespace MovieSearch.Droid
 {
-    [Activity(Label = "MovieList", Theme = "@style/MyTheme")]
-    public class MovieListActvity : Activity
+    [Activity(Label = "Movie List", Theme = "@style/MyTheme")]
+    public class MovieListActvity : ListActivity
     {
-        private List<MovieDetails> _movies;
+        private List<MovieDetails> _movieList;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
+            var jsonStr = this.Intent.GetStringExtra("movieList");
+            this._movieList = JsonConvert.DeserializeObject<List<MovieDetails>>(jsonStr);
+
+            this.ListView.ItemClick += (sender, args) =>
+            {
+                this.ShowAlert(args.Position);
+            };
+            this.ListAdapter = new MovieListAdapter(this, this._movieList);
+
+
             // Create your application here
+        }
+        private void ShowAlert(int position)
+        {
+            var person = this._movieList[position];
+            var alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.SetTitle("Person selected");
+            alertBuilder.SetMessage(_movieList[position].Title);
+            alertBuilder.SetCancelable(true);
+            alertBuilder.SetPositiveButton("OK", (e, args) => { });
+            var dialog = alertBuilder.Create();
+            dialog.Show();
         }
     }
 }

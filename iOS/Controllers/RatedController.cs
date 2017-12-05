@@ -79,7 +79,7 @@ namespace MovieSearch.iOS.Controllers
         }
         public async Task<List<MovieDetails>> getTopRatedMovies()
         {
-            var TopRatedMovies = await _apiService.getTopRatedMovies();
+            var TopRatedMovies = await _apiService.GetTopRatedMovies();
             return TopRatedMovies;
         }
         public void _onSelected(MovieDetails mov)

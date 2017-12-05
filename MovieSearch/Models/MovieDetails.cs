@@ -36,7 +36,7 @@ namespace MovieSearch.iOS
             get;
             set;
         }
-        public List<string> actors
+        public List<string> Actors
         {
             get;
             set;

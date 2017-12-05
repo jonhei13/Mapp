@@ -9,23 +9,21 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using MovieSearch.iOS;
 
 namespace MovieSearch.Droid
 {
-    class MovieListAdapter : BaseAdapter
+    class MovieListAdapter : BaseAdapter<MovieDetails>
     {
 
-        Context context;
+        private readonly Activity _context;
+        private readonly List<MovieDetails> _movieList;
 
-        public MovieListAdapter(Context context)
+
+        public MovieListAdapter(Activity context, List<MovieDetails> movies)
         {
-            this.context = context;
-        }
-
-
-        public override Java.Lang.Object GetItem(int position)
-        {
-            return position;
+            this._context = context;
+            this._movieList = movies;
         }
 
         public override long GetItemId(int position)
@@ -36,22 +34,20 @@ namespace MovieSearch.Droid
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var view = convertView;
-            MovieListAdapterViewHolder holder = null;
 
-            if (view != null)
-                holder = view.Tag as MovieListAdapterViewHolder;
 
-            if (holder == null)
-            {
-                holder = new MovieListAdapterViewHolder();
-                var inflater = context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
-                //replace with your item and your holder items
-                //comment back in
-                //view = inflater.Inflate(Resource.Layout.item, parent, false);
-                //holder.Title = view.FindViewById<TextView>(Resource.Id.text);
-                view.Tag = holder;
-            }
+            if (view == null)
+                view = this._context.LayoutInflater.Inflate(Resource.Layout.MovieListItem, null);
 
+            var movie = this._movieList[position];
+            view.FindViewById<TextView>(Resource.Id.name).Text = movie.Title;
+            view.FindViewById<TextView>(Resource.Id.year).Text = movie.ReleaseDate.ToString();
+            /*
+            var resourceId =
+                this._context.Resources.GetIdentifier(person.ImageName, "drawable", this._context.PackageName);
+            view.FindViewById<ImageView>(Resource.Id.picture).SetBackgroundResource(resourceId);
+            */
+            return view;
 
             //fill in your items
             //holder.Title.Text = "new text here";
@@ -60,19 +56,8 @@ namespace MovieSearch.Droid
         }
 
         //Fill in cound here, currently 0
-        public override int Count
-        {
-            get
-            {
-                return 0;
-            }
-        }
-
+        public override int Count => this._movieList.Count;
+        public override MovieDetails this[int position] => this._movieList[position];
     }
 
-    class MovieListAdapterViewHolder : Java.Lang.Object
-    {
-        //Your adapter views to re-use
-        //public TextView Title { get; set; }
-    }
 }

@@ -886,44 +886,44 @@ namespace MovieSearch.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f09003e
-			public const int abc_background_cache_hint_selector_material_dark = 2131296318;
-			
-			// aapt resource value: 0x7f09003f
-			public const int abc_background_cache_hint_selector_material_light = 2131296319;
-			
 			// aapt resource value: 0x7f090040
-			public const int abc_btn_colored_borderless_text_material = 2131296320;
+			public const int abc_background_cache_hint_selector_material_dark = 2131296320;
 			
 			// aapt resource value: 0x7f090041
-			public const int abc_btn_colored_text_material = 2131296321;
+			public const int abc_background_cache_hint_selector_material_light = 2131296321;
 			
 			// aapt resource value: 0x7f090042
-			public const int abc_color_highlight_material = 2131296322;
+			public const int abc_btn_colored_borderless_text_material = 2131296322;
 			
 			// aapt resource value: 0x7f090043
-			public const int abc_hint_foreground_material_dark = 2131296323;
+			public const int abc_btn_colored_text_material = 2131296323;
 			
 			// aapt resource value: 0x7f090044
-			public const int abc_hint_foreground_material_light = 2131296324;
+			public const int abc_color_highlight_material = 2131296324;
+			
+			// aapt resource value: 0x7f090045
+			public const int abc_hint_foreground_material_dark = 2131296325;
+			
+			// aapt resource value: 0x7f090046
+			public const int abc_hint_foreground_material_light = 2131296326;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_input_method_navigation_guard = 2131296256;
 			
-			// aapt resource value: 0x7f090045
-			public const int abc_primary_text_disable_only_material_dark = 2131296325;
-			
-			// aapt resource value: 0x7f090046
-			public const int abc_primary_text_disable_only_material_light = 2131296326;
-			
 			// aapt resource value: 0x7f090047
-			public const int abc_primary_text_material_dark = 2131296327;
+			public const int abc_primary_text_disable_only_material_dark = 2131296327;
 			
 			// aapt resource value: 0x7f090048
-			public const int abc_primary_text_material_light = 2131296328;
+			public const int abc_primary_text_disable_only_material_light = 2131296328;
 			
 			// aapt resource value: 0x7f090049
-			public const int abc_search_url_text = 2131296329;
+			public const int abc_primary_text_material_dark = 2131296329;
+			
+			// aapt resource value: 0x7f09004a
+			public const int abc_primary_text_material_light = 2131296330;
+			
+			// aapt resource value: 0x7f09004b
+			public const int abc_search_url_text = 2131296331;
 			
 			// aapt resource value: 0x7f090001
 			public const int abc_search_url_text_normal = 2131296257;
@@ -934,29 +934,29 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f090003
 			public const int abc_search_url_text_selected = 2131296259;
 			
-			// aapt resource value: 0x7f09004a
-			public const int abc_secondary_text_material_dark = 2131296330;
-			
-			// aapt resource value: 0x7f09004b
-			public const int abc_secondary_text_material_light = 2131296331;
-			
 			// aapt resource value: 0x7f09004c
-			public const int abc_tint_btn_checkable = 2131296332;
+			public const int abc_secondary_text_material_dark = 2131296332;
 			
 			// aapt resource value: 0x7f09004d
-			public const int abc_tint_default = 2131296333;
+			public const int abc_secondary_text_material_light = 2131296333;
 			
 			// aapt resource value: 0x7f09004e
-			public const int abc_tint_edittext = 2131296334;
+			public const int abc_tint_btn_checkable = 2131296334;
 			
 			// aapt resource value: 0x7f09004f
-			public const int abc_tint_seek_thumb = 2131296335;
+			public const int abc_tint_default = 2131296335;
 			
 			// aapt resource value: 0x7f090050
-			public const int abc_tint_spinner = 2131296336;
+			public const int abc_tint_edittext = 2131296336;
 			
 			// aapt resource value: 0x7f090051
-			public const int abc_tint_switch_track = 2131296337;
+			public const int abc_tint_seek_thumb = 2131296337;
+			
+			// aapt resource value: 0x7f090052
+			public const int abc_tint_spinner = 2131296338;
+			
+			// aapt resource value: 0x7f090053
+			public const int abc_tint_switch_track = 2131296339;
 			
 			// aapt resource value: 0x7f090004
 			public const int accent_material_dark = 2131296260;
@@ -1020,6 +1020,9 @@ namespace MovieSearch.Droid
 			
 			// aapt resource value: 0x7f090018
 			public const int foreground_material_light = 2131296280;
+			
+			// aapt resource value: 0x7f09003f
+			public const int green = 2131296319;
 			
 			// aapt resource value: 0x7f090019
 			public const int highlighted_text_material_dark = 2131296281;
@@ -1102,6 +1105,9 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f090030
 			public const int ripple_material_light = 2131296304;
 			
+			// aapt resource value: 0x7f09003e
+			public const int saddlebrown = 2131296318;
+			
 			// aapt resource value: 0x7f090031
 			public const int secondary_text_default_material_dark = 2131296305;
 			
@@ -1120,11 +1126,11 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f090036
 			public const int switch_thumb_disabled_material_light = 2131296310;
 			
-			// aapt resource value: 0x7f090052
-			public const int switch_thumb_material_dark = 2131296338;
+			// aapt resource value: 0x7f090054
+			public const int switch_thumb_material_dark = 2131296340;
 			
-			// aapt resource value: 0x7f090053
-			public const int switch_thumb_material_light = 2131296339;
+			// aapt resource value: 0x7f090055
+			public const int switch_thumb_material_light = 2131296341;
 			
 			// aapt resource value: 0x7f090037
 			public const int switch_thumb_normal_material_dark = 2131296311;
@@ -1825,8 +1831,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0028
 			public const int SYM = 2131361832;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int action0 = 2131361899;
+			// aapt resource value: 0x7f0a006f
+			public const int action0 = 2131361903;
 			
 			// aapt resource value: 0x7f0a0056
 			public const int action_bar = 2131361878;
@@ -1849,17 +1855,17 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0034
 			public const int action_bar_title = 2131361844;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int action_container = 2131361896;
+			// aapt resource value: 0x7f0a006c
+			public const int action_container = 2131361900;
 			
 			// aapt resource value: 0x7f0a0057
 			public const int action_context_bar = 2131361879;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int action_divider = 2131361903;
+			// aapt resource value: 0x7f0a0073
+			public const int action_divider = 2131361907;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int action_image = 2131361897;
+			// aapt resource value: 0x7f0a006d
+			public const int action_image = 2131361901;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_menu_divider = 2131361794;
@@ -1876,11 +1882,11 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0036
 			public const int action_mode_close_button = 2131361846;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int action_text = 2131361898;
+			// aapt resource value: 0x7f0a006e
+			public const int action_text = 2131361902;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int actions = 2131361912;
+			// aapt resource value: 0x7f0a007c
+			public const int actions = 2131361916;
 			
 			// aapt resource value: 0x7f0a0037
 			public const int activity_chooser_view_content = 2131361847;
@@ -1909,14 +1915,14 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a003d
 			public const int buttonPanel = 2131361853;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int cancel_action = 2131361900;
+			// aapt resource value: 0x7f0a0070
+			public const int cancel_action = 2131361904;
 			
 			// aapt resource value: 0x7f0a004d
 			public const int checkbox = 2131361869;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int chronometer = 2131361908;
+			// aapt resource value: 0x7f0a0078
+			public const int chronometer = 2131361912;
 			
 			// aapt resource value: 0x7f0a002a
 			public const int collapseActionView = 2131361834;
@@ -1945,8 +1951,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0021
 			public const int end = 2131361825;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int end_padder = 2131361914;
+			// aapt resource value: 0x7f0a007e
+			public const int end_padder = 2131361918;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int expand_activities_button = 2131361848;
@@ -1969,8 +1975,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a003c
 			public const int icon = 2131361852;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int icon_group = 2131361913;
+			// aapt resource value: 0x7f0a007d
+			public const int icon_group = 2131361917;
 			
 			// aapt resource value: 0x7f0a002b
 			public const int ifRoom = 2131361835;
@@ -1978,8 +1984,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0039
 			public const int image = 2131361849;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int info = 2131361909;
+			// aapt resource value: 0x7f0a0079
+			public const int info = 2131361913;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int italic = 2131361843;
@@ -1990,23 +1996,32 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a000a
 			public const int line3 = 2131361802;
 			
+			// aapt resource value: 0x7f0a0069
+			public const int listItem = 2131361897;
+			
 			// aapt resource value: 0x7f0a000e
 			public const int listMode = 2131361806;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int list_item = 2131361851;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int media_actions = 2131361902;
+			// aapt resource value: 0x7f0a0072
+			public const int media_actions = 2131361906;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int message = 2131361915;
+			// aapt resource value: 0x7f0a007f
+			public const int message = 2131361919;
 			
 			// aapt resource value: 0x7f0a0022
 			public const int middle = 2131361826;
 			
 			// aapt resource value: 0x7f0a0018
 			public const int multiply = 2131361816;
+			
+			// aapt resource value: 0x7f0a006a
+			public const int name = 2131361898;
+			
+			// aapt resource value: 0x7f0a0068
+			public const int nameListButton = 2131361896;
 			
 			// aapt resource value: 0x7f0a002c
 			public const int never = 2131361836;
@@ -2017,14 +2032,14 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a000f
 			public const int normal = 2131361807;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int notification_background = 2131361911;
+			// aapt resource value: 0x7f0a007b
+			public const int notification_background = 2131361915;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int notification_main_column = 2131361905;
+			// aapt resource value: 0x7f0a0075
+			public const int notification_main_column = 2131361909;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int notification_main_column_container = 2131361904;
+			// aapt resource value: 0x7f0a0074
+			public const int notification_main_column_container = 2131361908;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int parentPanel = 2131361855;
@@ -2038,11 +2053,11 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a004f
 			public const int radio = 2131361871;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int right_icon = 2131361910;
+			// aapt resource value: 0x7f0a007a
+			public const int right_icon = 2131361914;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int right_side = 2131361906;
+			// aapt resource value: 0x7f0a0076
+			public const int right_side = 2131361910;
 			
 			// aapt resource value: 0x7f0a0019
 			public const int screen = 2131361817;
@@ -2122,8 +2137,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a001c
 			public const int src_over = 2131361820;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int status_bar_latest_event_content = 2131361901;
+			// aapt resource value: 0x7f0a0071
+			public const int status_bar_latest_event_content = 2131361905;
 			
 			// aapt resource value: 0x7f0a0050
 			public const int submenuarrow = 2131361872;
@@ -2146,8 +2161,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0043
 			public const int textSpacerNoTitle = 2131361859;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int time = 2131361907;
+			// aapt resource value: 0x7f0a0077
+			public const int time = 2131361911;
 			
 			// aapt resource value: 0x7f0a000d
 			public const int title = 2131361805;
@@ -2178,6 +2193,9 @@ namespace MovieSearch.Droid
 			
 			// aapt resource value: 0x7f0a001f
 			public const int wrap_content = 2131361823;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int year = 2131361899;
 			
 			static Id()
 			{
@@ -2305,64 +2323,67 @@ namespace MovieSearch.Droid
 			public const int Main = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int notification_action = 2130903068;
+			public const int MovieListItem = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int notification_action_tombstone = 2130903069;
+			public const int notification_action = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int notification_media_action = 2130903070;
+			public const int notification_action_tombstone = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_media_cancel_action = 2130903071;
+			public const int notification_media_action = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_template_big_media = 2130903072;
+			public const int notification_media_cancel_action = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_big_media_custom = 2130903073;
+			public const int notification_template_big_media = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_template_big_media_narrow = 2130903074;
+			public const int notification_template_big_media_custom = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_template_big_media_narrow_custom = 2130903075;
+			public const int notification_template_big_media_narrow = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_template_custom_big = 2130903076;
+			public const int notification_template_big_media_narrow_custom = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_template_icon_group = 2130903077;
+			public const int notification_template_custom_big = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_lines_media = 2130903078;
+			public const int notification_template_icon_group = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_media = 2130903079;
+			public const int notification_template_lines_media = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_media_custom = 2130903080;
+			public const int notification_template_media = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_part_chronometer = 2130903081;
+			public const int notification_template_media_custom = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_part_time = 2130903082;
+			public const int notification_template_part_chronometer = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int select_dialog_item_material = 2130903083;
+			public const int notification_template_part_time = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int select_dialog_multichoice_material = 2130903084;
+			public const int select_dialog_item_material = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int select_dialog_singlechoice_material = 2130903085;
+			public const int select_dialog_multichoice_material = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int support_simple_spinner_dropdown_item = 2130903086;
+			public const int select_dialog_singlechoice_material = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int tooltip = 2130903087;
+			public const int support_simple_spinner_dropdown_item = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int tooltip = 2130903088;
 			
 			static Layout()
 			{

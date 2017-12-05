@@ -53,26 +53,26 @@ namespace MovieSearch.iOS.Views
 
         private void CheckActors(MovieDetails Movie)
         {
-            if (Movie.actors == null)
+            if (Movie.Actors == null)
             {
                 this._subHeadingLabel.Text = "No Actors Listed";
             }
-            else if (Movie.actors.Count < 1)
+            else if (Movie.Actors.Count < 1)
             {
                 this._subHeadingLabel.Text = "No Actors Listed";
             }
-            else if (Movie.actors.Count < 2)
+            else if (Movie.Actors.Count < 2)
             {
 
-                this._subHeadingLabel.Text = Movie.actors[0];
+                this._subHeadingLabel.Text = Movie.Actors[0];
             }
-            else if (Movie.actors.Count < 3)
+            else if (Movie.Actors.Count < 3)
             {
-                this._subHeadingLabel.Text = Movie.actors[0] + ", " + Movie.actors[1];
+                this._subHeadingLabel.Text = Movie.Actors[0] + ", " + Movie.Actors[1];
             }
             else
             {
-                this._subHeadingLabel.Text = Movie.actors[0] + ", " + Movie.actors[1] + ", " + Movie.actors[2];
+                this._subHeadingLabel.Text = Movie.Actors[0] + ", " + Movie.Actors[1] + ", " + Movie.Actors[2];
             }
         }
     }
