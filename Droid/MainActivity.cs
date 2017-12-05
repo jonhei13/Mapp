@@ -26,11 +26,8 @@ namespace MovieSearch.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-
-
-    
-        // Get our button from the layout resource,
-        // and attach an event to it
+            // Get our button from the layout resource,
+            // and attach an event to it
             var titleButton = this.FindViewById<Button>(Resource.Id.getMovieButton);
             var titleText = this.FindViewById<EditText>(Resource.Id.searchMovieText);
             var titleResult = this.FindViewById<TextView>(Resource.Id.searchResult);
@@ -44,10 +41,6 @@ namespace MovieSearch.Droid
   
       
             };
-
-         //   Button button = FindViewById<Button>(Resource.Id.myButton);
-
-         //   button.Click += delegate { button.Text = $"{count++} clicks!"; };
         }
     }
 }
