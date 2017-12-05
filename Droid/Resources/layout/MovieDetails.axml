@@ -6,29 +6,31 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:text="SomeTitle"
+        android:text="TITLE"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/movieTitle" />
-    <TextView
-        android:text="SomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:textSize="22dp"
-        android:textColor="@color/saddlebrown"
-        android:id="@+id/movieLength" />
+        android:id="@+id/movieTitle"
+        android:layout_marginTop="20dp" />
     <TextView
-        android:text="SomeText"
+        android:text="GENRE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textSize="16dp"
         android:textColor="@color/green"
-        android:id="@+id/genre" />
+        android:id="@+id/genre"
+        android:layout_marginTop="20dp" />
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/marilyn_monroe"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
     <TextView
-        android:text="SomeText"
+        android:text="DESCRIPTION"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
@@ -36,9 +38,4 @@
         android:textColor="@color/green"
         android:id="@+id/description"
         android:layout_below="@id/genre" />
-    <ImageView
-        android:id="@+id/picture"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_alignParentRight="true" />
 </LinearLayout>

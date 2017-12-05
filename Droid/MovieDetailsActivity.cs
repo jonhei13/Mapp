@@ -30,7 +30,7 @@ namespace MovieSearch.Droid
             {
                 genre += x + ",";
             }
-            this.FindViewById<TextView>(Resource.Id.movieTitle).Text = movie.Title;
+            this.FindViewById<TextView>(Resource.Id.movieTitle).Text = movie.Title + "(" + movie.ReleaseDate.Year.ToString() + ")";
             this.FindViewById<TextView>(Resource.Id.genre).Text = genre;
             this.FindViewById<TextView>(Resource.Id.description).Text = movie.Description;
             var imageView = this.FindViewById<ImageView>(Resource.Id.picture);

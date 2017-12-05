@@ -47,6 +47,7 @@ C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Debug\Newtonsoft.Json.dll
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Debug\Newtonsoft.Json.xml
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Debug\DM.MovieApi.pdb
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Debug\DM.MovieApi.xml
+C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.csprojResolveAssemblyReference.cache
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.csproj.CoreCompileInputs.cache
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.dll
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.pdb

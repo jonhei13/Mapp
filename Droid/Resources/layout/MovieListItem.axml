@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="10dp">
     <TextView
-        android:text="SomeText"
+        android:text="Marylin Monroe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -13,28 +13,27 @@
         android:textColor="@color/saddlebrown"
         android:id="@+id/name" />
     <TextView
-        android:text="SomeText"
+        android:text="Year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textSize="16dp"
         android:textColor="@color/green"
         android:id="@+id/year"
-        android:layout_below="@id/name"
-        android:layout_alignRight="@id/name" />
+        android:layout_below="@id/name" />
     <TextView
-        android:text="SomeText"
+        android:text="Actors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textSize="16dp"
         android:textColor="@color/green"
         android:id="@+id/actors"
-        android:layout_below="@id/year"
-        android:layout_alignRight="@id/year" />
+        android:layout_below="@id/year" />
     <ImageView
         android:id="@+id/picture"
         android:layout_width="65dp"
         android:layout_height="65dp"
+        android:background="@drawable/marilyn_monroe"
         android:layout_alignParentRight="true" />
 </RelativeLayout>
