@@ -8,14 +8,14 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MovieSearch.Droid</RootNamespace>
     <AssemblyName>MovieSearch.Droid</AssemblyName>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -111,6 +111,7 @@
   <ItemGroup>
     <Compile Include="DownloadImage.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MovieDetailsActivity.cs" />
     <Compile Include="MovieListActvity.cs" />
     <Compile Include="MovieListAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -124,6 +125,9 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\MovieListItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MovieDetails.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

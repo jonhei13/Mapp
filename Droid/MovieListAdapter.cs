@@ -41,8 +41,14 @@ namespace MovieSearch.Droid
                 view = this._context.LayoutInflater.Inflate(Resource.Layout.MovieListItem, null);
 
             var movie = this._movieList[position];
+            var actors = "";
+            foreach(var name in movie.Actors)
+            {
+                actors += name + ",";
+            }
             view.FindViewById<TextView>(Resource.Id.name).Text = movie.Title;
             view.FindViewById<TextView>(Resource.Id.year).Text = movie.ReleaseDate.Year.ToString();
+            view.FindViewById<TextView>(Resource.Id.actors).Text = actors;
             var imageView = view.FindViewById<ImageView>(Resource.Id.picture);
             Glide.With(this._context).Load("http://image.tmdb.org/t/p/original/"  + movie.ImagePath).Into(imageView);
 
