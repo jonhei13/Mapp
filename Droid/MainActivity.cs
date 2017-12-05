@@ -26,7 +26,7 @@ namespace MovieSearch.Droid
             MovieSettings ApiConnection = new MovieSettings();
             IApiMovieRequest _movieApi;
            _movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            var movies = new List<MovieDetails>();
+            _movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
@@ -66,6 +66,7 @@ namespace MovieSearch.Droid
                         ImagePath = "",
                         Actors = null
                     };
+                    _movieList.Add(movieDetails);
                 }
 
 

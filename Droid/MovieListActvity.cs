@@ -20,6 +20,7 @@ namespace MovieSearch.Droid
         private List<MovieDetails> _movieList;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            _movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
 
             var jsonStr = this.Intent.GetStringExtra("movieList");

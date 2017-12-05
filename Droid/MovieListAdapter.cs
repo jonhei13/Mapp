@@ -51,8 +51,6 @@ namespace MovieSearch.Droid
 
             //fill in your items
             //holder.Title.Text = "new text here";
-
-            return view;
         }
 
         //Fill in cound here, currently 0
