@@ -28,7 +28,9 @@ namespace MovieSearch.Droid
 
             this.ListView.ItemClick += (sender, args) =>
             {
-                this.ShowAlert(args.Position);
+                var intent = new Intent(this, typeof(MovieDetailsActivity));
+                intent.PutExtra("movieDetail", JsonConvert.SerializeObject(this._movieList[args.Position]));
+                this.StartActivity(intent);
             };
             this.ListAdapter = new MovieListAdapter(this, this._movieList);
 

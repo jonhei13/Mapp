@@ -18,7 +18,7 @@
         android:fontFamily="serif-monospace"
         android:textSize="22dp"
         android:textColor="@color/saddlebrown"
-        android:id="@+id/length" />
+        android:id="@+id/movieLength" />
     <TextView
         android:text="SomeText"
         android:layout_width="wrap_content"

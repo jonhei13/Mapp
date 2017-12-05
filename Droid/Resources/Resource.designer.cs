@@ -1999,9 +1999,6 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0a0033
 			public const int italic = 2131361843;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int length = 2131361899;
-			
 			// aapt resource value: 0x7f0a0009
 			public const int line1 = 2131361801;
 			
@@ -2028,6 +2025,9 @@ namespace MovieSearch.Droid
 			
 			// aapt resource value: 0x7f0a0022
 			public const int middle = 2131361826;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int movieLength = 2131361899;
 			
 			// aapt resource value: 0x7f0a006a
 			public const int movieTitle = 2131361898;
