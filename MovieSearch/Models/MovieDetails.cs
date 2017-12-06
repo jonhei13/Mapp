@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MovieSearch.iOS
+namespace MovieSearch
 {
     public class MovieDetails
     {
