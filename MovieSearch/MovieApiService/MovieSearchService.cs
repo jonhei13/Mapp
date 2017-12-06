@@ -19,6 +19,7 @@ namespace MovieSearch.MovieApiService
             _movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
             _movieList = new List<MovieDetails>();
         }
+
         public async Task<List<MovieDetails>> GetMoviesByTitle(string name)
         {
             _movieList.Clear();
@@ -27,6 +28,14 @@ namespace MovieSearch.MovieApiService
                 return new List<MovieDetails>();
             }
             ApiSearchResponse<MovieInfo> response = await _movieApi.SearchByTitleAsync(name);
+            _movieList = await GetMovies(response.Results);
+            return _movieList;
+        }
+
+        public async Task<List<MovieDetails>> GetTopRatedMovies()
+        {
+            _movieList.Clear();
+            ApiSearchResponse<MovieInfo> response = await _movieApi.GetTopRatedAsync();
             _movieList = await GetMovies(response.Results);
             return _movieList;
         }
