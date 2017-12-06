@@ -44,7 +44,13 @@ namespace MovieSearch.Droid
             var actors = "";
             foreach(var name in movie.Actors)
             {
-                actors += name + ",";
+                if (movie.Actors.IndexOf(name) == movie.Actors.Count - 1)
+                {
+                    actors += name;
+                }
+                else{
+                    actors += name + ", ";
+                }
             }
             view.FindViewById<TextView>(Resource.Id.name).Text = movie.Title;
             view.FindViewById<TextView>(Resource.Id.year).Text = movie.ReleaseDate.Year.ToString();

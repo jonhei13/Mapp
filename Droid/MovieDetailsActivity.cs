@@ -28,7 +28,14 @@ namespace MovieSearch.Droid
             var genre = "";
             foreach (var x in movie.Genre)
             {
-                genre += x + ",";
+                if (movie.Genre.IndexOf(x) == movie.Genre.Count - 1)
+                {
+                    genre += x;
+                }
+                else
+                {
+                    genre += x + ", ";
+                }
             }
             this.FindViewById<TextView>(Resource.Id.movieTitle).Text = movie.Title + "(" + movie.ReleaseDate.Year.ToString() + ")";
             this.FindViewById<TextView>(Resource.Id.genre).Text = genre;
