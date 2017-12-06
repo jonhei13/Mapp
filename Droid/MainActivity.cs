@@ -10,7 +10,6 @@ using System.Linq;
 using System.Collections.Generic;
 using Android.Content;
 using Newtonsoft.Json;
-using MovieDownload;
 using MovieSearch.iOS;
 using System.Threading.Tasks;
 
@@ -26,10 +25,6 @@ namespace MovieSearch.Droid
         {
             MovieSettings ApiConnection = new MovieSettings();
             _movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            var client = new StorageClient();
-            ImageDownloader _imageDownloader = new ImageDownloader(client);
-            DownloadImage _downloader = new DownloadImage(_imageDownloader);
-
             _movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
 

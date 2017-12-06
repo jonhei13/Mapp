@@ -34,19 +34,6 @@ namespace MovieSearch.Droid
             };
             this.ListAdapter = new MovieListAdapter(this, this._movieList);
 
-
-            // Create your application here
-        }
-        private void ShowAlert(int position)
-        {
-            var person = this._movieList[position];
-            var alertBuilder = new AlertDialog.Builder(this);
-            alertBuilder.SetTitle("Person selected");
-            alertBuilder.SetMessage(_movieList[position].Title);
-            alertBuilder.SetCancelable(true);
-            alertBuilder.SetPositiveButton("OK", (e, args) => { });
-            var dialog = alertBuilder.Create();
-            dialog.Show();
         }
     }
 }

@@ -34,6 +34,5 @@
         android:id="@+id/picture"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:background="@drawable/marilyn_monroe"
         android:layout_alignParentRight="true" />
 </RelativeLayout>

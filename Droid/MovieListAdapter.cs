@@ -54,11 +54,8 @@ namespace MovieSearch.Droid
 
             return view;
 
-            //fill in your items
-            //holder.Title.Text = "new text here";
         }
 
-        //Fill in cound here, currently 0
         public override int Count => this._movieList.Count;
         public override MovieDetails this[int position] => this._movieList[position];
     }
