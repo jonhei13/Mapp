@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:id="@+id/linearLayout1">
-    <TextView
-        android:text="TITLE"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/movieTitle"
-        android:layout_marginTop="20dp" />
-    <TextView
-        android:text="GENRE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:textSize="16dp"
-        android:textColor="@color/green"
-        android:id="@+id/genre"
-        android:layout_marginTop="20dp" />
-    <ImageView
-        android:id="@+id/picture"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideInset">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="20px"
-        android:layout_marginTop="20px" />
-    <TextView
-        android:text="DESCRIPTION"
-        android:layout_width="match_parent"
-        android:layout_height="500px"
-        android:fontFamily="sans-serif"
-        android:textSize="16dp"
-        android:textColor="@color/green"
-        android:id="@+id/description"
-        android:layout_below="@id/genre" />
-</LinearLayout>
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="TITLE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movieTitle"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:text="GENRE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textSize="16dp"
+            android:textColor="@color/green"
+            android:id="@+id/genre"
+            android:layout_marginTop="20dp" />
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px" />
+        <TextView
+            android:text="DESCRIPTION"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textSize="16dp"
+            android:textColor="@color/green"
+            android:id="@+id/description"
+            android:layout_below="@id/genre" />
+    </LinearLayout>
+</ScrollView>

@@ -1,37 +1,19 @@
-﻿<Properties StartupConfiguration="{ED5B451F-7533-4631-BD3C-EED1AD22FA6A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Controllers/MovieController.cs">
+﻿<Properties StartupConfiguration="{8F647C08-0C02-458D-810A-E1E25CBA198D}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="iOS/Controllers/MovieController.cs" Line="1" Column="1" />
-      <File FileName="iOS/Controllers/MovieTabController.cs" Line="9" Column="32" />
-      <File FileName="iOS/AppDelegate.cs" Line="40" Column="11" />
-      <File FileName="iOS/Controllers/RatedMoviesController.cs" Line="1" Column="1" />
-      <File FileName="iOS/Controllers/RatedController.cs" Line="82" Column="1" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="iOS/Controllers/MovieDetailsController.cs" Line="1" Column="1" />
-      <File FileName="iOS/ViewController.cs" Line="18" Column="13" />
-      <File FileName="iOS/Controllers/TopRatedViewController.cs" Line="20" Column="12" />
-      <File FileName="MovieDownload/ImageDownloader.cs" Line="63" Column="1" />
-      <File FileName="iOS/TableView/MovieDetailCell.cs" Line="48" Column="39" />
-      <File FileName="iOS/TableView/MovieDetailsRows.cs" Line="34" Column="29" />
-      <File FileName="MovieDownload/StorageClient.cs" Line="1" Column="1" />
-      <File FileName="MovieDownload/IImageStorage.cs" Line="9" Column="1" />
-      <File FileName="MovieSearch/Models/MovieDetails.cs" Line="16" Column="1" />
-      <File FileName="iOS/Controllers/TableController.cs" Line="1" Column="1" />
-      <File FileName="iOS/ApiService/MovieService.cs" Line="78" Column="10" />
-      <File FileName="iOS/ApiService/DownloadImage.cs" Line="18" Column="61" />
-      <File FileName="MovieSearch/MovieApiService/MovieSettings.cs" Line="1" Column="1" />
+      <File FileName="Droid/MovieDetailsActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/elfaeir/Desktop/Mapp/iOS/ApiService/DownloadImage.cs" relfile="iOS/ApiService/DownloadImage.cs" line="22" column="1" />
-      <Breakpoint file="/Users/elfaeir/Desktop/Mapp/MovieDownload/StorageClient.cs" relfile="MovieDownload/StorageClient.cs" line="29" column="1" />
-      <Breakpoint file="/Users/elfaeir/Desktop/Mapp/MovieDownload/ImageDownloader.cs" relfile="MovieDownload/ImageDownloader.cs" line="51" column="63" />
-      <Breakpoint file="/Users/elfaeir/Desktop/Mapp/MovieDownload/ImageDownloader.cs" relfile="MovieDownload/ImageDownloader.cs" line="42" column="1" />
+      <Breakpoint file="/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieDownload/StorageClient.cs" relfile="MovieDownload/StorageClient.cs" line="29" column="1" />
+      <Breakpoint file="/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieDownload/ImageDownloader.cs" relfile="MovieDownload/ImageDownloader.cs" line="51" column="63" />
+      <Breakpoint file="/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieDownload/ImageDownloader.cs" relfile="MovieDownload/ImageDownloader.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MovieSearch.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.903BCA13-BB77-460B-9DC4-439357542A23" />
+  <MonoDevelop.Ide.ItemProperties.MovieSearch.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1C926FD6-F969-4CC9-84DE-741CA21565F3" />
 </Properties>
