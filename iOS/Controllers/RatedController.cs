@@ -5,6 +5,7 @@ using DM.MovieApi.MovieDb.Movies;
 using System.Threading.Tasks;
 using MovieSearch.iOS.ApiService;
 using UIKit;
+using MovieSearch.MovieApiService;
 namespace MovieSearch.iOS.Controllers
 {
     public class RatedController : UITableViewController

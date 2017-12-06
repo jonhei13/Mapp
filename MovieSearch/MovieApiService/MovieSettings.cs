@@ -1,7 +1,7 @@
 ﻿using DM.MovieApi;
 
 
-namespace MovieSearch.iOS
+namespace MovieSearch.MovieApiService
 {
     public class MovieSettings : IMovieDbSettings
     {

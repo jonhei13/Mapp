@@ -5,6 +5,7 @@ using DM.MovieApi;
 using Foundation;
 using DM.MovieApi.MovieDb.Movies;
 using System.Collections.Generic;
+using MovieSearch.MovieApiService;
 using MovieSearch.iOS.ApiService;
 
 namespace MovieSearch.iOS.Controllers

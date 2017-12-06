@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
-using MovieSearch.iOS;
+using MovieSearch.MovieApiService;
 using Com.Bumptech.Glide;
 
 namespace MovieSearch.Droid

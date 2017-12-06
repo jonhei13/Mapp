@@ -3,7 +3,7 @@ using MovieDownload;
 using MovieSearch.iOS.ApiService;
 using MovieSearch.iOS.Controllers;
 using UIKit;
-
+using MovieSearch.MovieApiService;
 
 
 namespace MovieSearch.iOS

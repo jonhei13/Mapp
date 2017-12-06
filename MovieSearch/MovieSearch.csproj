@@ -32,6 +32,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\MovieDetails.cs" />
     <Compile Include="MovieApiService\MovieSettings.cs" />
+    <Compile Include="MovieApiService\MovieSearchService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

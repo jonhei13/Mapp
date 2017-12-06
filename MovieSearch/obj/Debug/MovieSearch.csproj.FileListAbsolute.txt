@@ -48,7 +48,7 @@ C:/Users/jonsi/Desktop/Mapp/MovieSearch/obj/Debug/MovieSearch.pdb
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/bin/Debug/DM.MovieApi.pdb
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/bin/Debug/DM.MovieApi.dll.mdb
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/bin/Debug/DM.MovieApi.xml
-/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.csprojResolveAssemblyReference.cache
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.csproj.CoreCompileInputs.cache
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.dll
 /Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.pdb
+/Users/eyrunmagnusdottir/Projects/MovieSearch/Mapp/MovieSearch/obj/Debug/MovieSearch.csprojResolveAssemblyReference.cache
