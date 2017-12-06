@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UIKit;
+using MovieSearch.Models;
 namespace MovieSearch.iOS.Controllers
 {
     public class TableController : UITableViewController

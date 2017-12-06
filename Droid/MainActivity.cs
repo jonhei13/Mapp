@@ -5,12 +5,18 @@ using Android.Views.InputMethods;
 using System.Collections.Generic;
 using Android.Content;
 using Newtonsoft.Json;
+using MovieSearch.Models;
 using MovieSearch.MovieApiService;
+using Fragment = Android.Support.V4.App.Fragment;
+using Android.Support.V4.App;
+using Android.Runtime;
+using Android.Support.V4.View;
+using Android.Support.Design.Widget;
 
 namespace MovieSearch.Droid
 {
     [Activity(Label = "MovieSearch", Theme = "@style/MyTheme")]
-    public class MainActivity : Activity
+    public class MainActivity : FragmentActivity
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
@@ -24,25 +30,29 @@ namespace MovieSearch.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            var titleText = this.FindViewById<EditText>(Resource.Id.searchMovieText);
-            var nameListButton = this.FindViewById<Button>(Resource.Id.nameListButton);
-            var progressBar = this.FindViewById<ProgressBar>(Resource.Id.MovieProgress);
-            progressBar.Visibility = Android.Views.ViewStates.Invisible;
-            nameListButton.Click += async (sender, args) =>
+            var fragments = new Fragment[]
             {
-                progressBar.Visibility = Android.Views.ViewStates.Visible;
-                var manager = (InputMethodManager)this.GetSystemService(InputMethodService);
-                manager.HideSoftInputFromWindow(titleText.WindowToken, 0);
-                _movieList = await _movieService.GetMoviesByTitle(titleText.Text);
-
-                progressBar.Visibility = Android.Views.ViewStates.Gone;
-                var intent = new Intent(this, typeof(MovieListActvity));
-                intent.PutExtra("movieList", JsonConvert.SerializeObject(_movieList));
-                this.StartActivity(intent);
+                new TitleInputFragment(),
+                new TopRatedFragment()
             };
+            var titles = CharSequence.ArrayFromStringArray(new[] { "Search", "Top Rated" });
+
+            
+            var viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
+            viewPager.Adapter = new TabsFragmentPagerAdapter(SupportFragmentManager, fragments, titles);
+            
+            var tabLayout = this.FindViewById<TabLayout>(Resource.Id.sliding_tabs);
+            tabLayout.SetupWithViewPager(viewPager);
+
+            var toolbar = this.FindViewById<Toolbar>(Resource.Id.toolbar);
+            this.SetActionBar(toolbar);
+            this.ActionBar.Title = "My Toolbar";
+
+        
         }
-    }
+
+
+    } 
 }
+
 

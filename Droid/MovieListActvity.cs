@@ -7,6 +7,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Newtonsoft.Json;
+using MovieSearch.Models;
 
 namespace MovieSearch.Droid
 {
@@ -29,7 +30,6 @@ namespace MovieSearch.Droid
                 this.StartActivity(intent);
             };
             this.ListAdapter = new MovieListAdapter(this, this._movieList);
-
         }
     }
 }

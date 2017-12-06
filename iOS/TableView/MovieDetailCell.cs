@@ -2,6 +2,7 @@
 using Foundation;
 using UIKit;
 using CoreGraphics;
+using MovieSearch.Models;
 namespace MovieSearch.iOS.Views
 {
     public class MovieDetailCell : UITableViewCell

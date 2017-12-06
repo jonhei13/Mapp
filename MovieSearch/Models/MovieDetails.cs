@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MovieSearch
+namespace MovieSearch.Models
 {
     public class MovieDetails
     {

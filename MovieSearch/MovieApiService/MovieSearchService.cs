@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DM.MovieApi;
 using DM.MovieApi.ApiResponse;
 using DM.MovieApi.MovieDb.Movies;
+using MovieSearch.Models;
 
 namespace MovieSearch.MovieApiService
 {

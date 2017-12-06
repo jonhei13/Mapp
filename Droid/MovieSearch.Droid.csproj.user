@@ -4,6 +4,6 @@
     <SelectedDevice>Samsung SM-G935F</SelectedDevice>
     <DefaultDevice>VisualStudio_android-23_arm_phone</DefaultDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <AndroidDesignerPreferredTheme>MyTheme.Splash</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>MyTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

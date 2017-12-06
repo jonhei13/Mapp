@@ -7,6 +7,7 @@ using DM.MovieApi.MovieDb.Movies;
 using System.Collections.Generic;
 using MovieSearch.MovieApiService;
 using MovieSearch.iOS.ApiService;
+using MovieSearch.Models;
 
 namespace MovieSearch.iOS.Controllers
 {

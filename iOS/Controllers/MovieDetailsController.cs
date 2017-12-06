@@ -1,6 +1,7 @@
 ﻿using System;
 using CoreGraphics;
 using UIKit;
+using MovieSearch.Models;
 
 namespace MovieSearch.iOS.Controllers
 {
