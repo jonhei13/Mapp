@@ -53,8 +53,6 @@ namespace MovieSearch.Droid
                 intent.PutExtra("movieList", JsonConvert.SerializeObject(_movieList));
                 this.StartActivity(intent);
             };
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
             return rootView;
         }

@@ -15,10 +15,12 @@ using Android.Support.Design.Widget;
 
 namespace MovieSearch.Droid
 {
-    [Activity(Label = "MovieSearch", Theme = "@style/MyTheme")]
+    [Activity(Theme = "@style/MyTheme")]
     public class MainActivity : FragmentActivity
     {
         const string TOPRATEDTAB = "Top Rated";
+        const string SEARCHBARTAB = "Search";
+        const string TABTITLE = "Search Movies";
         private List<MovieDetails> _movieList;
         public static MovieSearchService MovieService { get; set; }
 
@@ -36,7 +38,7 @@ namespace MovieSearch.Droid
                 titleInputFragment,
                 topRatedFragment
             };
-            var titles = CharSequence.ArrayFromStringArray(new[] { "Search", TOPRATEDTAB });
+            var titles = CharSequence.ArrayFromStringArray(new[] { SEARCHBARTAB, TOPRATEDTAB });
 
             
             var viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
@@ -53,9 +55,8 @@ namespace MovieSearch.Droid
                 {
                     topRatedFragment.getMovies();
                 }
-
             };
-            this.ActionBar.Title = "Search Movie";
+            this.ActionBar.Title = TABTITLE;
 
         
         }

@@ -13,7 +13,7 @@ using MovieSearch.MovieApiService;
 
 namespace MovieSearch.Droid
 {
-    [Activity(Label = "MovieSearch", Theme = "@style/MyTheme.Splash", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, Icon = "@drawable/icon")]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

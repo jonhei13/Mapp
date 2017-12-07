@@ -41,27 +41,14 @@ namespace MovieSearch.Droid
             base.OnCreate(savedInstanceState);
             _rootView = inflater.Inflate(Resource.Layout.TopRated, container, false);
             _listview = _rootView.FindViewById<ListView>(Resource.Id.list);
-
-           
-
             this._listview.ItemClick += (sender, args) =>
             {
                 var intent = new Intent(this.Activity, typeof(MovieDetailsActivity));
                 intent.PutExtra("movieDetail", JsonConvert.SerializeObject(this._movieList[args.Position]));
                 this.StartActivity(intent);
             };
-
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
             return _rootView;
-            /*
-                if (e.Item.TitleFormatted.Equals())
-                getMovies();
-                var intent = new Intent(this.Context, typeof(MovieListActvity));
-                intent.PutExtra("movieList", JsonConvert.SerializeObject(_movieList));
-                this.StartActivity(intent);
-            */
-
-
         }
         public async void getMovies()
         {

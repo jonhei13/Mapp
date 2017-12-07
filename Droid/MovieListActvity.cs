@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace MovieSearch.Droid
 {
-    [Activity(Label = "Movie List", Theme = "@style/MyTheme")]
+    [Activity(Theme = "@style/MyTheme")]
     public class MovieListActvity : ListActivity
     {
         private List<MovieDetails> _movieList;
