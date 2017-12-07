@@ -2423,6 +2423,9 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f070085
 			public const int linearLayout1 = 2131165317;
 			
+			// aapt resource value: 0x7f0700a9
+			public const int list = 2131165353;
+			
 			// aapt resource value: 0x7f07008a
 			public const int listItem = 2131165322;
 			
@@ -2665,9 +2668,6 @@ namespace MovieSearch.Droid
 			
 			// aapt resource value: 0x7f070056
 			public const int topPanel = 2131165270;
-			
-			// aapt resource value: 0x7f0700a9
-			public const int topRatedProgressBar = 2131165353;
 			
 			// aapt resource value: 0x7f070077
 			public const int touch_outside = 2131165303;

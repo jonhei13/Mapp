@@ -22,13 +22,14 @@ namespace MovieSearch.Droid
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
-
+        private ListView _listview;
         public TopRatedFragment(MovieSearchService movieService) {
             this._movieService = movieService;
         }
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            this._movieList = new List<MovieDetails>();
 
             // Create your fragment here
         }
@@ -37,21 +38,15 @@ namespace MovieSearch.Droid
         {
     
             base.OnCreate(savedInstanceState);
+            var rootView = inflater.Inflate(Resource.Layout.TopRated, container, false);
+            _listview = rootView.FindViewById<ListView>(Resource.Id.list);
 
-            this._movieList = new List<MovieDetails>();
-            this._movieService = new MovieSearchService();
-            var rootView = inflater.Inflate(Resource.Layout.Main, container, false);
-            var toolbar = rootView.FindViewById<Toolbar>(Resource.Id.toolbar);
-            toolbar.MenuItemClick += (sender, e) =>
-            {
-                Console.WriteLine(e.Item);
-                getMovies();
-                var intent = new Intent(this.Context, typeof(MovieListActvity));
-                intent.PutExtra("movieList", JsonConvert.SerializeObject(_movieList));
-                this.StartActivity(intent);
-            };
+            _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
 
 
+
+
+            return rootView;
             /*
                 if (e.Item.TitleFormatted.Equals())
                 getMovies();
@@ -60,11 +55,12 @@ namespace MovieSearch.Droid
                 this.StartActivity(intent);
             */
 
-            return rootView;
+
         }
         public async void getMovies()
         {
-            _movieList = await _movieService.GetTopRatedMovies();
+            _movieList = await _movieService.GetMoviesByTitle("fargo");
+            _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
         }
 
     }

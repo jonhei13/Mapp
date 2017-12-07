@@ -18,6 +18,7 @@ namespace MovieSearch.Droid
     [Activity(Label = "MovieSearch", Theme = "@style/MyTheme")]
     public class MainActivity : FragmentActivity
     {
+        const string TOPRATEDTAB = "Top Rated";
         private List<MovieDetails> _movieList;
         public static MovieSearchService MovieService { get; set; }
 
@@ -28,13 +29,14 @@ namespace MovieSearch.Droid
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
+            var topRatedFragment = new TopRatedFragment(MovieService);
+            var titleInputFragment = new TitleInputFragment();
             var fragments = new Fragment[]
             {
-                new TitleInputFragment(),
-                new TopRatedFragment(MovieService)
+                titleInputFragment,
+                topRatedFragment
             };
-            var titles = CharSequence.ArrayFromStringArray(new[] { "Search", "Top Rated" });
+            var titles = CharSequence.ArrayFromStringArray(new[] { "Search", TOPRATEDTAB });
 
             
             var viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
@@ -45,6 +47,14 @@ namespace MovieSearch.Droid
 
             var toolbar = this.FindViewById<Toolbar>(Resource.Id.toolbar);
             this.SetActionBar(toolbar);
+            tabLayout.TabSelected += (object sender, TabLayout.TabSelectedEventArgs e) =>
+            {
+                if (e.Tab.Text.Equals(TOPRATEDTAB))
+                {
+                    topRatedFragment.getMovies();
+                }
+
+            };
             this.ActionBar.Title = "My Toolbar";
 
         
