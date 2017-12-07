@@ -51,3 +51,4 @@ C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Debug\DM.MovieApi.xml
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.csproj.CoreCompileInputs.cache
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.dll
 C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.pdb
+C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Debug\MovieSearch.csprojResolveAssemblyReference.cache

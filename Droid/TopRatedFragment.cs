@@ -38,6 +38,16 @@ namespace MovieSearch.Droid
             this._movieService = new MovieSearchService();
             var rootView = inflater.Inflate(Resource.Layout.Main, container, false);
             var toolbar = rootView.FindViewById<Toolbar>(Resource.Id.toolbar);
+            toolbar.MenuItemClick += (sender, e) =>
+            {
+                Console.WriteLine(e.Item);
+                getMovies();
+                var intent = new Intent(this.Context, typeof(MovieListActvity));
+                intent.PutExtra("movieList", JsonConvert.SerializeObject(_movieList));
+                this.StartActivity(intent);
+            };
+
+
             /*
                 if (e.Item.TitleFormatted.Equals())
                 getMovies();
@@ -45,7 +55,7 @@ namespace MovieSearch.Droid
                 intent.PutExtra("movieList", JsonConvert.SerializeObject(_movieList));
                 this.StartActivity(intent);
             */
-        
+
             return rootView;
         }
         public async void getMovies()
