@@ -43,6 +43,7 @@ namespace MovieSearch.MovieApiService
 
         private async Task<List<MovieDetails>> GetMovies(IReadOnlyList<MovieInfo> response)
         {
+            _movieList.Clear();
             var result = (from x in response select x).ToList();
             var Movies = new List<MovieDetails>();
 

@@ -19,13 +19,12 @@ namespace MovieSearch.Droid
     public class MainActivity : FragmentActivity
     {
         private List<MovieDetails> _movieList;
-        private MovieSearchService _movieService;
+        public static MovieSearchService MovieService { get; set; }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             this._movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
-            this._movieService = new MovieSearchService();
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
@@ -33,7 +32,7 @@ namespace MovieSearch.Droid
             var fragments = new Fragment[]
             {
                 new TitleInputFragment(),
-                new TopRatedFragment()
+                new TopRatedFragment(MovieService)
             };
             var titles = CharSequence.ArrayFromStringArray(new[] { "Search", "Top Rated" });
 

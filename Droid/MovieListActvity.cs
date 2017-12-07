@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Android.Views;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Newtonsoft.Json;
 using MovieSearch.Models;
+using Android.Widget;
 
 namespace MovieSearch.Droid
 {

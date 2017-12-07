@@ -22,6 +22,10 @@ namespace MovieSearch.Droid
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
+
+        public TopRatedFragment(MovieSearchService movieService) {
+            this._movieService = movieService;
+        }
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
