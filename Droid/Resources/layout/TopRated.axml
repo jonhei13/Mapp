@@ -7,5 +7,11 @@
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
+  <ProgressBar
+      style="?android:attr/progressBarStyleLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/TopRatedProgress"
+      android:layout_marginTop="200px" />
 </RelativeLayout>

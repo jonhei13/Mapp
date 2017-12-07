@@ -15,7 +15,7 @@ using Com.Bumptech.Glide;
 
 namespace MovieSearch.Droid
 {
-    [Activity(Label = "Movie Details", Theme = "@style/MyTheme")]
+    [Activity(Theme = "@style/MyTheme")]
     public class MovieDetailsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -41,6 +41,9 @@ namespace MovieSearch.Droid
             this.FindViewById<TextView>(Resource.Id.genre).Text = genre;
             this.FindViewById<TextView>(Resource.Id.description).Text = movie.Description;
             var imageView = this.FindViewById<ImageView>(Resource.Id.picture);
+            var toolbar = this.FindViewById<Toolbar>(Resource.Id.toolbar);
+            this.SetActionBar(toolbar);
+            this.ActionBar.Title = "Movie Details";
             Glide.With(this).Load("http://image.tmdb.org/t/p/original/" + movie.ImagePath).Into(imageView);
 
         }

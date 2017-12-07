@@ -12,6 +12,9 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/linearLayout1">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
         <TextView
             android:text="TITLE"
             android:textAppearance="?android:attr/textAppearanceLarge"

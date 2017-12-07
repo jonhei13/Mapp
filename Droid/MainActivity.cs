@@ -55,7 +55,7 @@ namespace MovieSearch.Droid
                 }
 
             };
-            this.ActionBar.Title = "My Toolbar";
+            this.ActionBar.Title = "Search Movie";
 
         
         }

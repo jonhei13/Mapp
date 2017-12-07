@@ -23,6 +23,7 @@ namespace MovieSearch.Droid
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
         private ListView _listview;
+        private View _rootView;
         public TopRatedFragment(MovieSearchService movieService) {
             this._movieService = movieService;
         }
@@ -38,15 +39,20 @@ namespace MovieSearch.Droid
         {
     
             base.OnCreate(savedInstanceState);
-            var rootView = inflater.Inflate(Resource.Layout.TopRated, container, false);
-            _listview = rootView.FindViewById<ListView>(Resource.Id.list);
+            _rootView = inflater.Inflate(Resource.Layout.TopRated, container, false);
+            _listview = _rootView.FindViewById<ListView>(Resource.Id.list);
+
+           
+
+            this._listview.ItemClick += (sender, args) =>
+            {
+                var intent = new Intent(this.Activity, typeof(MovieDetailsActivity));
+                intent.PutExtra("movieDetail", JsonConvert.SerializeObject(this._movieList[args.Position]));
+                this.StartActivity(intent);
+            };
 
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
-
-
-
-
-            return rootView;
+            return _rootView;
             /*
                 if (e.Item.TitleFormatted.Equals())
                 getMovies();
@@ -59,8 +65,11 @@ namespace MovieSearch.Droid
         }
         public async void getMovies()
         {
-            _movieList = await _movieService.GetMoviesByTitle("fargo");
+            var progressBar = _rootView.FindViewById<ProgressBar>(Resource.Id.TopRatedProgress);
+            progressBar.Visibility = ViewStates.Visible;
+            _movieList = await _movieService.GetTopRatedMovies();
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
+            progressBar.Visibility = ViewStates.Gone;
         }
 
     }

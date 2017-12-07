@@ -2189,6 +2189,9 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f0700a8
 			public const int MovieProgress = 2131165352;
 			
+			// aapt resource value: 0x7f0700aa
+			public const int TopRatedProgress = 2131165354;
+			
 			// aapt resource value: 0x7f070091
 			public const int action0 = 2131165329;
 			
@@ -2438,8 +2441,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f070082
 			public const int main_content = 2131165314;
 			
-			// aapt resource value: 0x7f0700ab
-			public const int masked = 2131165355;
+			// aapt resource value: 0x7f0700ac
+			public const int masked = 2131165356;
 			
 			// aapt resource value: 0x7f070094
 			public const int media_actions = 2131165332;
@@ -2690,8 +2693,8 @@ namespace MovieSearch.Droid
 			// aapt resource value: 0x7f070084
 			public const int viewpager = 2131165316;
 			
-			// aapt resource value: 0x7f0700aa
-			public const int visible = 2131165354;
+			// aapt resource value: 0x7f0700ab
+			public const int visible = 2131165355;
 			
 			// aapt resource value: 0x7f070027
 			public const int withText = 2131165223;
