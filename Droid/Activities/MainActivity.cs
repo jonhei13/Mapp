@@ -20,19 +20,21 @@ namespace MovieSearch.Droid
         const string TOPRATEDTAB = "Top Rated";
         const string SEARCHBARTAB = "Search";
         const string TABTITLE = "Search Movies";
-        private List<MovieDetails> _movieList;
+        private List<MovieDetails> _movieListTitleInput;
+        private List<MovieDetails> _movieListTopRated;
         public static MovieSearchService MovieService { get; set; }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            this._movieList = new List<MovieDetails>();
+            this._movieListTitleInput = new List<MovieDetails>();
+            this._movieListTopRated = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
 
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            var topRatedFragment = new TopRatedFragment(MovieService);
-            var titleInputFragment = new TitleInputFragment(MovieService);
+            var topRatedFragment = new TopRatedFragment(MovieService, _movieListTopRated);
+            var titleInputFragment = new TitleInputFragment(MovieService, _movieListTitleInput);
             var fragments = new Fragment[]
             {
                 titleInputFragment,

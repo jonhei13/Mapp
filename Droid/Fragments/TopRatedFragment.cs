@@ -16,13 +16,13 @@ namespace MovieSearch.Droid
         private MovieSearchService _movieService;
         private ListView _listview;
         private View _rootView;
-        public TopRatedFragment(MovieSearchService movieService) {
+        public TopRatedFragment(MovieSearchService movieService, List<MovieDetails> movieList) {
             this._movieService = movieService;
+            this._movieList = movieList;
         }
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            this._movieList = new List<MovieDetails>();
 
             // Create your fragment here
         }
@@ -50,6 +50,7 @@ namespace MovieSearch.Droid
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
             progressBar.Visibility = ViewStates.Gone;
         }
+
 
     }
 

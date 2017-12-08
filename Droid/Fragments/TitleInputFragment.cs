@@ -16,20 +16,18 @@ namespace MovieSearch.Droid
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
 
-        public TitleInputFragment(MovieSearchService movieService)
+        public TitleInputFragment(MovieSearchService movieService, List<MovieDetails> movieList)
         {
             this._movieService = movieService;
+            this._movieList = movieList;
         }
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            this._movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
 
             var rootView = inflater.Inflate(Resource.Layout.TitleInput, container, false);
