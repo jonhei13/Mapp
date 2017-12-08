@@ -1,8 +1,0 @@
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Release\MovieSearch.dll
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Release\DM.MovieApi.dll
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Release\Newtonsoft.Json.dll
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Release\Newtonsoft.Json.xml
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Release\DM.MovieApi.pdb
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\bin\Release\DM.MovieApi.xml
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Release\MovieSearch.csproj.CoreCompileInputs.cache
-C:\Users\jonsi\Desktop\Mapp\MovieSearch\obj\Release\MovieSearch.dll
