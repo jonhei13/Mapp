@@ -7,6 +7,7 @@
     <TextView
         android:text="Enter a movie title"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/lightGray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
@@ -18,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/searchMovieText"
+        android:textColor="@color/lightGray"
         android:layout_marginRight="70px"
         android:hint="Enter A Movie Title"
         android:layout_marginTop="30px"
@@ -25,6 +27,7 @@
         android:layout_marginLeft="70px" />
     <Button
         android:text="See Movie List"
+        android:textColor="@color/solidGray"
         android:layout_width="600px"
         android:layout_height="wrap_content"
         android:id="@+id/nameListButton"
@@ -37,6 +40,7 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:color="@color/darkGray"
         android:id="@+id/MovieProgress"
         android:layout_marginTop="200px" />
 </LinearLayout>
