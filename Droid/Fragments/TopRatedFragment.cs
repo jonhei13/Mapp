@@ -16,9 +16,9 @@ namespace MovieSearch.Droid
         private MovieSearchService _movieService;
         private ListView _listview;
         private View _rootView;
-        public TopRatedFragment(MovieSearchService movieService, List<MovieDetails> movieList) {
+        public TopRatedFragment(MovieSearchService movieService) {
             this._movieService = movieService;
-            this._movieList = movieList;
+            this._movieList = new List<MovieDetails>();
         }
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -42,15 +42,20 @@ namespace MovieSearch.Droid
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
             return _rootView;
         }
-        public async void getMovies()
+        public async void LoadTopRatedMovies()
         {
+            _listview.Adapter = null;
             var progressBar = _rootView.FindViewById<ProgressBar>(Resource.Id.TopRatedProgress);
             progressBar.Visibility = ViewStates.Visible;
             _movieList = await _movieService.GetTopRatedMovies();
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
             progressBar.Visibility = ViewStates.Gone;
         }
-
+        public override void OnStop()
+        {
+            base.OnStop();
+            _movieList.Clear();
+        }
 
     }
 

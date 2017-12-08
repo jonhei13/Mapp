@@ -16,10 +16,10 @@ namespace MovieSearch.Droid
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
 
-        public TitleInputFragment(MovieSearchService movieService, List<MovieDetails> movieList)
+        public TitleInputFragment(MovieSearchService movieService)
         {
             this._movieService = movieService;
-            this._movieList = movieList;
+            this._movieList = new List<MovieDetails>(); ;
         }
         public override void OnCreate(Bundle savedInstanceState)
         {

@@ -12,18 +12,17 @@ namespace MovieSearch.MovieApiService
     public class MovieSearchService
     {
         private IApiMovieRequest _movieApi;
-        private List<MovieDetails> _movieList;
 
         public MovieSearchService()
         {
             MovieSettings ApiConnection = new MovieSettings();
             _movieApi = MovieDbFactory.Create<IApiMovieRequest>().Value;
-            _movieList = new List<MovieDetails>();
+         
         }
 
         public async Task<List<MovieDetails>> GetMoviesByTitle(string name)
         {
-            _movieList.Clear();
+            List<MovieDetails> _movieList = new List<MovieDetails>();
             if (string.IsNullOrEmpty(name))
             {
                 return new List<MovieDetails>();
@@ -35,7 +34,7 @@ namespace MovieSearch.MovieApiService
 
         public async Task<List<MovieDetails>> GetTopRatedMovies()
         {
-            _movieList.Clear();
+            List<MovieDetails> _movieList = new List<MovieDetails>();
             ApiSearchResponse<MovieInfo> response = await _movieApi.GetTopRatedAsync();
             _movieList = await GetMovies(response.Results);
             return _movieList;
@@ -43,7 +42,7 @@ namespace MovieSearch.MovieApiService
 
         private async Task<List<MovieDetails>> GetMovies(IReadOnlyList<MovieInfo> response)
         {
-            _movieList.Clear();
+            List<MovieDetails> _movieList = new List<MovieDetails>();
             var result = (from x in response select x).ToList();
             var Movies = new List<MovieDetails>();
 
