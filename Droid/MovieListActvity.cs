@@ -32,7 +32,9 @@ namespace MovieSearch.Droid
             };
             this.ListAdapter = new MovieListAdapter(this, this._movieList);
             this.ListView.SetBackgroundResource(Resource.Drawable.Background);
-  
+
+
+
         }
     }
 }
