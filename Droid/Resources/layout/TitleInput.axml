@@ -45,5 +45,5 @@
         android:layout_height="wrap_content"
         android:color="@color/darkGray"
         android:id="@+id/MovieProgress"
-        android:layout_marginTop="200px" />
+        android:layout_marginTop="100px" />
 </LinearLayout>
