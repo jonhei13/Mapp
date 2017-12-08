@@ -29,6 +29,7 @@ namespace MovieSearch.Droid
             this._movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
 
+
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             var topRatedFragment = new TopRatedFragment(MovieService);
@@ -53,6 +54,8 @@ namespace MovieSearch.Droid
             {
                 if (e.Tab.Text.Equals(TOPRATEDTAB))
                 {
+                    InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+                    imm.HideSoftInputFromWindow(toolbar.WindowToken, 0);
                     topRatedFragment.getMovies();
                 }
             };
@@ -61,7 +64,7 @@ namespace MovieSearch.Droid
         
         }
 
-
+ 
     } 
 }
 

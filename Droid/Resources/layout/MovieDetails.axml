@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="vertical"
-    android:scrollbarStyle="insideInset">
+    android:scrollbarStyle="insideInset"
+    android:background="@drawable/Background" >
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
