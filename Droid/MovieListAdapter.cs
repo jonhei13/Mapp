@@ -42,16 +42,21 @@ namespace MovieSearch.Droid
 
             var movie = this._movieList[position];
             var actors = "";
-            foreach(var name in movie.Actors)
+            if (movie.Actors != null)
             {
-                if (movie.Actors.IndexOf(name) == movie.Actors.Count - 1)
+                foreach (var name in movie.Actors)
                 {
-                    actors += name;
-                }
-                else{
-                    actors += name + ", ";
+                    if (movie.Actors.IndexOf(name) == movie.Actors.Count - 1)
+                    {
+                        actors += name;
+                    }
+                    else
+                    {
+                        actors += name + ", ";
+                    }
                 }
             }
+    
             view.FindViewById<TextView>(Resource.Id.name).Text = movie.Title;
             view.FindViewById<TextView>(Resource.Id.year).Text = movie.ReleaseDate.Year.ToString();
             view.FindViewById<TextView>(Resource.Id.actors).Text = actors;
