@@ -51,12 +51,6 @@ namespace MovieSearch.Droid
             _listview.Adapter = new MovieListAdapter(this.Activity, this._movieList);
             progressBar.Visibility = ViewStates.Gone;
         }
-        public override void OnStop()
-        {
-            base.OnStop();
-            _movieList.Clear();
-        }
-
     }
 
 }

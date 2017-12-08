@@ -6,7 +6,7 @@
   <color name="solidGray">#909090</color>
   <color name="darkGray">#606060</color>
   <color name="black">#000000</color>
-  <color name="grayBlue">#778899</color>
+  <color name="grayBlue">#696969</color>
   <color name="white">#ffffff </color>
+  <color name="titleBlack">#303030</color>
 </resources>
-
