@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using System.Collections.Generic;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
@@ -23,6 +16,10 @@ namespace MovieSearch.Droid
         private List<MovieDetails> _movieList;
         private MovieSearchService _movieService;
 
+        public TitleInputFragment(MovieSearchService movieService)
+        {
+            this._movieService = movieService;
+        }
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,7 +31,6 @@ namespace MovieSearch.Droid
         {
             this._movieList = new List<MovieDetails>();
             base.OnCreate(savedInstanceState);
-            this._movieService = new MovieSearchService();
 
             var rootView = inflater.Inflate(Resource.Layout.TitleInput, container, false);
             var titleText = rootView.FindViewById<EditText>(Resource.Id.searchMovieText);

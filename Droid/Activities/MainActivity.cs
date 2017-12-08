@@ -4,7 +4,6 @@ using Android.OS;
 using Android.Views.InputMethods;
 using System.Collections.Generic;
 using Android.Content;
-using Newtonsoft.Json;
 using MovieSearch.Models;
 using MovieSearch.MovieApiService;
 using Fragment = Android.Support.V4.App.Fragment;
@@ -33,7 +32,7 @@ namespace MovieSearch.Droid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
             var topRatedFragment = new TopRatedFragment(MovieService);
-            var titleInputFragment = new TitleInputFragment();
+            var titleInputFragment = new TitleInputFragment(MovieService);
             var fragments = new Fragment[]
             {
                 titleInputFragment,

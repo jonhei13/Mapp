@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Background" 
+    android:background="@drawable/Background"
     android:id="@+id/linearLayout1">
     <TextView
         android:text="Enter a movie title"
@@ -28,10 +28,12 @@
         android:layout_marginLeft="70px" />
     <Button
         android:text="See Movie List"
-        android:textColor="@color/solidGray"
-        android:layout_width="600px"
+        android:textColor="@color/lightGray"
+        android:background="@color/grayBlue"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/nameListButton"
+        android:textSize="20dp"
         android:textAllCaps="false"
         android:layout_marginTop="20dp"
         android:textAlignment="center"
