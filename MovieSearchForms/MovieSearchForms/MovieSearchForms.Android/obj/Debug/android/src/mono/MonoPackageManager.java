@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "MovieSearchForms.Android.dll" comes first in this list. */
 		"MovieSearchForms.Android.dll",
 		"FormsViewGroup.dll",
+		"MovieSearchForms.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",
@@ -126,7 +127,9 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
-		"MovieSearchForms.dll",
+		"MovieSearch.dll",
+		"DM.MovieApi.dll",
+		"Newtonsoft.Json.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
