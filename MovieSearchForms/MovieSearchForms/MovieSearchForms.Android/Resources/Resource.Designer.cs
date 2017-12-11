@@ -4319,9 +4319,6 @@ namespace MovieSearchForms.Droid
 			// aapt resource value: 0x7f0b018a
 			public const int MainTheme_Base = 2131427722;
 			
-			// aapt resource value: 0x7f0b018c
-			public const int MyTheme_Splash = 2131427724;
-			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;
 			
@@ -5011,6 +5008,9 @@ namespace MovieSearchForms.Droid
 			
 			// aapt resource value: 0x7f0b000a
 			public const int Widget_MediaRouter_MediaRouteButton = 2131427338;
+			
+			// aapt resource value: 0x7f0b018c
+			public const int splashscreen = 2131427724;
 			
 			static Style()
 			{
