@@ -11,7 +11,7 @@
 namespace MovieSearchForms {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\Ma" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\Ma" +
         "inPage.xaml")]
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         

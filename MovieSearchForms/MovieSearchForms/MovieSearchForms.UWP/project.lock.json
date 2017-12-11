@@ -2159,8 +2159,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
@@ -4429,8 +4435,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
@@ -6735,8 +6747,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
@@ -9014,8 +9032,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x64-aot": {
@@ -11329,8 +11353,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
@@ -13608,8 +13638,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
@@ -15923,8 +15959,14 @@
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
       },
-      "MovieSearchForms/1.0.0": {
+      "MovieSearch/1.0.0": {
         "type": "project"
+      },
+      "MovieSearchForms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MovieSearch": "1.0.0"
+        }
       }
     }
   },
@@ -22282,6 +22324,11 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "MovieSearch/1.0.0": {
+      "type": "project",
+      "path": "../../../MovieSearch_Verkefni1_Verkefni2/MovieSearch/MovieSearch.csproj",
+      "msbuildProject": "../../../MovieSearch_Verkefni1_Verkefni2/MovieSearch/MovieSearch.csproj"
+    },
     "MovieSearchForms/1.0.0": {
       "type": "project",
       "path": "../MovieSearchForms/MovieSearchForms.csproj",
@@ -22300,12 +22347,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\MovieSearchForms.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\MovieSearchForms.UWP.csproj",
       "projectName": "MovieSearchForms.UWP",
-      "projectPath": "C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\MovieSearchForms.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\project.json",
+      "projectPath": "C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\MovieSearchForms.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\project.json",
       "packagesPath": "C:\\Users\\jonsi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\obj\\",
+      "outputPath": "C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\jonsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22318,8 +22365,8 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.csproj": {
-              "projectPath": "C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.csproj"
+            "C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.csproj": {
+              "projectPath": "C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms.csproj"
             }
           }
         }

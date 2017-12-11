@@ -11,7 +11,7 @@
 namespace MovieSearchForms {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jonsi\\source\\repos\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\Ap" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jonsi\\Desktop\\Mapp\\MovieSearchForms\\MovieSearchForms\\MovieSearchForms\\Ap" +
         "p.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         

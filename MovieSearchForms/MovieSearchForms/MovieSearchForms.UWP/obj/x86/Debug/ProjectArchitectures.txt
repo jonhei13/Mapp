@@ -1,2 +1,3 @@
-C:\Users\jonsi\source\repos\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\MovieSearchForms.UWP.csproj;x86
-C:\Users\jonsi\source\repos\MovieSearchForms\MovieSearchForms\MovieSearchForms\MovieSearchForms.csproj;neutral
+C:\Users\jonsi\Desktop\Mapp\MovieSearch_Verkefni1_Verkefni2\MovieSearch\MovieSearch.csproj;neutral
+C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\MovieSearchForms.UWP.csproj;x86
+C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\MovieSearchForms.csproj;neutral
