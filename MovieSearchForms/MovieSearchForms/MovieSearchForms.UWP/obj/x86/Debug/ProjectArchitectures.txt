@@ -1,0 +1,2 @@
+C:\Users\jonsi\source\repos\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\MovieSearchForms.UWP.csproj;x86
+C:\Users\jonsi\source\repos\MovieSearchForms\MovieSearchForms\MovieSearchForms\MovieSearchForms.csproj;neutral
