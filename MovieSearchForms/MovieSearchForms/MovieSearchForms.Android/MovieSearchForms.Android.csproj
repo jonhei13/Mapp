@@ -115,6 +115,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +140,10 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\MovieSearch_Verkefni1_Verkefni2\MovieSearch\MovieSearch.csproj">
+      <Project>{8035d3ba-fd5e-4e36-86a4-b85decf9d404}</Project>
+      <Name>MovieSearch</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MovieSearchForms\MovieSearchForms.csproj">
       <Project>{156bff03-2e59-4784-97b9-d9bef2e88ed1}</Project>
       <Name>MovieSearchForms</Name>
