@@ -385,6 +385,15 @@
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\MovieSearchForms.dll">
       <PackagePath>MovieSearchForms.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\MovieSearch.dll">
+      <PackagePath>MovieSearch.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\DM.MovieApi.dll">
+      <PackagePath>DM.MovieApi.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -509,9 +518,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\bin\x86\Debug\MovieSearchForms.UWP.xr.xml">
       <PackagePath>MovieSearchForms.UWP.xr.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearch_Verkefni1_Verkefni2\MovieSearch\bin\Debug\MovieSearch.dll">
-      <PackagePath>MovieSearch.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
