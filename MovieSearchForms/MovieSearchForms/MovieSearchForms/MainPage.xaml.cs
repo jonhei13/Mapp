@@ -18,10 +18,10 @@ namespace MovieSearchForms
         }
         private async void TitleSearchButton_OnClicked(object sender, EventArgs e)
         {
-
+            this.SearchTitleProgressBar.IsRunning = true;
             var Movies =  await _service.GetMoviesByTitle(this.TitleSearch.Text);
             this.MovieLabel.Text = (from x in Movies select x.Title).FirstOrDefault();
-            
+            this.SearchTitleProgressBar.IsRunning = false;
         }
     }
 }
