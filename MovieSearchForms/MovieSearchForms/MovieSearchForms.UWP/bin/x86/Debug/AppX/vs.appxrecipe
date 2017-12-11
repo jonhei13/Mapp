@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T12:22:03.458</Modified>
+      <Modified>2017-12-11T12:41:21.146</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\bin\x86\Debug\MovieSearchForms.UWP.exe">
       <PackagePath>entrypoint\MovieSearchForms.UWP.exe</PackagePath>
-      <Modified>2017-12-11T12:22:02.977</Modified>
+      <Modified>2017-12-11T12:41:20.328</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -513,19 +513,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\MovieSearchForms.dll">
       <PackagePath>MovieSearchForms.dll</PackagePath>
-      <Modified>2017-12-11T12:22:01.193</Modified>
+      <Modified>2017-12-11T12:33:36.472</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\MovieSearch.dll">
       <PackagePath>MovieSearch.dll</PackagePath>
-      <Modified>2017-12-11T11:32:06.275</Modified>
+      <Modified>2017-12-11T12:33:36.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\DM.MovieApi.dll">
       <PackagePath>DM.MovieApi.dll</PackagePath>
-      <Modified>2017-12-04T09:54:33.263</Modified>
+      <Modified>2017-02-26T16:49:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms\bin\Debug\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2017-12-04T09:54:33.257</Modified>
+      <Modified>2017-12-11T12:33:00.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -554,27 +554,27 @@
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T11:10:02.238</Modified>
+      <Modified>2017-12-11T12:40:36.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T11:10:02.241</Modified>
+      <Modified>2017-12-11T12:40:36.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T11:10:02.243</Modified>
+      <Modified>2017-12-11T12:40:36.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T11:10:02.245</Modified>
+      <Modified>2017-12-11T12:40:36.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T11:10:02.248</Modified>
+      <Modified>2017-12-11T12:40:36.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
@@ -696,11 +696,11 @@
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-11T11:32:20.252</Modified>
+      <Modified>2017-12-11T12:41:20.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonsi\Desktop\Mapp\MovieSearchForms\MovieSearchForms\MovieSearchForms.UWP\bin\x86\Debug\Core\MovieSearchForms.UWP.exe">
       <PackagePath>MovieSearchForms.UWP.exe</PackagePath>
-      <Modified>2017-12-11T12:22:03.453</Modified>
+      <Modified>2017-12-11T12:41:21.144</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

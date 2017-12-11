@@ -9,7 +9,7 @@
             <Entry Placeholder="Enter a movie title" x:Name="TitleSearch"  ></Entry>
             <Button x:Name="TitleSearchButton" Clicked="TitleSearchButton_OnClicked" Text="Search Movie">></Button>
             <Label x:Name="MovieLabel" FontSize="Large" ></Label>
-            <ActivityIndicator Color="Blue" IsRunning="False" x:Name="SearchTitleProgressBar" VerticalOptions="Center" HorizontalOptions="Center">  </ActivityIndicator>
+            <ActivityIndicator Color="Blue" IsRunning="False" x:Name="SearchTitleProgressBar" >  </ActivityIndicator>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
