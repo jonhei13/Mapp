@@ -11,7 +11,6 @@ namespace MovieSearch.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            MainActivity.MovieService = new MovieSearchService();
             // Create your application here
             this.StartActivity(typeof(MainActivity));
             this.Finish();
