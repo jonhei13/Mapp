@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using MovieSearch.MovieApiService;
 using Xamarin.Forms;
 
 namespace MovieSearchForms

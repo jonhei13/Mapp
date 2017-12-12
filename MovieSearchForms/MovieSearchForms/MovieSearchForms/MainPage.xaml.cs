@@ -11,20 +11,17 @@ namespace MovieSearchForms
 {
     public partial class MainPage : ContentPage
     {
-        private MovieSearchService _service;
-        private List<MovieDetails> _movieList;
+        private MainPageViewModel _mainViewModel;
 
         public MainPage()
         {
             InitializeComponent();
-            _service = new MovieSearchService();
+            this._mainViewModel = new MainPageViewModel(this.Navigation);
         }
-        private async void TitleSearchButton_OnClicked(object sender, EventArgs e)
+        private void TitleSearchButton_OnClicked(object sender, EventArgs e)
         {
             this.SearchTitleProgressBar.IsRunning = true;
-            this._movieList =  await _service.GetMoviesByTitle(this.TitleSearch.Text);
-
-            await this.Navigation.PushAsync(new MovieListPage(this._movieList));
+            this._mainViewModel.FetchMoviesByTitle(this.TitleSearch.Text);
             this.SearchTitleProgressBar.IsRunning = false;
         }
     }

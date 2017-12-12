@@ -56,7 +56,7 @@ namespace MovieSearch.MovieApiService
                     Genre = (from x in info.Genres select x.Name).ToList(),
                     ReleaseDate = info.ReleaseDate.Year,
                     Description = info.Overview,
-                    ImagePath = info.PosterPath
+                    ImagePath = "http://image.tmdb.org/t/p/original/" + info.PosterPath
                 };
 
                 MovieDetails.Actors = await getCredits(MovieDetails.Id);

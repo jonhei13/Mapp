@@ -9,6 +9,29 @@
                 HorizontalOptions="Start"
                 FontSize="Large"
                 FontAttributes="Bold"/>
+             <Label Text="{Binding Genre}"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                FontSize="Large"
+                FontAttributes="Bold"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding ImagePath}"
+                        WidthRequest="90"
+                        HeightRequest="90"/>
+                <ScrollView Grid.Row="0"
+                            Grid.Column="1"
+                            Grid.RowSpan="1">
+                    <Label Text="{Binding Description}"
+                        FontSize="Small"/>
+                </ScrollView>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
