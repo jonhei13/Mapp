@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using MovieSearch.MovieApiService;
+using MovieSearch.Models;
 
 namespace MovieSearchForms
 {
     public partial class MainPage : ContentPage
     {
         private MovieSearchService _service;
+        private List<MovieDetails> _movieList;
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,8 +22,9 @@ namespace MovieSearchForms
         private async void TitleSearchButton_OnClicked(object sender, EventArgs e)
         {
             this.SearchTitleProgressBar.IsRunning = true;
-            var Movies =  await _service.GetMoviesByTitle(this.TitleSearch.Text);
-            this.MovieLabel.Text = (from x in Movies select x.Title).FirstOrDefault();
+            this._movieList =  await _service.GetMoviesByTitle(this.TitleSearch.Text);
+
+            await this.Navigation.PushAsync(new MovieListPage(this._movieList));
             this.SearchTitleProgressBar.IsRunning = false;
         }
     }

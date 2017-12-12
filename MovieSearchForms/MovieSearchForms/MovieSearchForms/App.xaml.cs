@@ -13,7 +13,8 @@ namespace MovieSearchForms
         {
             InitializeComponent();
 
-            MainPage = new MovieSearchForms.MainPage();
+            //MainPage = new MovieSearchForms.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
