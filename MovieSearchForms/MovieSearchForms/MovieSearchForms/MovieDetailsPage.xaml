@@ -4,33 +4,31 @@
     x:Class="MovieSearchForms.MovieDetailsPage">
 <ContentPage.Content>
         <StackLayout>
+            <Label Text="{Binding RunTime}"
+                FontSize="Small"
+                FontAttributes="Bold"/>
             <Label Text="{Binding Title}"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                FontSize="Large"
+                FontSize="Small"
                 FontAttributes="Bold"/>
-             <Label Text="{Binding Genre}"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"
-                FontSize="Large"
-                FontAttributes="Bold"/>
+            <ListView ItemsSource="{Binding Genre}"/>
+            <Label Text="{Binding BackDropText}"
+                        FontSize="Small"/>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="500"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="500"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="{Binding ImagePath}"
                         WidthRequest="90"
                         HeightRequest="90"/>
-                <ScrollView Grid.Row="0"
-                            Grid.Column="1"
-                            Grid.RowSpan="1">
-                    <Label Text="{Binding Description}"
+                <Label Text="{Binding Description}"
                         FontSize="Small"/>
-                </ScrollView>
+                <Image Source="{Binding ImagePoster}"
+                        WidthRequest="90"
+                        HeightRequest="90"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

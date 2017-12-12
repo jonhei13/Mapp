@@ -46,6 +46,9 @@ namespace MovieSearch.Models
             get;
             set;
         }
+        public string RunTime { get; set; }
+        public string ImagePoster { get; set; }
+        public string BackDropText { get; set; }
 
         //public int Runtime { get; set; }
     }

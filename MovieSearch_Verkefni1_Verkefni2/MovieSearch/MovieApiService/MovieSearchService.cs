@@ -39,7 +39,6 @@ namespace MovieSearch.MovieApiService
             _movieList = await GetMovies(response.Results);
             return _movieList;
         }
-
         private async Task<List<MovieDetails>> GetMovies(IReadOnlyList<MovieInfo> response)
         {
             List<MovieDetails> _movieList = new List<MovieDetails>();
@@ -48,11 +47,14 @@ namespace MovieSearch.MovieApiService
 
             foreach (MovieInfo info in result)
             {
-
+                ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(info.Id);
                 var MovieDetails = new MovieDetails()
                 {
                     Title = info.Title,
                     Id = info.Id,
+                    RunTime = movieDetailedResponse.Item.Runtime + " Min",
+                    BackDropText = movieDetailedResponse.Item.Tagline,
+                    ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath,
                     Genre = (from x in info.Genres select x.Name).ToList(),
                     ReleaseDate = info.ReleaseDate.Year,
                     Description = info.Overview,
