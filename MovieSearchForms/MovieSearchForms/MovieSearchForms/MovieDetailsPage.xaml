@@ -5,8 +5,10 @@
 <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Title}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                FontSize="Large"
+                FontAttributes="Bold"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

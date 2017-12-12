@@ -54,7 +54,7 @@ namespace MovieSearch.MovieApiService
                     Title = info.Title,
                     Id = info.Id,
                     Genre = (from x in info.Genres select x.Name).ToList(),
-                    ReleaseDate = info.ReleaseDate,
+                    ReleaseDate = info.ReleaseDate.Year,
                     Description = info.Overview,
                     ImagePath = info.PosterPath
                 };

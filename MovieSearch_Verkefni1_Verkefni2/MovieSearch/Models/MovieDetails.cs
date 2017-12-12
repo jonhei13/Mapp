@@ -20,7 +20,7 @@ namespace MovieSearch.Models
             set;
         }
 
-        public DateTime ReleaseDate
+        public int ReleaseDate
         {
             get;
             set;
