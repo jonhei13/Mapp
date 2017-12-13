@@ -20,12 +20,6 @@ namespace MovieSearch.Models
             set;
         }
 
-        public int ReleaseDate
-        {
-            get;
-            set;
-        }
-
         public string Description
         {
             get;

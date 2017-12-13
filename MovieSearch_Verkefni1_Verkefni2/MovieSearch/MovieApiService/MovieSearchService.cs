@@ -39,6 +39,16 @@ namespace MovieSearch.MovieApiService
             _movieList = await GetMovies(response.Results);
             return _movieList;
         }
+        public async Task<MovieDetails> GetDetailedMovie(MovieDetails movie)
+        {
+            ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(movie.Id);
+            movie.ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath;
+            movie.Description = movieDetailedResponse.Item.Overview;
+            movie.Genre = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
+            movie.RunTime = movieDetailedResponse.Item.Runtime + "Min";
+            return movie;
+
+        }
         private async Task<List<MovieDetails>> GetMovies(IReadOnlyList<MovieInfo> response)
         {
             List<MovieDetails> _movieList = new List<MovieDetails>();
@@ -47,17 +57,11 @@ namespace MovieSearch.MovieApiService
 
             foreach (MovieInfo info in result)
             {
-                ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(info.Id);
                 var MovieDetails = new MovieDetails()
                 {
-                    Title = info.Title,
+                    Title = info.Title + " (" + info.ReleaseDate.Year + ")",
                     Id = info.Id,
-                    RunTime = movieDetailedResponse.Item.Runtime + " Min",
-                    BackDropText = movieDetailedResponse.Item.Tagline,
-                    ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath,
                     Genre = (from x in info.Genres select x.Name).ToList(),
-                    ReleaseDate = info.ReleaseDate.Year,
-                    Description = info.Overview,
                     ImagePath = "http://image.tmdb.org/t/p/original/" + info.PosterPath
                 };
 
