@@ -1,5 +1,5 @@
 ﻿using System;
-
+using MovieSearchForms.Pages;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
