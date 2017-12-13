@@ -5,7 +5,7 @@ using System.Text;
 using MovieSearch.MovieApiService;
 using Xamarin.Forms;
 
-namespace MovieSearchForms
+namespace MovieSearchForms.Pages
 {
     public partial class App : Application
     {

@@ -4,8 +4,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using MovieSearch.Models;
 using Xamarin.Forms;
+using MovieSearchForms.Pages;
 
-namespace MovieSearchForms
+namespace MovieSearchForms.ViewModels
 {
     public class MovieListViewModel : INotifyPropertyChanged
     {

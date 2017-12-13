@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using MovieSearch.MovieApiService;
 using MovieSearch.Models;
+using MovieSearchForms.ViewModels;
 
-namespace MovieSearchForms
+namespace MovieSearchForms.Pages
 {
     public partial class MainPage : ContentPage
     {
