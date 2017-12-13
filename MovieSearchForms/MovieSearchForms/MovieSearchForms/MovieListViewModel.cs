@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using MovieSearch.Models;
 using Xamarin.Forms;
+using MovieSearch.MovieApiService;
 
 namespace MovieSearchForms
 {
@@ -12,10 +13,12 @@ namespace MovieSearchForms
         private INavigation _navigation;
         private List<MovieDetails> _movieList;
         private MovieDetails _selectedMovie;
+        private MovieSearchService _service;
 
 
         public MovieListViewModel(INavigation navigation, List<MovieDetails> movieList)
         {
+            this._service = new MovieSearchService();
             this._navigation = navigation;
             this._movieList = movieList;
         }
@@ -39,12 +42,18 @@ namespace MovieSearchForms
             {
                 if (value != null)
                 {
-                    this._selectedMovie = value;
-                    this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+                    var movie = value;
+                    getDetailedMovie(movie);
+                
                 }
             }
         }
 
+        private async void getDetailedMovie(MovieDetails movie)
+        {
+            this._selectedMovie = await this._service.GetDetailedMovie(movie);
+            this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
 
