@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MovieSearch.MovieApiService;
+using MovieSearchForms.ViewModels;
 using Xamarin.Forms;
 
 namespace MovieSearchForms.Pages
@@ -12,7 +13,7 @@ namespace MovieSearchForms.Pages
         public App()
         {
             InitializeComponent();
-            //MainPage = new NavigationPage(new MainPage());
+
             var MovieSearchPage = new MainPage();
             var MovieSearchNavigationPage = new NavigationPage(MovieSearchPage);
             MovieSearchNavigationPage.Title = "Movie Search";
@@ -21,13 +22,14 @@ namespace MovieSearchForms.Pages
             var TopRatedNavigationPage = new NavigationPage(TopRatedPage);
             TopRatedNavigationPage.Title = "Top Rated";
 
-            /*var PopularPage = new PopularPage();
+            var PopularPage = new PopularPage();
             var PopularNavigationPage = new NavigationPage(PopularPage);
-            PopularNavigationPage.Title = "Popular";*/
+            PopularNavigationPage.Title = "Popular";
 
             var tabbedPage = new TabbedPage();
             tabbedPage.Children.Add(MovieSearchNavigationPage);
             tabbedPage.Children.Add(TopRatedNavigationPage);
+            tabbedPage.Children.Add(PopularNavigationPage);
 
             MainPage = tabbedPage;
         }
@@ -35,6 +37,7 @@ namespace MovieSearchForms.Pages
         protected override void OnStart()
         {
             // Handle when your app starts
+
         }
 
         protected override void OnSleep()

@@ -39,6 +39,16 @@ namespace MovieSearch.MovieApiService
             _movieList = await GetMovies(response.Results);
             return _movieList;
         }
+
+        public async Task<List<MovieDetails>> GetPopularMovies()
+        {
+            List<MovieDetails> _movieList = new List<MovieDetails>();
+            ApiSearchResponse<MovieInfo> response = await _movieApi.GetPopularAsync();
+            _movieList = await GetMovies(response.Results);
+            return _movieList;
+        }
+
+
         public async Task<MovieDetails> GetDetailedMovie(MovieDetails movie)
         {
             ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(movie.Id);

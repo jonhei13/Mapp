@@ -7,25 +7,24 @@ using Xamarin.Forms;
 
 namespace MovieSearchForms.ViewModels
 {
-    public class TopRatedPageViewModel
+    public class PopularPageViewModel
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
         private INavigation _navigation;
 
-        public TopRatedPageViewModel(INavigation navigation)
+        public PopularPageViewModel(INavigation navigation)
         {
             _service = new MovieSearchService();
-            _movieList = new List<MovieDetails>();
             this._navigation = navigation;
-            FetchTopRatedMovies();
+            _movieList = new List<MovieDetails>();
+            FetchPopularMovies();
         }
 
-        public async void FetchTopRatedMovies()
+        public async void FetchPopularMovies()
         {
-            this._movieList = await _service.GetTopRatedMovies();
+            this._movieList = await _service.GetPopularMovies();
             await this._navigation.PushAsync(new MovieListPage(this._movieList));
         }
     }
 }
-
