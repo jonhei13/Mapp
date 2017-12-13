@@ -30,7 +30,7 @@ namespace MovieSearch.Models
             get;
             set;
         }
-        public List<string> Actors
+        public string Actors
         {
             get;
             set;
