@@ -14,5 +14,6 @@ namespace MovieSearchForms.Pages
             InitializeComponent();
             this._viewModel = new PopularPageViewModel(this.Navigation);
         }
+
     }
 }
