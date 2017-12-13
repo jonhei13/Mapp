@@ -10,15 +10,17 @@ namespace MovieSearchForms.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MovieListPage : ContentPage
     {
+        MovieListViewModel _model { get; set; }
         public MovieListPage(List<MovieDetails> movieList)
         {
-            this.BindingContext = new MovieListViewModel(this.Navigation, movieList);
-
+            this._model = new MovieListViewModel(this.Navigation, movieList);
+            this.BindingContext = _model;
             InitializeComponent();
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            this._model.LoadActors();
             this.ListView.SelectedItem = null;
         }
     }

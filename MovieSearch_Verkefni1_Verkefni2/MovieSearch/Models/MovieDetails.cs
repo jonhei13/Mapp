@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MovieSearch.Models
 {
-    public class MovieDetails
+    public class MovieDetails : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        private string _actors;
         public int Id
         {
             get;
@@ -12,7 +16,7 @@ namespace MovieSearch.Models
         }
         public MovieDetails()
         {
-
+            _actors = "";
         }
         public string Title
         {
@@ -32,8 +36,16 @@ namespace MovieSearch.Models
         }
         public string Actors
         {
-            get;
-            set;
+            get { return this._actors;  }
+            set
+            {
+                if (value != null)
+                {
+                    this._actors = value;
+                    OnPropertyChanged();
+                }
+     
+            }
         }
         public string ImagePath
         {
@@ -43,7 +55,9 @@ namespace MovieSearch.Models
         public string RunTime { get; set; }
         public string ImagePoster { get; set; }
         public string BackDropText { get; set; }
-
-        //public int Runtime { get; set; }
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

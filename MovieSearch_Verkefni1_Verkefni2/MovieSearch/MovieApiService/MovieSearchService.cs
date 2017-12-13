@@ -64,39 +64,42 @@ namespace MovieSearch.MovieApiService
                     Genre = (from x in info.Genres select x.Name).ToList(),
                     ImagePath = "http://image.tmdb.org/t/p/original/" + info.PosterPath
                 };
-
-                MovieDetails.Actors = await getCredits(MovieDetails.Id);
-                if (MovieDetails != null)
-                {
-                    _movieList.Add(MovieDetails);
-                }
+                _movieList.Add(MovieDetails);
             }
             return _movieList;
         }
-        private async Task<string> getCredits(int movieId)
+        public async Task<List<MovieDetails>> getActors(List<MovieDetails> movies)
         {
-            ApiQueryResponse<MovieCredit> response = await _movieApi.GetCreditsAsync(movieId);
-            try
+            foreach (MovieDetails mov in movies)
             {
-                var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
-                string a = "";
-                foreach(var x in actors){
-                    if (actors.IndexOf(x) == actors.Count - 1)
+                ApiQueryResponse<MovieCredit> response = await _movieApi.GetCreditsAsync(mov.Id);
+                try
+                {
+                    var actors = (from x in response.Item.CastMembers select x.Name).Take(3).ToList();
+                    string a = "";
+                    foreach (var x in actors)
                     {
-                        a += x;
+                        if (actors.IndexOf(x) == actors.Count - 1)
+                        {
+                            a += x;
+                        }
+                        else
+                        {
+                            a += x + ", ";
+                        }
                     }
-                    else
-                    {
-                        a += x + ", ";
-                    }
+                    mov.Actors = a;
+
                 }
-                return a;
+                catch (NullReferenceException e)
+                {
+                    //WriteLine(e);
+                    mov.Actors = "";
+                }
+
             }
-            catch (NullReferenceException e)
-            {
-                //WriteLine(e);
-                return null;
-            }
+            return movies;
+ 
 
         }
     }
