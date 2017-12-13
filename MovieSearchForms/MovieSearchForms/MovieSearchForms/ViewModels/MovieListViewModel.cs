@@ -53,7 +53,7 @@ namespace MovieSearchForms.ViewModels
         private async void getDetailedMovie(MovieDetails movie)
         {
             this._selectedMovie = await this._service.GetDetailedMovie(movie);
-            this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
