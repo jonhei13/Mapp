@@ -58,6 +58,9 @@
       <DependentUpon>PopularPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\PopularPageViewModel.cs" />
+    <Compile Include="MovieListView.xaml.cs">
+      <DependentUpon>MovieListView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\App.xaml">
@@ -81,6 +84,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\PopularPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

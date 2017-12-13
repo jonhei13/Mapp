@@ -21,6 +21,10 @@ namespace MovieSearchForms.ViewModels
             FetchTopRatedMovies();
         }
 
+        public List<MovieDetails> getTopRatedList(){
+            return this._movieList;
+        }
+
         public async void FetchTopRatedMovies()
         {
             this._movieList = await _service.GetTopRatedMovies();

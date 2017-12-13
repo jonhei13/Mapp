@@ -6,6 +6,8 @@ using MovieSearch.Models;
 using Xamarin.Forms;
 using MovieSearchForms.Pages;
 using MovieSearch.MovieApiService;
+using System.Windows.Input;
+using System.Threading.Tasks;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -16,6 +18,7 @@ namespace MovieSearchForms.ViewModels
         private MovieDetails _selectedMovie;
         private MovieSearchService _service;
         public event PropertyChangedEventHandler PropertyChanged;
+        //private bool _isRefreshing = false;
 
         public MovieListViewModel(INavigation navigation, List<MovieDetails> movieList)
         {
@@ -55,17 +58,46 @@ namespace MovieSearchForms.ViewModels
             await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
 
-
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         public async void LoadActors()
         {
             var movies = await this._service.getActors(this._movieList);
-            
 
         }
+
+                /*
+         * public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+         * 
+         * public ICommand RefreshCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    IsRefreshing = true;
+
+                    await RefreshData();
+
+                    IsRefreshing = false;
+                });
+            }
+        }
+
+        public async Task RefreshData()
+        {
+        }
+        */
     }
 }
