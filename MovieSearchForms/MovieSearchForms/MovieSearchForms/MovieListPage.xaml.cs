@@ -12,7 +12,13 @@ namespace MovieSearchForms
         public MovieListPage(List<MovieDetails> movieList)
         {
             this.BindingContext = new MovieListViewModel(this.Navigation, movieList);
+
             InitializeComponent();
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            this.ListView.SelectedItem = null;
         }
     }
 }

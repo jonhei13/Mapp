@@ -43,8 +43,7 @@ namespace MovieSearchForms
                 if (value != null)
                 {
                     var movie = value;
-                    getDetailedMovie(movie);
-                
+                    getDetailedMovie(movie);      
                 }
             }
         }
@@ -60,6 +59,10 @@ namespace MovieSearchForms
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        public void clearItemSelected()
+        {
+            this._selectedMovie = null;
         }
     }
 }
