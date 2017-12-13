@@ -15,7 +15,7 @@ namespace MovieSearchForms.ViewModels
         private List<MovieDetails> _movieList;
         private MovieDetails _selectedMovie;
         private MovieSearchService _service;
-
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public MovieListViewModel(INavigation navigation, List<MovieDetails> movieList)
         {
@@ -31,7 +31,7 @@ namespace MovieSearchForms.ViewModels
             set
             {
                 this._movieList = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Movies");
             }
         }
 
@@ -44,7 +44,7 @@ namespace MovieSearchForms.ViewModels
                 if (value != null)
                 {
                     var movie = value;
-                    getDetailedMovie(movie);      
+                    getDetailedMovie(movie);
                 }
             }
         }
@@ -54,16 +54,18 @@ namespace MovieSearchForms.ViewModels
             this._selectedMovie = await this._service.GetDetailedMovie(movie);
             await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
-        public event PropertyChangedEventHandler PropertyChanged;
+
 
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public void clearItemSelected()
+        public async void LoadActors()
         {
-            this._selectedMovie = null;
+            var movies = await this._service.getActors(this._movieList);
+            
+
         }
     }
 }
