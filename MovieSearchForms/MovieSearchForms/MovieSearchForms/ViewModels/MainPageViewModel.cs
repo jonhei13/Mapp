@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using MovieSearch.Models;
 using MovieSearch.MovieApiService;
 using Xamarin.Forms;
+using MovieSearchForms.Pages;
 
-namespace MovieSearchForms
+namespace MovieSearchForms.ViewModels
 {
     public class MainPageViewModel
     {

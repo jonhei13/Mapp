@@ -3,7 +3,7 @@ using MovieSearch.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MovieSearchForms
+namespace MovieSearchForms.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MovieDetailsPage : ContentPage
