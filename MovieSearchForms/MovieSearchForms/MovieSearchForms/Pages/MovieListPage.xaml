@@ -19,22 +19,22 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="0"
-                                   Grid.Column="0"
+                                   Grid.Column="1"
                                    Text="{Binding Title}"
                                    FontSize="Medium"
                                    TextColor="Black"
                                    FontAttributes="Bold"/>
                             <Label Grid.Row="1"
-                                   Grid.Column="0"
-                                   Text="{Binding ReleaseDate}"
+                                   Grid.Column="1"
+                                   Text="{Binding Actors}"
                                    TextColor="Gray"
                                    FontSize="Small"/>
                             <Image Grid.Row="0"
-                                   Grid.Column="1"
+                                   Grid.Column="0"
                                    Grid.RowSpan="2"
                                    Source="{Binding ImagePath}"/>
                         </Grid>
