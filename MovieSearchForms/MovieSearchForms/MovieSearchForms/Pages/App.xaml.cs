@@ -12,9 +12,24 @@ namespace MovieSearchForms.Pages
         public App()
         {
             InitializeComponent();
+            //MainPage = new NavigationPage(new MainPage());
+            var MovieSearchPage = new MainPage();
+            var MovieSearchNavigationPage = new NavigationPage(MovieSearchPage);
+            MovieSearchNavigationPage.Title = "Movie Search";
 
-            //MainPage = new MovieSearchForms.MainPage();
-            MainPage = new NavigationPage(new MainPage());
+            var TopRatedPage = new TopRatedPage();
+            var TopRatedNavigationPage = new NavigationPage(TopRatedPage);
+            TopRatedNavigationPage.Title = "Top Rated";
+
+            /*var PopularPage = new PopularPage();
+            var PopularNavigationPage = new NavigationPage(PopularPage);
+            PopularNavigationPage.Title = "Popular";*/
+
+            var tabbedPage = new TabbedPage();
+            tabbedPage.Children.Add(MovieSearchNavigationPage);
+            tabbedPage.Children.Add(TopRatedNavigationPage);
+
+            MainPage = tabbedPage;
         }
 
         protected override void OnStart()
