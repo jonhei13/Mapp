@@ -54,7 +54,21 @@ namespace MovieSearch.MovieApiService
             ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(movie.Id);
             movie.ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath;
             movie.Description = movieDetailedResponse.Item.Overview;
-            movie.Genre = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
+            //movie.Genre = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
+            var genres = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
+            string g = "";
+            foreach (var x in genres)
+            {
+                if (genres.IndexOf(x) == genres.Count - 1)
+                {
+                    g += x;
+                }
+                else
+                {
+                    g += x + ", ";
+                }
+            }
+            movie.Genre = g;
             movie.RunTime = movieDetailedResponse.Item.Runtime + "Min";
             return movie;
 
@@ -71,9 +85,23 @@ namespace MovieSearch.MovieApiService
                 {
                     Title = info.Title + " (" + info.ReleaseDate.Year + ")",
                     Id = info.Id,
-                    Genre = (from x in info.Genres select x.Name).ToList(),
+                    //Genre = (from x in info.Genres select x.Name).ToList(),
                     ImagePath = "http://image.tmdb.org/t/p/original/" + info.PosterPath
                 };
+                var genres = (from x in info.Genres select x.Name).ToList();
+                string g = "";
+                foreach (var x in genres)
+                {
+                    if (genres.IndexOf(x) == genres.Count - 1)
+                    {
+                       g += x;
+                    }
+                    else
+                    {
+                        g += x + ", ";
+                    }
+                }
+                MovieDetails.Genre = g;
                 _movieList.Add(MovieDetails);
             }
             return _movieList;

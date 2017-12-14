@@ -29,7 +29,7 @@ namespace MovieSearch.Models
             get;
             set;
         }
-        public List<string> Genre
+        public string Genre
         {
             get;
             set;
