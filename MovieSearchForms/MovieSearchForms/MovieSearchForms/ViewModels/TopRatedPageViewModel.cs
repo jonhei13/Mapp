@@ -65,6 +65,7 @@ namespace MovieSearchForms.ViewModels
                 OnPropertyChanged(nameof(IsRefreshing));
             }
         }
+
         public ICommand RefreshCommand
         {
             get
@@ -78,7 +79,8 @@ namespace MovieSearchForms.ViewModels
             }
         }
 
-        public async Task RefreshData(){
+        public async Task RefreshData()
+        {
             this.FetchTopRatedMovies();
         }
 
@@ -92,15 +94,14 @@ namespace MovieSearchForms.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public List<MovieDetails> getTopRatedList(){
+        public List<MovieDetails> getTopRatedList()
+        {
             return this._movieList;
         }
 
         public async void FetchTopRatedMovies()
         {
             this.Movies = await _service.GetTopRatedMovies();
- 
-     
         }
     }
 }

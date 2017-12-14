@@ -27,7 +27,7 @@ namespace MovieSearchForms.Pages
             var PopularNavigationPage = new NavigationPage(PopularPage);
             PopularNavigationPage.Title = "Popular";
 
-            var tabbedPage = new TabbedPage();
+            var tabbedPage = new TabPage();
             tabbedPage.Children.Add(MovieSearchNavigationPage);
             tabbedPage.Children.Add(TopRatedNavigationPage);
             tabbedPage.Children.Add(PopularNavigationPage);

@@ -20,8 +20,6 @@ namespace MovieSearchForms.ViewModels
         private ICommand _searchCommand;
         public event PropertyChangedEventHandler PropertyChanged;
 
-
-
         public MainPageViewModel(INavigation navigation)
         {
             _service = new MovieSearchService();
@@ -30,8 +28,8 @@ namespace MovieSearchForms.ViewModels
             _searchCommand = new Command(() => SearchCommandExecute());
         }
 
-
-        public string titleSearch { 
+        public string titleSearch 
+        { 
             get{
                 return this._titleSearch;
             } 
@@ -41,6 +39,7 @@ namespace MovieSearchForms.ViewModels
                 //SearchCommandExecute();
             } 
         }
+
         public ICommand SearchCommand
         {
             get{
@@ -59,9 +58,9 @@ namespace MovieSearchForms.ViewModels
             this.FetchMoviesByTitle(this._titleSearch);
         }
 
-        public async void FetchMoviesByTitle(string title){
+        public async void FetchMoviesByTitle(string title)
+        {
             this.Movies = await _service.GetMoviesByTitle(title);
-           
         }
 
         public List<MovieDetails> Movies
@@ -78,7 +77,7 @@ namespace MovieSearchForms.ViewModels
         public MovieDetails SelectedMovie
         {
             get => this._selectedMovie;
-
+           
             set
             {
                 if (value != null)
@@ -88,6 +87,7 @@ namespace MovieSearchForms.ViewModels
                 }
             }
         }
+
         private async void getDetailedMovie(MovieDetails movie)
         {
             this._selectedMovie = await this._service.GetDetailedMovie(movie);

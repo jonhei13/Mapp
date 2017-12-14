@@ -26,6 +26,7 @@ namespace MovieSearchForms.ViewModels
             this._navigation = navigation;
             _movieList = new List<MovieDetails>();
         }
+
         public List<MovieDetails> Movies
         {
             get => this._movieList;
@@ -61,6 +62,7 @@ namespace MovieSearchForms.ViewModels
                 OnPropertyChanged(nameof(IsRefreshing));
             }
         }
+
         public ICommand RefreshCommand
         {
             get
@@ -93,7 +95,6 @@ namespace MovieSearchForms.ViewModels
         public async void FetchPopularMovies()
         {
              this.Movies = await _service.GetPopularMovies();
-
         }
     }
 }
