@@ -55,8 +55,11 @@ namespace MovieSearchForms.ViewModels
 
         private async void getDetailedMovie(MovieDetails movie)
         {
-            this._selectedMovie = await this._service.GetDetailedMovie(movie);
-            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+            if (movie != null)
+            {
+                this._selectedMovie = await this._service.GetDetailedMovie(movie);
+                await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+            }
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
