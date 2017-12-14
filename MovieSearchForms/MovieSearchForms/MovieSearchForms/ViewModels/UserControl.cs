@@ -28,30 +28,5 @@ namespace MovieSearchForms.ViewModels
 
         }
 
-
-        public MovieDetails SelectedMovie
-        {
-            get => this._selectedMovie;
-
-            set
-            {
-                if (value != null)
-                {
-                    var movie = value;
-                    getDetailedMovie(movie);
-                }
-            }
-        }
-
-
-        private async void getDetailedMovie(MovieDetails movie)
-        {
-            this._selectedMovie = await this._service.GetDetailedMovie(movie);
-            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
-        }
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

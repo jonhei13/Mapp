@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using MovieSearchForms.Pages;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -12,6 +13,7 @@ namespace MovieSearchForms.ViewModels
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
+        private MovieDetails _selectedMovie;
         private INavigation _navigation;
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -20,8 +22,6 @@ namespace MovieSearchForms.ViewModels
             _service = new MovieSearchService();
             this._navigation = navigation;
             _movieList = new List<MovieDetails>();
-
-
         }
         public List<MovieDetails> Movies
         {
@@ -36,6 +36,26 @@ namespace MovieSearchForms.ViewModels
                     OnPropertyChanged();
                 }
             }
+        }
+
+        public MovieDetails SelectedMovie
+        {
+            get => this._selectedMovie;
+
+            set
+            {
+                if (value != null)
+                {
+                    var movie = value;
+                    getDetailedMovie(movie);
+                }
+            }
+        }
+
+        private async void getDetailedMovie(MovieDetails movie)
+        {
+            this._selectedMovie = await this._service.GetDetailedMovie(movie);
+            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

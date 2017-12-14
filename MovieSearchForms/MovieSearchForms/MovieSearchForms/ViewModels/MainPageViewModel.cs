@@ -50,7 +50,6 @@ namespace MovieSearchForms.ViewModels
                     OnPropertyChanged();
                     SearchCommandExecute();
                 }
-
             }
         }
 

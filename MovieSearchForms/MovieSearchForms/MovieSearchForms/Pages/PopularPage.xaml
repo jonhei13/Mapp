@@ -6,6 +6,6 @@
              x:Class="MovieSearchForms.Pages.PopularPage">
 
     <ContentPage.Content>
-        <control:GridView MovieList="{Binding Movies}"/>
+        <control:GridView ItemsSource="{Binding Movies}"/>
     </ContentPage.Content>
 </ContentPage>

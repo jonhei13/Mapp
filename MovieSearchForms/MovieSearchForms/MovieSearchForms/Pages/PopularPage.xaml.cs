@@ -13,7 +13,6 @@ namespace MovieSearchForms.Pages
         public PopularPage()
         {
             this._viewModel = new PopularPageViewModel(this.Navigation);
-            this.BindingContext = _viewModel;
             fetchMovies();
 
   
@@ -21,6 +20,7 @@ namespace MovieSearchForms.Pages
         public async void fetchMovies()
         {
             this._viewModel.Movies = await this._viewModel.FetchPopularMovies();
+            this.BindingContext = _viewModel;
             InitializeComponent();
         }
 
