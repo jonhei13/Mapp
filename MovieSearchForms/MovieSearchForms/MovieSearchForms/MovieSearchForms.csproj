@@ -60,6 +60,7 @@
     <Compile Include="MovieListView.xaml.cs">
       <DependentUpon>MovieListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TabPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\App.xaml">

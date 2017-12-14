@@ -1,30 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MovieSearch.Models;
 using MovieSearch.MovieApiService;
+using MovieSearchForms.Pages;
 using Xamarin.Forms;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using MovieSearchForms.Pages;
 using System.Windows.Input;
 
 namespace MovieSearchForms.ViewModels
 {
-    public class TabsPageViewModel : INotifyPropertyChanged
+    public class TopRatedPageViewModel : INotifyPropertyChanged
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
         private MovieDetails _selectedMovie;
         private INavigation _navigation;
-        private bool _isRefreshing;
-
+        private bool _isRefreshing = false;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public  TabsPageViewModel(INavigation navigation)
+        public TopRatedPageViewModel(INavigation navigation)
         {
             _service = new MovieSearchService();
-            this._navigation = navigation;
             _movieList = new List<MovieDetails>();
+            this._navigation = navigation;
         }
 
         public List<MovieDetails> Movies
@@ -33,8 +33,12 @@ namespace MovieSearchForms.ViewModels
 
             set
             {
-                this._movieList = value;
-                OnPropertyChanged();
+                if (value != null)
+                {
+                    this._movieList = value;
+                    getTopRatedList();
+                    OnPropertyChanged();
+                }
             }
         }
 
@@ -51,7 +55,6 @@ namespace MovieSearchForms.ViewModels
                 }
             }
         }
-
 
         public bool IsRefreshing
         {
@@ -78,7 +81,7 @@ namespace MovieSearchForms.ViewModels
 
         public async Task RefreshData()
         {
-            this.FetchPopularMovies();
+            this.FetchTopRatedMovies();
         }
 
         private async void getDetailedMovie(MovieDetails movie)
@@ -87,31 +90,19 @@ namespace MovieSearchForms.ViewModels
             await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
 
-        public async Task<List<MovieDetails>> LoadActors()
-        {
-            var movies = await this._service.getActors(this._movieList);
-            return movies;
-        }
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        public async void FetchPopularMovies()
+        public List<MovieDetails> getTopRatedList()
         {
-             this.Movies = await _service.GetPopularMovies();
-<<<<<<< HEAD:MovieSearchForms/MovieSearchForms/MovieSearchForms/ViewModels/TabsPageViewModel.cs
-             this.Movies = await LoadActors();
-
-=======
->>>>>>> 9d972438add0f25ac21e2255b06c1d4f170487a3:MovieSearchForms/MovieSearchForms/MovieSearchForms/ViewModels/PopularPageViewModel.cs
+            return this._movieList;
         }
-   
+
         public async void FetchTopRatedMovies()
         {
             this.Movies = await _service.GetTopRatedMovies();
-            this.Movies = await LoadActors();
         }
     }
 }
+

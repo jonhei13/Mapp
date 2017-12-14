@@ -10,8 +10,10 @@
             <Label HorizontalOptions="Center" 
                 Text="Enter words in movie title:">
             </Label>
-            <SearchBar x:Name="SearchText" Placeholder="Enter a movie title" Text="{Binding titleSearch}"
-           SearchCommand="{Binding SearchCommand}"/>
+            <SearchBar x:Name="SearchText" 
+                       Placeholder="Enter a movie title"
+                       Text="{Binding titleSearch}"
+                       SearchCommand="{Binding SearchCommand}"/>
             <Label 
                 x:Name="MovieLabel" 
                 FontSize="Large" >
@@ -23,6 +25,5 @@
             </ActivityIndicator>
             <control:GridView ItemsSource="{Binding Movies}"/>
         </StackLayout>
-    
     </ContentPage.Content>
 </ContentPage>

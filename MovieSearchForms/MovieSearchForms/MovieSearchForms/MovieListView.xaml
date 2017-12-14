@@ -5,7 +5,6 @@
 	<ContentView.Content>
          <ListView x:Name="ListView"
                   ItemsSource="{Binding Movies}"
-                  HasUnevenRows="True"
                   SelectedItem="{Binding SelectedMovie}">
              <ListView.ItemTemplate>
                 <DataTemplate>
