@@ -14,6 +14,14 @@ namespace MovieSearchForms.Pages
         {
             InitializeComponent();
             this._viewModel = new TopRatedPageViewModel(this.Navigation);
+            fetchMovies();
+        }
+
+        public async void fetchMovies()
+        {
+            this._viewModel.Movies = await this._viewModel.FetchTopRatedMovies();
+            this.BindingContext = _viewModel;
+            InitializeComponent();
         }
     }
 }

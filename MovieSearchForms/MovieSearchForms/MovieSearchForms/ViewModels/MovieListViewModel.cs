@@ -25,6 +25,7 @@ namespace MovieSearchForms.ViewModels
             this._service = new MovieSearchService();
             this._navigation = navigation;
             this._movieList = movieList;
+            this._selectedMovie = new MovieDetails();
         }
 
         public List<MovieDetails> Movies

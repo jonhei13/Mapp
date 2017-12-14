@@ -24,9 +24,5 @@ namespace MovieSearchForms.Pages
             this._model.LoadActors();
             this.ListView.SelectedItem = null;
         }
-        protected override bool OnBackButtonPressed()
-        {
-            return true;
-        }
     }
 }

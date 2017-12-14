@@ -64,7 +64,6 @@
     <Compile Include="MovieListView.xaml.cs">
       <DependentUpon>MovieListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\UserControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\App.xaml">
