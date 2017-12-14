@@ -18,22 +18,18 @@ namespace MovieSearchForms.Pages
             this.BindingContext = this._userControl;
             InitializeComponent();
         }
-        public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(MovieList), typeof(List<MovieDetails>), typeof(UserControl));
+        public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(MovieList), typeof(Binding), typeof(GridView));
 
-        public List<MovieDetails> MovieList
+        public Binding MovieList
         {
             get
             {
-                var x = (List<MovieDetails>)GetValue(TextProperty);
-                if (x == null)
-                {
-                    return new List<MovieDetails>();
-                }
+                var x = (Binding)GetValue(TextProperty);
                 return x;
             }
             set
             {
-                SetValue(TextProperty, value);
+                this.BindingContext = value;
             }
         }
         public List<MovieDetails> adaw
@@ -43,7 +39,7 @@ namespace MovieSearchForms.Pages
             set
             {
                 this._movieList = value;
-                this._userControl = new UserControl(this.Navigation, this._movieList);
+                this.BindingContext = new UserControl(this.Navigation, this._movieList);
                 OnPropertyChanged();
             }
         }
