@@ -54,6 +54,7 @@ namespace MovieSearch.MovieApiService
             ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(movie.Id);
             movie.ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath;
             movie.Description = movieDetailedResponse.Item.Overview;
+            movie.BackDropText = movieDetailedResponse.Item.Tagline;
             movie.Genre = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
             movie.RunTime = movieDetailedResponse.Item.Runtime + "Min";
             return movie;
