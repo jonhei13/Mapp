@@ -28,7 +28,10 @@ namespace MovieSearch.MovieApiService
                 return new List<MovieDetails>();
             }
             ApiSearchResponse<MovieInfo> response = await _movieApi.SearchByTitleAsync(name);
-            _movieList = await GetMovies(response.Results);
+            if (response != null)
+            {
+                _movieList = await GetMovies(response.Results);
+            }
             return _movieList;
         }
 
@@ -36,7 +39,10 @@ namespace MovieSearch.MovieApiService
         {
             List<MovieDetails> _movieList = new List<MovieDetails>();
             ApiSearchResponse<MovieInfo> response = await _movieApi.GetTopRatedAsync();
-            _movieList = await GetMovies(response.Results);
+            if (response != null)
+            {
+                _movieList = await GetMovies(response.Results);
+            }
             return _movieList;
         }
 
@@ -44,14 +50,20 @@ namespace MovieSearch.MovieApiService
         {
             List<MovieDetails> _movieList = new List<MovieDetails>();
             ApiSearchResponse<MovieInfo> response = await _movieApi.GetPopularAsync();
-            _movieList = await GetMovies(response.Results);
+            if (response != null)
+            {
+                _movieList = await GetMovies(response.Results);
+            }
             return _movieList;
         }
-
 
         public async Task<MovieDetails> GetDetailedMovie(MovieDetails movie)
         {
             ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(movie.Id);
+            if (movieDetailedResponse == null)
+            {
+                return movie;
+            }
             movie.ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath;
             movie.Description = movieDetailedResponse.Item.Overview;
             var genres = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
@@ -73,6 +85,7 @@ namespace MovieSearch.MovieApiService
             return movie;
 
         }
+
         private async Task<List<MovieDetails>> GetMovies(IReadOnlyList<MovieInfo> response)
         {
             List<MovieDetails> _movieList = new List<MovieDetails>();
@@ -91,6 +104,7 @@ namespace MovieSearch.MovieApiService
             }
             return _movieList;
         }
+
         public async Task<List<MovieDetails>> getActors(List<MovieDetails> movies)
         {
             foreach (MovieDetails mov in movies)
@@ -122,8 +136,6 @@ namespace MovieSearch.MovieApiService
 
             }
             return movies;
- 
-
         }
     }
 }

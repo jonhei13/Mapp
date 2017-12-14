@@ -56,7 +56,7 @@
     <Compile Include="Pages\PopularPage.xaml.cs">
       <DependentUpon>PopularPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\PopularPageViewModel.cs" />
+    <Compile Include="ViewModels\TabsPageViewModel.cs" />
     <Compile Include="MovieListView.xaml.cs">
       <DependentUpon>MovieListView.xaml</DependentUpon>
     </Compile>

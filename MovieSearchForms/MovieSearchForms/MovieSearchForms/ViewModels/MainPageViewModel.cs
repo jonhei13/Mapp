@@ -7,6 +7,7 @@ using MovieSearchForms.Pages;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using System.Threading.Tasks;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -38,7 +39,6 @@ namespace MovieSearchForms.ViewModels
             set {
                 _titleSearch = value;
                 OnPropertyChanged();
-                //SearchCommandExecute();
             } 
         }
         public ICommand SearchCommand
@@ -61,6 +61,7 @@ namespace MovieSearchForms.ViewModels
 
         public async void FetchMoviesByTitle(string title){
             this.Movies = await _service.GetMoviesByTitle(title);
+            this.Movies = await LoadActors();
            
         }
 
@@ -93,7 +94,11 @@ namespace MovieSearchForms.ViewModels
             this._selectedMovie = await this._service.GetDetailedMovie(movie);
             await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
-
+        public async Task<List<MovieDetails>>LoadActors()
+        {
+            var movies = await this._service.getActors(this._movieList);
+            return movies;
+        }
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

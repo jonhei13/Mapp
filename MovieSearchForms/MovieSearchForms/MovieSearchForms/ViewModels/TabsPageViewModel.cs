@@ -9,7 +9,7 @@ using MovieSearchForms.Pages;
 
 namespace MovieSearchForms.ViewModels
 {
-    public class PopularPageViewModel : INotifyPropertyChanged
+    public class TabsPageViewModel : INotifyPropertyChanged
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
@@ -17,12 +17,13 @@ namespace MovieSearchForms.ViewModels
         private INavigation _navigation;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public  PopularPageViewModel(INavigation navigation)
+        public  TabsPageViewModel(INavigation navigation)
         {
             _service = new MovieSearchService();
             this._navigation = navigation;
             _movieList = new List<MovieDetails>();
         }
+
         public List<MovieDetails> Movies
         {
             get => this._movieList;
@@ -54,6 +55,12 @@ namespace MovieSearchForms.ViewModels
             await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
 
+        public async Task<List<MovieDetails>> LoadActors()
+        {
+            var movies = await this._service.getActors(this._movieList);
+            return movies;
+        }
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -62,7 +69,14 @@ namespace MovieSearchForms.ViewModels
         public async void FetchPopularMovies()
         {
              this.Movies = await _service.GetPopularMovies();
+             this.Movies = await LoadActors();
 
+        }
+   
+        public async void FetchTopRatedMovies()
+        {
+            this.Movies = await _service.GetTopRatedMovies();
+            this.Movies = await LoadActors();
         }
     }
 }

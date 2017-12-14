@@ -8,12 +8,12 @@ namespace MovieSearchForms.Pages
 {
     public partial class TopRatedPage : ContentPage
     {
-        private TopRatedPageViewModel _viewModel;
+        private TabsPageViewModel _viewModel;
 
         public TopRatedPage()
         {
             
-            this._viewModel = new TopRatedPageViewModel(this.Navigation);
+            this._viewModel = new TabsPageViewModel(this.Navigation);
             this.BindingContext = this._viewModel;
             InitializeComponent();
         }

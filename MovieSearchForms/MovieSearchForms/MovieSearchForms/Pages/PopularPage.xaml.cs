@@ -8,11 +8,11 @@ namespace MovieSearchForms.Pages
 {
     public partial class PopularPage : ContentPage
     {
-        private PopularPageViewModel _viewModel { get; set; }
+        private TabsPageViewModel _viewModel { get; set; }
 
         public PopularPage()
         {
-            this._viewModel = new PopularPageViewModel(this.Navigation);
+            this._viewModel = new TabsPageViewModel(this.Navigation);
             this.BindingContext = _viewModel;
             InitializeComponent();
 
