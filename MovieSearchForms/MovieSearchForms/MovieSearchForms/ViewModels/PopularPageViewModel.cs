@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MovieSearch.Models;
 using MovieSearch.MovieApiService;
-using MovieSearchForms.Pages;
 using Xamarin.Forms;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
+using System.Threading.Tasks;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -12,19 +13,40 @@ namespace MovieSearchForms.ViewModels
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
         private INavigation _navigation;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        public PopularPageViewModel(INavigation navigation)
+        public  PopularPageViewModel(INavigation navigation)
         {
             _service = new MovieSearchService();
             this._navigation = navigation;
             _movieList = new List<MovieDetails>();
-            FetchPopularMovies();
+
+
+        }
+        public List<MovieDetails> Movies
+        {
+            get => this._movieList;
+
+            set
+            {
+                if (value != null)
+                {
+                    this._movieList = value;
+                    FetchPopularMovies();
+                    OnPropertyChanged();
+                }
+            }
         }
 
-        public async void FetchPopularMovies()
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            this._movieList = await _service.GetPopularMovies();
-            await this._navigation.PushAsync(new MovieListPage(this._movieList));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public async Task<List<MovieDetails>> FetchPopularMovies()
+        {
+            var movies = await _service.GetPopularMovies();
+            return movies;
         }
     }
 }

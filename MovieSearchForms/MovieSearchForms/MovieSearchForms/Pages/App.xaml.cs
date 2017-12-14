@@ -5,6 +5,7 @@ using System.Text;
 using MovieSearch.MovieApiService;
 using MovieSearchForms.ViewModels;
 using Xamarin.Forms;
+using MovieSearch.Models;
 
 namespace MovieSearchForms.Pages
 {

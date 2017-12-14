@@ -14,6 +14,7 @@ namespace MovieSearchForms.Pages
         public MovieListPage(List<MovieDetails> movieList)
         {
             this._model = new MovieListViewModel(this.Navigation, movieList);
+    
             this.BindingContext = _model;
             InitializeComponent();
         }
@@ -22,6 +23,10 @@ namespace MovieSearchForms.Pages
             base.OnAppearing();
             this._model.LoadActors();
             this.ListView.SelectedItem = null;
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
         }
     }
 }

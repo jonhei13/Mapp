@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ListView   xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MovieSearchForms.Pages.GridView"
+            ItemsSource="{Binding Movies}"
+            IsPullToRefreshEnabled="True"
+            RefreshCommand="{Binding RefreshCommand}"
+            HasUnevenRows="True"
+            SelectedItem="{Binding SelectedMovie}"
+            >
+    <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10,10"
+                              RowSpacing="6">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding Title}"
+                                   FontSize="Medium"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"/>
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding Actors}"
+                                   TextColor="Gray"
+                                   FontSize="Small"/>
+                            <Image Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.RowSpan="2"
+                                   Source="{Binding ImagePath}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+    </ListView.ItemTemplate>
+ </ListView>
