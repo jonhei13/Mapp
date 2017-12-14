@@ -8,13 +8,8 @@
             <Label HorizontalOptions="Center" 
                 Text="Enter words in movie title:">
             </Label>
-            <SearchBar x:Name="SearchText" Placeholder="Enter a movie title"/>
-            <Entry Placeholder="Enter a movie title" 
-                x:Name="TitleSearch"  >
-            </Entry>
-            <Button x:Name="TitleSearchButton" 
-                Clicked="TitleSearchButton_OnClicked" 
-                Text="Search Movie">></Button>
+            <SearchBar x:Name="SearchText" Placeholder="Enter a movie title" Text="{Binding titleSearch}"
+           SearchCommand="{Binding SearchCommand}"/>
             <Label 
                 x:Name="MovieLabel" 
                 FontSize="Large" >

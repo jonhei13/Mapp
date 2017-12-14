@@ -18,12 +18,18 @@ namespace MovieSearchForms.Pages
         {
             InitializeComponent();
             this._mainViewModel = new MainPageViewModel(this.Navigation);
+            this.BindingContext = _mainViewModel;
+            var x = this.BindingContext;
         }
+
+        /*
         private void TitleSearchButton_OnClicked(object sender, EventArgs e)
         {
             this.SearchTitleProgressBar.IsRunning = true;
             this._mainViewModel.FetchMoviesByTitle(this.TitleSearch.Text);
             this.SearchTitleProgressBar.IsRunning = false;
-        }
+        }*/
+
+       
     }
 }
