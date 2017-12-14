@@ -14,6 +14,7 @@ namespace MovieSearchForms.ViewModels
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
+        private MovieDetails _selectedMovie;
         private INavigation _navigation;
         private string _titleSearch;
         private ICommand _searchCommand;
@@ -59,8 +60,38 @@ namespace MovieSearchForms.ViewModels
         }
 
         public async void FetchMoviesByTitle(string title){
-            this._movieList = await _service.GetMoviesByTitle(title);
-            await _navigation.PushAsync(new MovieListPage(this._movieList));
+            this.Movies = await _service.GetMoviesByTitle(title);
+           
+        }
+
+        public List<MovieDetails> Movies
+        {
+            get => this._movieList;
+
+            set
+            {
+                this._movieList = value;
+                OnPropertyChanged("Movies");
+            }
+        }
+
+        public MovieDetails SelectedMovie
+        {
+            get => this._selectedMovie;
+
+            set
+            {
+                if (value != null)
+                {
+                    var movie = value;
+                    getDetailedMovie(movie);
+                }
+            }
+        }
+        private async void getDetailedMovie(MovieDetails movie)
+        {
+            this._selectedMovie = await this._service.GetDetailedMovie(movie);
+            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

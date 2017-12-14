@@ -19,7 +19,6 @@ namespace MovieSearchForms.Pages
             InitializeComponent();
             this._mainViewModel = new MainPageViewModel(this.Navigation);
             this.BindingContext = _mainViewModel;
-            var x = this.BindingContext;
         }
     }
 }
