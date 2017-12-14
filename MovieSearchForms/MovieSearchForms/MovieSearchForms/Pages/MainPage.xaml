@@ -8,6 +8,7 @@
             <Label HorizontalOptions="Center" 
                 Text="Enter words in movie title:">
             </Label>
+            <SearchBar x:Name="SearchText" Placeholder="Enter a movie title"/>
             <Entry Placeholder="Enter a movie title" 
                 x:Name="TitleSearch"  >
             </Entry>
