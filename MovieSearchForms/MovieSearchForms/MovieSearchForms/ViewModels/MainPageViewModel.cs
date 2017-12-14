@@ -61,11 +61,8 @@ namespace MovieSearchForms.ViewModels
         public async void FetchMoviesByTitle(string title)
         {
             this.Movies = await _service.GetMoviesByTitle(title);
-<<<<<<< HEAD
             this.Movies = await LoadActors();
-           
-=======
->>>>>>> 9d972438add0f25ac21e2255b06c1d4f170487a3
+
         }
 
         public List<MovieDetails> Movies

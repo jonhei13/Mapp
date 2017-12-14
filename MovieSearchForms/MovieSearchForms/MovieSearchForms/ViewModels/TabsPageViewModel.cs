@@ -101,11 +101,7 @@ namespace MovieSearchForms.ViewModels
         public async void FetchPopularMovies()
         {
              this.Movies = await _service.GetPopularMovies();
-<<<<<<< HEAD:MovieSearchForms/MovieSearchForms/MovieSearchForms/ViewModels/TabsPageViewModel.cs
              this.Movies = await LoadActors();
-
-=======
->>>>>>> 9d972438add0f25ac21e2255b06c1d4f170487a3:MovieSearchForms/MovieSearchForms/MovieSearchForms/ViewModels/PopularPageViewModel.cs
         }
    
         public async void FetchTopRatedMovies()

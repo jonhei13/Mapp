@@ -52,7 +52,6 @@
     <Compile Include="Pages\TopRatedPage.xaml.cs">
       <DependentUpon>TopRatedPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\TopRatedPageViewModel.cs" />
     <Compile Include="Pages\PopularPage.xaml.cs">
       <DependentUpon>PopularPage.xaml</DependentUpon>
     </Compile>
@@ -60,7 +59,6 @@
     <Compile Include="MovieListView.xaml.cs">
       <DependentUpon>MovieListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TabPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\App.xaml">
