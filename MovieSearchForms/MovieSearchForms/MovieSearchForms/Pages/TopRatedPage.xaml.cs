@@ -12,16 +12,17 @@ namespace MovieSearchForms.Pages
 
         public TopRatedPage()
         {
-            InitializeComponent();
+            
             this._viewModel = new TopRatedPageViewModel(this.Navigation);
-            fetchMovies();
+            this.BindingContext = this._viewModel;
+            InitializeComponent();
         }
 
-        public async void fetchMovies()
+        protected async override void OnAppearing()
         {
-            this._viewModel.Movies = await this._viewModel.FetchTopRatedMovies();
-            this.BindingContext = _viewModel;
-            InitializeComponent();
+            base.OnAppearing();
+            this._viewModel.FetchTopRatedMovies();
+
         }
     }
 }

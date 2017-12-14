@@ -3,9 +3,7 @@
 <ListView   xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MovieSearchForms.Pages.GridView"
-            ItemsSource="{Binding Movies}"
             IsPullToRefreshEnabled="True"
-            RefreshCommand="{Binding RefreshCommand}"
             HasUnevenRows="True"
             SelectedItem="{Binding SelectedMovie}"
             >
