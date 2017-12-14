@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -16,6 +17,7 @@ namespace MovieSearchForms.ViewModels
         private MovieSearchService _service;
         private MovieDetails _selectedMovie;
         private INavigation _navigation;
+        private bool _isRefreshing = false;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public TopRatedPageViewModel(INavigation navigation)
@@ -52,6 +54,32 @@ namespace MovieSearchForms.ViewModels
                     getDetailedMovie(movie);
                 }
             }
+        }
+
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    IsRefreshing = true;
+                    await RefreshData();
+                    IsRefreshing = false;
+                });
+            }
+        }
+
+        public async Task RefreshData(){
+            this.FetchTopRatedMovies();
         }
 
         private async void getDetailedMovie(MovieDetails movie)

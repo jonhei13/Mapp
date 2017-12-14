@@ -4,6 +4,9 @@
                 x:Class="MovieSearchForms.Pages.TopRatedPage"
                 xmlns:control="clr-namespace:MovieSearchForms.Pages;assembly=MovieSearchForms">
 	<ContentPage.Content>
-        <control:GridView ItemsSource="{Binding Movies}"/>
+        <control:GridView ItemsSource="{Binding Movies}"
+                            IsPullToRefreshEnabled="True"
+                            RefreshCommand="{Binding RefreshCommand}"
+                            IsRefreshing="{Binding IsRefreshing}"/>
     </ContentPage.Content>
 </ContentPage>
