@@ -29,10 +29,8 @@ namespace MovieSearchForms.ViewModels
 
             set
             {
-
                 this._movieList = value;
                 OnPropertyChanged();
-
             }
         }
 
