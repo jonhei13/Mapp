@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using MovieSearchForms.Pages;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -15,7 +16,7 @@ namespace MovieSearchForms.ViewModels
         private MovieSearchService _service;
         private INavigation _navigation;
         private string _titleSearch;
-        private Command _searchCommand;
+        private ICommand _searchCommand;
         public event PropertyChangedEventHandler PropertyChanged;
 
 
@@ -36,11 +37,21 @@ namespace MovieSearchForms.ViewModels
             set {
                 _titleSearch = value;
                 OnPropertyChanged();
+                //SearchCommandExecute();
             } 
         }
-        public Command SearchCommmand
+        public ICommand SearchCommand
         {
-            get; set;
+            get{
+                return this._searchCommand;
+            } 
+            set {
+                if(value != null){
+                    OnPropertyChanged();
+                    SearchCommandExecute();
+                }
+
+            }
         }
 
         private void SearchCommandExecute()

@@ -21,15 +21,5 @@ namespace MovieSearchForms.Pages
             this.BindingContext = _mainViewModel;
             var x = this.BindingContext;
         }
-
-        /*
-        private void TitleSearchButton_OnClicked(object sender, EventArgs e)
-        {
-            this.SearchTitleProgressBar.IsRunning = true;
-            this._mainViewModel.FetchMoviesByTitle(this.TitleSearch.Text);
-            this.SearchTitleProgressBar.IsRunning = false;
-        }*/
-
-       
     }
 }
