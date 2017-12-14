@@ -43,6 +43,7 @@ namespace MovieSearchForms.ViewModels
             }
         }
 
+
         private async void getDetailedMovie(MovieDetails movie)
         {
             this._selectedMovie = await this._service.GetDetailedMovie(movie);
