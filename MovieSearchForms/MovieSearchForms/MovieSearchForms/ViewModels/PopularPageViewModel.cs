@@ -9,7 +9,7 @@ using MovieSearchForms.Pages;
 
 namespace MovieSearchForms.ViewModels
 {
-    public class PopularPageViewModel
+    public class PopularPageViewModel : INotifyPropertyChanged
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
@@ -29,12 +29,10 @@ namespace MovieSearchForms.ViewModels
 
             set
             {
-                if (value != null)
-                {
-                    this._movieList = value;
-                    FetchPopularMovies();
-                    OnPropertyChanged();
-                }
+
+                this._movieList = value;
+                OnPropertyChanged();
+
             }
         }
 
@@ -63,10 +61,10 @@ namespace MovieSearchForms.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public async Task<List<MovieDetails>> FetchPopularMovies()
+        public async void FetchPopularMovies()
         {
-            var movies = await _service.GetPopularMovies();
-            return movies;
+             this.Movies = await _service.GetPopularMovies();
+
         }
     }
 }

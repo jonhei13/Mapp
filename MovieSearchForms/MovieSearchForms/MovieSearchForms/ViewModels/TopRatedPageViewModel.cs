@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MovieSearchForms.ViewModels
 {
-    public class TopRatedPageViewModel
+    public class TopRatedPageViewModel : INotifyPropertyChanged
     {
         private List<MovieDetails> _movieList;
         private MovieSearchService _service;
@@ -69,11 +69,11 @@ namespace MovieSearchForms.ViewModels
             return this._movieList;
         }
 
-        public async Task<List<MovieDetails>> FetchTopRatedMovies()
+        public async void FetchTopRatedMovies()
         {
-            this._movieList = await _service.GetTopRatedMovies();
-            await this._navigation.PushAsync(new MovieListPage(this._movieList));
-            return this._movieList;
+            this.Movies = await _service.GetTopRatedMovies();
+ 
+     
         }
     }
 }
