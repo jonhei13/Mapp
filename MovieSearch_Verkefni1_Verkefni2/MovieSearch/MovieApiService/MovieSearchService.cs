@@ -54,6 +54,7 @@ namespace MovieSearch.MovieApiService
             ApiQueryResponse<Movie> movieDetailedResponse = await _movieApi.FindByIdAsync(movie.Id);
             movie.ImagePoster = "http://image.tmdb.org/t/p/original/" + movieDetailedResponse.Item.BackdropPath;
             movie.Description = movieDetailedResponse.Item.Overview;
+<<<<<<< HEAD
             var genres = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
             string g = "";
             foreach (var x in genres)
@@ -68,6 +69,10 @@ namespace MovieSearch.MovieApiService
                 }
             }
             movie.Genre = g;
+=======
+            movie.BackDropText = movieDetailedResponse.Item.Tagline;
+            movie.Genre = (from x in movieDetailedResponse.Item.Genres select x.Name).ToList();
+>>>>>>> 72bf54aba77ea440a6925939182ddf78612f5ea2
             movie.RunTime = movieDetailedResponse.Item.Runtime + "Min";
             return movie;
 
