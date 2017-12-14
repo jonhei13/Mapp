@@ -23,7 +23,6 @@ namespace MovieSearchForms.ViewModels
             _service = new MovieSearchService();
             _movieList = new List<MovieDetails>();
             this._navigation = navigation;
-            FetchTopRatedMovies();
         }
 
         public List<MovieDetails> Movies
