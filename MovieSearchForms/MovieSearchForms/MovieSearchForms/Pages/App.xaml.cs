@@ -27,10 +27,11 @@ namespace MovieSearchForms.Pages
             var PopularNavigationPage = new NavigationPage(PopularPage);
             PopularNavigationPage.Title = "Popular";
 
-            var tabbedPage = new TabbedPage();
+            var tabbedPage = new TabPage(TopRatedPage, TopRatedNavigationPage, PopularPage, PopularNavigationPage);
             tabbedPage.Children.Add(MovieSearchNavigationPage);
             tabbedPage.Children.Add(TopRatedNavigationPage);
             tabbedPage.Children.Add(PopularNavigationPage);
+            tabbedPage.BackgroundColor = Color.FromHex("#00ffffff");
 
             MainPage = tabbedPage;
         }

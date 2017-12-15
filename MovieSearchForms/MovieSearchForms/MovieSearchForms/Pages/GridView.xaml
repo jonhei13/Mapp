@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <ListView   xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MovieSearchForms.Pages.GridView"
             HasUnevenRows="True"
             SelectedItem="{Binding SelectedMovie}"
-            >
+            BackgroundColor="#00ffffff">
     <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -23,12 +22,12 @@
                                    Grid.Column="1"
                                    Text="{Binding Title}"
                                    FontSize="Medium"
-                                   TextColor="Black"
+                                   TextColor="White"
                                    FontAttributes="Bold"/>
                             <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Actors}"
-                                   TextColor="Gray"
+                                   TextColor="White"
                                    FontSize="Small"/>
                             <Image Grid.Row="0"
                                    Grid.Column="0"

@@ -1,25 +1,38 @@
 ﻿using System;
 using Xamarin.Forms;
 using MovieSearchForms.ViewModels;
-
 namespace MovieSearchForms.Pages
 {
     public partial class TabPage : TabbedPage
     {
-        private PopularPageViewModel _popularViewModel;
-        private TopRatedPageViewModel _topRatedViewModel;
+        private TabsPageViewModel _topViewModel;
+        private TabsPageViewModel _popularViewModel;
 
-        public TabPage()
+        private Page _top;
+        private Page _popular;
+        private Page _topNav;
+        private Page _popularNav;
+
+        public TabPage(Page top, Page topNavigation, Page popular, Page popNavigation)
         {
-            _popularViewModel = new PopularPageViewModel(this.Navigation);
-            _topRatedViewModel = new TopRatedPageViewModel(this.Navigation);
+            this._top = top;
+            this._topNav = topNavigation;
+
+            this._popular = popular;
+            this._popularNav = popNavigation;
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            _topViewModel = new TabsPageViewModel(this._topNav.Navigation);
+            _popularViewModel = new TabsPageViewModel(this._popularNav.Navigation);
+            _popular.BindingContext = _popularViewModel;
+            _top.BindingContext = _topViewModel;
+
             this._popularViewModel.FetchPopularMovies();
-            this._topRatedViewModel.FetchTopRatedMovies();
+            this._topViewModel.FetchTopRatedMovies();
         }
     }
 }

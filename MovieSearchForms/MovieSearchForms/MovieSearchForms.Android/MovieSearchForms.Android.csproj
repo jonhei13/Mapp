@@ -131,6 +131,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\Background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -148,7 +150,7 @@
       <Name>MovieSearch</Name>
     </ProjectReference>
     <ProjectReference Include="..\MovieSearchForms\MovieSearchForms.csproj">
-      <Project>{156bff03-2e59-4784-97b9-d9bef2e88ed1}</Project>
+      <Project>{320657AA-25EF-4018-BCEA-2F6F7C7BADEB}</Project>
       <Name>MovieSearchForms</Name>
     </ProjectReference>
   </ItemGroup>

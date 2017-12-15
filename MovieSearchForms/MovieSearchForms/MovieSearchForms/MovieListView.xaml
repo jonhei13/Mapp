@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView    xmlns="http://xamarin.com/schemas/2014/forms" 
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                x:Class="MovieSearchForms.MovieListView">
+                x:Class="MovieSearchForms.MovieListView"
+                BackgroundImage="Background.png">
 	<ContentView.Content>
          <ListView x:Name="ListView"
                   ItemsSource="{Binding Movies}"
@@ -28,7 +29,7 @@
                             <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Actors}"
-                                   TextColor="Gray"
+                                   TextColor="Black"
                                    FontSize="Small"/>
                             <Image Grid.Row="0"
                                    Grid.Column="0"

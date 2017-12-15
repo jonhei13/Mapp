@@ -12,14 +12,14 @@ namespace MovieSearchForms.Pages
 
         public PopularPage()
         {
-            this._viewModel = new TabsPageViewModel(this.Navigation);
-            this.BindingContext = _viewModel;
+            //this._viewModel = new TabsPageViewModel(this.Navigation);
+            //this.BindingContext = _viewModel;
             InitializeComponent();
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            this._viewModel.FetchPopularMovies();
+            //this._viewModel.FetchPopularMovies();
         }
 
     }
