@@ -17,6 +17,7 @@ namespace MovieSearchForms.ViewModels
         private MovieDetails _selectedMovie;
         private INavigation _navigation;
         private bool _isRefreshing;
+        private bool _TopRatedIsRefreshing;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -70,16 +71,45 @@ namespace MovieSearchForms.ViewModels
                 return new Command(async () =>
                 {
                     IsRefreshing = true;
-                    await RefreshData();
+                    await RefreshPopular();
                     IsRefreshing = false;
                 });
             }
         }
 
-        public async Task RefreshData()
+        public async Task RefreshPopular()
         {
             this.FetchPopularMovies();
         }
+
+        public bool TopRatedIsRefreshing
+        {
+            get { return _TopRatedIsRefreshing; }
+            set
+            {
+                _TopRatedIsRefreshing = value;
+                OnPropertyChanged(nameof(TopRatedIsRefreshing));
+            }
+        }
+
+        public ICommand TopRatedRefreshCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    TopRatedIsRefreshing = true;
+                    await RefreshTopRated();
+                    TopRatedIsRefreshing = false;
+                });
+            }
+        }
+
+        public async Task RefreshTopRated()
+        {
+            this.FetchTopRatedMovies();
+        }
+
 
         private async void getDetailedMovie(MovieDetails movie)
         {
