@@ -15,20 +15,31 @@ namespace MovieSearchForms.Pages
         {
             InitializeComponent();
 
+
+
+
             var service = new MovieSearchService();
+
+            var topViewModel = new TabsPageViewModel(service);
+            var popularViewModel = new TabsPageViewModel(service);
+
             var MovieSearchPage = new MainPage();
             var MovieSearchNavigationPage = new NavigationPage(MovieSearchPage);
             MovieSearchNavigationPage.Title = "Movie Search";
 
-            var TopRatedPage = new TopRatedPage();
+            var TopRatedPage = new TopRatedPage(topViewModel);
             var TopRatedNavigationPage = new NavigationPage(TopRatedPage);
             TopRatedNavigationPage.Title = "Top Rated";
 
-            var PopularPage = new PopularPage();
+            var PopularPage = new PopularPage(popularViewModel);
             var PopularNavigationPage = new NavigationPage(PopularPage);
             PopularNavigationPage.Title = "Popular";
 
-            var tabbedPage = new TabPage(TopRatedPage, TopRatedNavigationPage, PopularPage, PopularNavigationPage, service);
+            topViewModel.setNavigation(TopRatedNavigationPage.Navigation);
+            popularViewModel.setNavigation(PopularNavigationPage.Navigation);
+
+
+            var tabbedPage = new TabPage(topViewModel, popularViewModel, service);
             tabbedPage.Children.Add(MovieSearchNavigationPage);
             tabbedPage.Children.Add(TopRatedNavigationPage);
             tabbedPage.Children.Add(PopularNavigationPage);

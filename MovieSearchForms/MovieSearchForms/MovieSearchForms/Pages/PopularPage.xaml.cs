@@ -8,18 +8,18 @@ namespace MovieSearchForms.Pages
 {
     public partial class PopularPage : ContentPage
     {
-        private TabsPageViewModel _viewModel { get; set; }
+        private TabsPageViewModel _model;
 
-        public PopularPage()
+        public PopularPage(TabsPageViewModel model)
         {
-            //this._viewModel = new TabsPageViewModel(this.Navigation);
-            //this.BindingContext = _viewModel;
+            this._model = model;
+            this.BindingContext = model;
             InitializeComponent();
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            //this._viewModel.FetchPopularMovies();
+            this._model.SelectedMovie = null;
         }
 
     }

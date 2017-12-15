@@ -68,7 +68,6 @@ namespace MovieSearchForms.ViewModels
         public List<MovieDetails> Movies
         {
             get => this._movieList;
-
             set
             {
                 this._movieList = value;
@@ -92,8 +91,14 @@ namespace MovieSearchForms.ViewModels
 
         private async void getDetailedMovie(MovieDetails movie)
         {
-            this._selectedMovie = await this._service.GetDetailedMovie(movie);
-            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+            try
+            {
+                this._selectedMovie = await this._service.GetDetailedMovie(movie);
+                await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+            }catch(NullReferenceException e)
+            {
+                //Do Nothing
+            }
         }
         public async Task<List<MovieDetails>>LoadActors()
         {

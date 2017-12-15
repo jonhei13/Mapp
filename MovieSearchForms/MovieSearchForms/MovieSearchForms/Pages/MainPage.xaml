@@ -36,7 +36,8 @@
                 IsRunning="False" 
                 x:Name="SearchTitleProgressBar" >
             </ActivityIndicator>
-            <control:GridView ItemsSource="{Binding Movies}"/>
+            <control:GridView ItemsSource="{Binding Movies}"
+                              SelectedItem="{Binding SelectedMovie}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

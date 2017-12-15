@@ -3,7 +3,6 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MovieSearchForms.Pages.GridView"
             HasUnevenRows="True"
-            SelectedItem="{Binding SelectedMovie}"
             BackgroundColor="#00ffffff">
     <ListView.ItemTemplate>
                 <DataTemplate>

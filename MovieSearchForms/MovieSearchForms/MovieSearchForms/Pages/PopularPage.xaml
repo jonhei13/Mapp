@@ -9,6 +9,7 @@
         <control:GridView 
                  ItemsSource="{Binding Movies}"
                  IsPullToRefreshEnabled="True"
+                 SelectedItem ="{Binding SelectedMovie}"
                  RefreshCommand="{Binding RefreshCommand}"
                  IsRefreshing="{Binding IsRefreshing}"/>
     </ContentPage.Content>

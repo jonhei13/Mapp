@@ -12,10 +12,8 @@ namespace MovieSearchForms.Pages
     {
         public GridView()
         {
+
             InitializeComponent();
- 
         }
-
-
     }
 }

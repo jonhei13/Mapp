@@ -6,7 +6,8 @@
                 BackgroundImage="background.png"
                 Title="Top Rated Movies">
 	<ContentPage.Content>
-        <control:GridView ItemsSource="{Binding Movies}"
+        <control:GridView   ItemsSource="{Binding Movies}"
+                            SelectedItem ="{Binding SelectedMovie}"
                             IsPullToRefreshEnabled="True"
                             RefreshCommand="{Binding TopRatedRefreshCommand}"
                             IsRefreshing="{Binding TopRatedIsRefreshing}"/>

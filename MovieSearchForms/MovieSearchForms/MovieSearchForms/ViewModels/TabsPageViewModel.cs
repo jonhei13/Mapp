@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using MovieSearchForms.Pages;
 using System.Windows.Input;
+using System;
 
 namespace MovieSearchForms.ViewModels
 {
@@ -21,10 +22,9 @@ namespace MovieSearchForms.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public  TabsPageViewModel(INavigation navigation, MovieSearchService service)
+        public  TabsPageViewModel(MovieSearchService service)
         {
             _service = service;
-            this._navigation = navigation;
             _movieList = new List<MovieDetails>();
         }
 
@@ -45,14 +45,16 @@ namespace MovieSearchForms.ViewModels
 
             set
             {
-                if (value != null)
                 {
-                    var movie = value;
-                    getDetailedMovie(movie);
+                    this._selectedMovie = value;
+                    if(this._selectedMovie != null)
+                    {
+                        getDetailedMovie(this._selectedMovie);
+                    }
+                    OnPropertyChanged();
                 }
             }
         }
-
 
         public bool IsRefreshing
         {
@@ -110,11 +112,18 @@ namespace MovieSearchForms.ViewModels
             this.FetchTopRatedMovies();
         }
 
-
         private async void getDetailedMovie(MovieDetails movie)
         {
-            this._selectedMovie = await this._service.GetDetailedMovie(movie);
-            await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+            try
+            {
+                this._selectedMovie = await this._service.GetDetailedMovie(movie);
+                await this._navigation.PushAsync(new MovieDetailsPage(this._selectedMovie), true);
+
+            }
+            catch(NullReferenceException e)
+            {
+                this._selectedMovie = null;
+            }
         }
 
         public async Task<List<MovieDetails>> LoadActors()
@@ -138,6 +147,10 @@ namespace MovieSearchForms.ViewModels
         {
             this.Movies = await _service.GetTopRatedMovies();
             this.Movies = await LoadActors();
+        }
+        public void setNavigation(INavigation pop)
+        {
+            this._navigation = pop;
         }
     }
 }

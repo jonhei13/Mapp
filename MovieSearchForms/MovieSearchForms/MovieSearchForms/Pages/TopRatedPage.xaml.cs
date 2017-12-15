@@ -8,20 +8,19 @@ namespace MovieSearchForms.Pages
 {
     public partial class TopRatedPage : ContentPage
     {
-        private TabsPageViewModel _viewModel { get; set; }
-
-        public TopRatedPage()
+        private TabsPageViewModel _model;
+        public TopRatedPage(TabsPageViewModel model)
         {
-            
-            //this._viewModel = new TabsPageViewModel(this.Navigation);
-            //this.BindingContext = this._viewModel;
+            this._model = model;
+            this.BindingContext = model;
             InitializeComponent();
         }
-
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
+           
             base.OnAppearing();
-            //this._viewModel.FetchTopRatedMovies();
+            this._model.SelectedMovie = null;
+            this._model.Movies = null;
 
         }
     }
