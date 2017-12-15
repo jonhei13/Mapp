@@ -13,7 +13,7 @@ namespace MovieSearchForms.Pages
     {
         public App()
         {
-            InitializeComponent();
+
 
 
 
@@ -49,6 +49,7 @@ namespace MovieSearchForms.Pages
             tabbedPage.BackgroundColor = Color.FromHex("#00ffffff");
 
             MainPage = tabbedPage;
+            InitializeComponent();
         }
 
         protected override void OnStart()

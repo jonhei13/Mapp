@@ -23,11 +23,10 @@
                     </OnPlatform>
                 </SearchBar.HeightRequest>
             </SearchBar>
-            <ActivityIndicator 
-                Color="White" 
-                IsRunning="False" 
-                x:Name="SearchTitleProgressBar" >
-            </ActivityIndicator>
+            <ActivityIndicator
+                Color="Black" 
+                IsVisible="{Binding ActivityRunning}"
+                IsRunning="{Binding ActivityRunning}"/>
             <control:GridView ItemsSource="{Binding Movies}"
                               SelectedItem="{Binding SelectedMovie}"/>
         </StackLayout>

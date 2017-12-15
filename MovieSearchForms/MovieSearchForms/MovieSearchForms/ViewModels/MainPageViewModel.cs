@@ -20,6 +20,7 @@ namespace MovieSearchForms.ViewModels
         private string _titleSearch;
         private ICommand _searchCommand;
         public event PropertyChangedEventHandler PropertyChanged;
+        private bool _isRunning;
 
         public MainPageViewModel(INavigation navigation)
         {
@@ -27,6 +28,7 @@ namespace MovieSearchForms.ViewModels
             this._navigation = navigation;
             _movieList = new List<MovieDetails>();
             _searchCommand = new Command(() => SearchCommandExecute());
+            _isRunning = false;
         }
 
         public string titleSearch 
@@ -53,16 +55,17 @@ namespace MovieSearchForms.ViewModels
             }
         }
 
-        private void SearchCommandExecute()
+        private async Task SearchCommandExecute()
         {
-            this.FetchMoviesByTitle(this._titleSearch);
+            await this.FetchMoviesByTitle(this._titleSearch);
         }
 
-        public async void FetchMoviesByTitle(string title)
+        public async Task FetchMoviesByTitle(string title)
         {
+            this.ActivityRunning = true;
             this.Movies = await _service.GetMoviesByTitle(title);
             this.Movies = await LoadActors();
-
+            this.ActivityRunning = false;
         }
 
         public List<MovieDetails> Movies
@@ -88,8 +91,16 @@ namespace MovieSearchForms.ViewModels
                 }
             }
         }
-
-        private async void getDetailedMovie(MovieDetails movie)
+        public bool ActivityRunning
+        {
+            get { return _isRunning; }
+            set
+            {
+                _isRunning = value;
+                OnPropertyChanged();
+            }
+        }
+        private async Task getDetailedMovie(MovieDetails movie)
         {
             try
             {
@@ -102,8 +113,10 @@ namespace MovieSearchForms.ViewModels
         }
         public async Task<List<MovieDetails>>LoadActors()
         {
+    
             var movies = await this._service.getActors(this._movieList);
             return movies;
+            
         }
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

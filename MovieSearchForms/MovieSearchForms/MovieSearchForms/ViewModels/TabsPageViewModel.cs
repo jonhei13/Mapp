@@ -81,7 +81,7 @@ namespace MovieSearchForms.ViewModels
 
         public async Task RefreshPopular()
         {
-            this.FetchPopularMovies();
+             await this.FetchPopularMovies();
         }
 
         public bool TopRatedIsRefreshing
@@ -109,10 +109,10 @@ namespace MovieSearchForms.ViewModels
 
         public async Task RefreshTopRated()
         {
-            this.FetchTopRatedMovies();
+            await this.FetchTopRatedMovies();
         }
 
-        private async void getDetailedMovie(MovieDetails movie)
+        private async Task getDetailedMovie(MovieDetails movie)
         {
             try
             {
@@ -137,13 +137,13 @@ namespace MovieSearchForms.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public async void FetchPopularMovies()
+        public async Task FetchPopularMovies()
         {
              this.Movies = await _service.GetPopularMovies();
              this.Movies = await LoadActors();
         }
    
-        public async void FetchTopRatedMovies()
+        public async Task FetchTopRatedMovies()
         {
             this.Movies = await _service.GetTopRatedMovies();
             this.Movies = await LoadActors();
