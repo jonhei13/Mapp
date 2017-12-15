@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:control="clr-namespace:MovieSearchForms.Pages;assembly=MovieSearchForms"
              x:Class="MovieSearchForms.Pages.PopularPage"
-             BackgroundImage="Background.png"
+             BackgroundImage="background.png"
              Title="Popular Movies">
     <ContentPage.Content>
         <control:GridView 

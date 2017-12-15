@@ -15,6 +15,7 @@ namespace MovieSearchForms.Pages
         {
             InitializeComponent();
 
+            var service = new MovieSearchService();
             var MovieSearchPage = new MainPage();
             var MovieSearchNavigationPage = new NavigationPage(MovieSearchPage);
             MovieSearchNavigationPage.Title = "Movie Search";
@@ -27,7 +28,7 @@ namespace MovieSearchForms.Pages
             var PopularNavigationPage = new NavigationPage(PopularPage);
             PopularNavigationPage.Title = "Popular";
 
-            var tabbedPage = new TabPage(TopRatedPage, TopRatedNavigationPage, PopularPage, PopularNavigationPage);
+            var tabbedPage = new TabPage(TopRatedPage, TopRatedNavigationPage, PopularPage, PopularNavigationPage, service);
             tabbedPage.Children.Add(MovieSearchNavigationPage);
             tabbedPage.Children.Add(TopRatedNavigationPage);
             tabbedPage.Children.Add(PopularNavigationPage);

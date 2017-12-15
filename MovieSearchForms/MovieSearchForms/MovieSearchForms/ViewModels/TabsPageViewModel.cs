@@ -21,9 +21,9 @@ namespace MovieSearchForms.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public  TabsPageViewModel(INavigation navigation)
+        public  TabsPageViewModel(INavigation navigation, MovieSearchService service)
         {
-            _service = new MovieSearchService();
+            _service = service;
             this._navigation = navigation;
             _movieList = new List<MovieDetails>();
         }

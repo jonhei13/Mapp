@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:MovieSearchForms"
              x:Class="MovieSearchForms.Pages.MainPage"
              xmlns:control="clr-namespace:MovieSearchForms.Pages;assembly=MovieSearchForms"
-             BackgroundImage="Background.png"
+             BackgroundImage="background.png"
              Title="Movie Search" >
     <ContentPage.Content>
         <StackLayout Margin="20,20,40,20">

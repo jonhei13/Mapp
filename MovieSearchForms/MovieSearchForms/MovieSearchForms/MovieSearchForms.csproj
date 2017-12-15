@@ -107,7 +107,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Pages\packages.config" />
-    <None Include="Images\Background.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\MovieSearch_Verkefni1_Verkefni2\MovieSearch\MovieSearch.csproj">
@@ -121,9 +120,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
