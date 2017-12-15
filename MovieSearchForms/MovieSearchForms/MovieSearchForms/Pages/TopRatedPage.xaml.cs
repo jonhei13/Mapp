@@ -20,7 +20,6 @@ namespace MovieSearchForms.Pages
            
             base.OnAppearing();
             this._model.SelectedMovie = null;
-            this._model.Movies = null;
 
         }
     }
