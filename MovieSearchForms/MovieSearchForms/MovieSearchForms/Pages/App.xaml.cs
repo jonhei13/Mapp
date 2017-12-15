@@ -26,14 +26,17 @@ namespace MovieSearchForms.Pages
             var MovieSearchPage = new MainPage();
             var MovieSearchNavigationPage = new NavigationPage(MovieSearchPage);
             MovieSearchNavigationPage.Title = "Movie Search";
+            MovieSearchNavigationPage.Icon = ("search.png");
 
             var TopRatedPage = new TopRatedPage(topViewModel);
             var TopRatedNavigationPage = new NavigationPage(TopRatedPage);
             TopRatedNavigationPage.Title = "Top Rated";
+            TopRatedNavigationPage.Icon = ("thumbsup.png");
 
             var PopularPage = new PopularPage(popularViewModel);
             var PopularNavigationPage = new NavigationPage(PopularPage);
             PopularNavigationPage.Title = "Popular";
+            PopularNavigationPage.Icon = ("fireball.png");
 
             topViewModel.setNavigation(TopRatedNavigationPage.Navigation);
             popularViewModel.setNavigation(PopularNavigationPage.Navigation);

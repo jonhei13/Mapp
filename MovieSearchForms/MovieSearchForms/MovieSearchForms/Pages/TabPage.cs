@@ -15,6 +15,13 @@ namespace MovieSearchForms.Pages
             this._topViewModel = top;
             this._popularViewModel = pop;
             this._service = service;
+<<<<<<< HEAD
+=======
+
+            this._popular = popular;
+            this._popularNav = popNavigation;
+
+>>>>>>> 09da07ee3ae6d79f0b2320f1075a28da671e9b4c
         }
 
         protected override void OnAppearing()
