@@ -7,12 +7,9 @@
              BackgroundImage="background.png"
              Title="Movie Search" >
     <ContentPage.Content>
-        <StackLayout Margin="20,20,40,20">
-            <Label HorizontalOptions="Center" 
-                Text="Enter words in movie title:"
-                TextColor="White">
-            </Label>
-            <SearchBar x:Name="SearchText" 
+        <StackLayout>
+            <SearchBar Margin="5,20,5,-15"
+                       x:Name="SearchText" 
                        Placeholder="Enter a movie title"
                        Text="{Binding titleSearch}"
                        TextColor="Black"
@@ -21,16 +18,11 @@
                 <SearchBar.HeightRequest>
                     <OnPlatform x:TypeArguments="x:Double"
                             iOS="-1.0"
-                            Android="20.0"
+                            Android="30.0"
                             WinPhone="-1">                   
                     </OnPlatform>
                 </SearchBar.HeightRequest>
             </SearchBar>
-            <Label 
-                x:Name="MovieLabel" 
-                FontSize="Large"
-                TextColor="White">
-            </Label>
             <ActivityIndicator 
                 Color="White" 
                 IsRunning="False" 

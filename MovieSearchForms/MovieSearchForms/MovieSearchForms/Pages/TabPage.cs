@@ -23,6 +23,7 @@ namespace MovieSearchForms.Pages
 
             this._popular = popular;
             this._popularNav = popNavigation;
+
         }
 
         protected override void OnAppearing()

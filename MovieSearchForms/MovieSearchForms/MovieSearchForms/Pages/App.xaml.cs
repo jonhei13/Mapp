@@ -19,14 +19,17 @@ namespace MovieSearchForms.Pages
             var MovieSearchPage = new MainPage();
             var MovieSearchNavigationPage = new NavigationPage(MovieSearchPage);
             MovieSearchNavigationPage.Title = "Movie Search";
+            MovieSearchNavigationPage.Icon = ("search.png");
 
             var TopRatedPage = new TopRatedPage();
             var TopRatedNavigationPage = new NavigationPage(TopRatedPage);
             TopRatedNavigationPage.Title = "Top Rated";
+            TopRatedNavigationPage.Icon = ("thumbsup.png");
 
             var PopularPage = new PopularPage();
             var PopularNavigationPage = new NavigationPage(PopularPage);
             PopularNavigationPage.Title = "Popular";
+            PopularNavigationPage.Icon = ("fireball.png");
 
             var tabbedPage = new TabPage(TopRatedPage, TopRatedNavigationPage, PopularPage, PopularNavigationPage, service);
             tabbedPage.Children.Add(MovieSearchNavigationPage);

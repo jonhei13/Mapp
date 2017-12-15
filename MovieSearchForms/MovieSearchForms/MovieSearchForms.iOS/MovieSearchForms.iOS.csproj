@@ -112,6 +112,15 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\movienight.png" />
     <BundleResource Include="Resources\background.png" />
+    <BundleResource Include="Resources\thumbsup%401x.png" />
+    <BundleResource Include="Resources\thumbsup%402x.png" />
+    <BundleResource Include="Resources\thumbsup%403x.png" />
+    <BundleResource Include="Resources\fireball%401x.png" />
+    <BundleResource Include="Resources\fireball%402x.png" />
+    <BundleResource Include="Resources\fireball%403x.png" />
+    <BundleResource Include="Resources\search%401x.png" />
+    <BundleResource Include="Resources\search%402x.png" />
+    <BundleResource Include="Resources\search%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
